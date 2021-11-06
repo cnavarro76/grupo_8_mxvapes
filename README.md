@@ -24,3 +24,6 @@ https://shishashop.mx/
 https://www.lavaperia.com/
 https://vapelab.mx/
 https://vapos.mx/
+https://www.vaperscafemty.com.mx/
+https://vapermexico.com/
+https://www.elmundodelvaper.com/432-pod-systems
