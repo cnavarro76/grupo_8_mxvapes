@@ -15,18 +15,18 @@ html, body {
 
 /* Columns */
 .left-column {
-  width: 65vw;
+  width: 55vw;
   position: relative;
 }
  
 .right-column {
-  width: 35vw;
+  width: 45vw;
   margin-top: 60px;
 }
 
 /* Left Column */
 .left-column img {
-  width: 100%;
+  width: 80%;
   position: absolute;
   left: 0;
   top: 0;
@@ -58,6 +58,7 @@ html, body {
 }
 .product-description p {
   font-size: 16px;
+  text-align: justify;
   font-weight: 300;
   color: #87868a;
   line-height: 24px;
@@ -127,6 +128,7 @@ html, body {
   background-color: #d27825;
   cursor: pointer;
   transition: all .5s;
+  
 }
  
 .kit-choose button:hover,
@@ -150,7 +152,6 @@ html, body {
   display: inline-block;
 }
 .kit-config a:before {
-  content: &amp;quot;?&amp;quot;
   height: 15px;
   width: 15px;
   border-radius: 50%;
@@ -195,6 +196,7 @@ html, body {
     flex-direction: column;
     margin-top: 60px;
   }
+  
  
   .left-column,
   .right-column {
@@ -202,7 +204,7 @@ html, body {
   }
  
   .left-column img {
-    width: 300px;
+    width: 200px;
     right: 0;
     top: -65px;
     left: initial;
@@ -210,6 +212,9 @@ html, body {
 }
  
 @media (max-width: 535px) {
+
+ 
+
   .left-column img {
     width: 220px;
     top: -85px;
