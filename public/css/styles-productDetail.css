@@ -1,11 +1,12 @@
 /* Basic Styling */
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
   font-family: 'Fira Sans bold 700', 'Poppins Light300';
 }
- 
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -13,12 +14,37 @@ html, body {
   display: flex;
 }
 
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/*productos index*/
+.productos {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.producto {
+  width: 17%;
+}
+
+
+.producto img {
+  width: 100%;
+
+}
+
+
 /* Columns */
 .left-column {
   width: 55vw;
   position: relative;
 }
- 
+
 .right-column {
   width: 45vw;
   margin-top: 60px;
@@ -33,7 +59,7 @@ html, body {
   opacity: 0;
   transition: all 0.3s ease;
 }
- 
+
 .left-column img.active {
   opacity: 1;
 }
@@ -43,6 +69,7 @@ html, body {
   border-bottom: 1px solid #E1E8EE;
   margin-bottom: 20px;
 }
+
 .product-description span {
   font-size: 12px;
   color: #d27825;
@@ -50,12 +77,14 @@ html, body {
   text-transform: uppercase;
   text-decoration: none;
 }
+
 .product-description h1 {
   font-weight: 300;
   font-size: 52px;
   color: #444242;
   letter-spacing: -2px;
 }
+
 .product-description p {
   font-size: 16px;
   text-align: justify;
@@ -68,16 +97,16 @@ html, body {
 .product-color {
   margin-bottom: 30px;
 }
- 
+
 .color-choose div {
   display: inline-block;
 }
- 
-.color-choose input[type="checkbox"]{
+
+.color-choose input[type="checkbox"] {
   display: none;
 }
- 
-.color-choose input[type="checkbox"] + label span {
+
+.color-choose input[type="checkbox"]+label span {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -87,28 +116,30 @@ html, body {
   border-radius: 50%;
 }
 
-/*input[type="checkbox"]:checked*/ 
+/*input[type="checkbox"]:checked*/
 
 .color-choose input[type="checkbox"] label span {
   border: 2px solid #FFFFFF;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
 }
- 
-.color-choose input[type="checkbox"]#black + label span {
+
+.color-choose input[type="checkbox"]#black+label span {
   background-color: #000000;
 }
-.color-choose input[type="checkbox"]#silver + label span {
+
+.color-choose input[type="checkbox"]#silver+label span {
   background-color: #C0C0C0;
 }
-.color-choose input[type="checkbox"]#red + label span {
+
+.color-choose input[type="checkbox"]#red+label span {
   background-color: #FF0000;
 }
 
-.color-choose input[type="checkbox"]#bronze + label span {
+.color-choose input[type="checkbox"]#bronze+label span {
   background-color: #CD7F32;
 }
- 
-.color-choose input[type="checkbox"]:checked + label span {
+
+.color-choose input[type="checkbox"]:checked+label span {
   background-image: url(img/productDetail/check-icn.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -118,7 +149,7 @@ html, body {
 .kit-choose {
   margin-bottom: 20px;
 }
- 
+
 .kit-choose button {
   border: 2px solid #E1E8EE;
   border-radius: 6px;
@@ -128,23 +159,27 @@ html, body {
   background-color: #d27825;
   cursor: pointer;
   transition: all .5s;
+<<<<<<< HEAD
   margin-top: 5px;
   
+=======
+
+>>>>>>> f2770981f15eaece15176f2b9ce2beadc0623f7f
 }
- 
+
 .kit-choose button:hover,
 .kit-choose button:active,
 .kit-choose button:focus {
   border: 2px solid #86939E;
   outline: none;
 }
- 
+
 .kit-config {
   border-bottom: 1px solid #E1E8EE;
   margin-bottom: 20px;
   margin-top: 20px;
 }
- 
+
 .kit-config a {
   color: #d27825;
   text-decoration: none;
@@ -153,6 +188,7 @@ html, body {
   margin: 10px 0px;
   display: inline-block;
 }
+
 .kit-config a:before {
   height: 15px;
   width: 15px;
@@ -170,14 +206,14 @@ html, body {
   display: flex;
   align-items: center;
 }
- 
+
 .product-price span {
   font-size: 26px;
   font-weight: 300;
   color: #444242;
   margin-right: 20px;
 }
- 
+
 .cart-btn {
   display: inline-block;
   background-color: #d27825;
@@ -188,9 +224,13 @@ html, body {
   padding: 12px 30px;
   transition: all .5s;
 }
+
 .cart-btn:hover {
   background-color: #d27825;
 }
+
+
+
 
 /* Responsive */
 @media (max-width: 940px) {
@@ -198,13 +238,13 @@ html, body {
     flex-direction: column;
     margin-top: 60px;
   }
-  
- 
+
+
   .left-column,
   .right-column {
     width: 100%;
   }
- 
+
   .left-column img {
     width: 200px;
     right: 0;
@@ -212,10 +252,10 @@ html, body {
     left: initial;
   }
 }
- 
+
 @media (max-width: 535px) {
 
- 
+
 
   .left-column img {
     width: 220px;
