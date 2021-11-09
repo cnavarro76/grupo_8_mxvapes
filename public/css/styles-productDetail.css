@@ -128,6 +128,7 @@ html, body {
   background-color: #d27825;
   cursor: pointer;
   transition: all .5s;
+  margin-top: 5px;
   
 }
  
@@ -141,6 +142,7 @@ html, body {
 .kit-config {
   border-bottom: 1px solid #E1E8EE;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
  
 .kit-config a {
@@ -148,7 +150,7 @@ html, body {
   text-decoration: none;
   font-size: 12px;
   position: relative;
-  margin: 10px 0;
+  margin: 10px 0px;
   display: inline-block;
 }
 .kit-config a:before {
