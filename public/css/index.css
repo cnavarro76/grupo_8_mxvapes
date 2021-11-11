@@ -21,6 +21,17 @@ main {
   padding: 15px;
 }
 
+.carousel .fas {
+  font-size: 45px;
+  color: #d27825;
+}
+
+.carousel-indicators li {
+  background-color: #d27825;
+}
+
+
+
 /*productos index*/
 .productos,
 .categorias,
@@ -143,7 +154,7 @@ input {
 
 
   .footer-info {
-  width: 20%;
+    width: 20%;
     margin: 0 2.5%;
   }
 
