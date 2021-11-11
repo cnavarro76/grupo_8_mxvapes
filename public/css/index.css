@@ -1,0 +1,85 @@
+/* Basic Styling */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Fira Sans bold 700', 'Poppins Light300';
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/*productos index*/
+.productos,
+.categorias,
+.accesorios {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.producto {
+  width: 17%;
+}
+
+
+.accesorio {
+  width: 40%;
+}
+
+.categoria {
+  width: 20%;
+}
+
+.producto img,
+.categoria img,
+.accesorio img {
+  width: 100%;
+
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 940px) {
+  .productos {
+    flex-direction: column;
+  }
+
+
+  .producto {
+    width: 70%;
+    margin: 20px auto;
+  }
+
+
+
+
+  .container {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+
+  
+}
+
+@media (max-width: 535px) {
+
+
+
+}
