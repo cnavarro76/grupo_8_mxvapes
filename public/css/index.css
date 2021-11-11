@@ -1,10 +1,11 @@
-/* Basic Styling */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
 html,
 body {
   height: 100%;
   width: 100%;
   margin: 0;
-  font-family: 'Fira Sans bold 700', 'Poppins Light300';
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -23,7 +24,8 @@ main {
 /*productos index*/
 .productos,
 .categorias,
-.accesorios {
+.accesorios,
+footer {
   margin: 20px 0;
   display: flex;
   justify-content: space-between;
@@ -51,17 +53,47 @@ main {
 }
 
 
+.newsletter {
+  width: 80%;
+  margin: 20px auto;
+}
+
+
+
+h3 {
+  text-align: center;
+}
+
+
+
+input {
+  width: 100%;
+  padding: 10px;
+
+}
+
+
+.footer-info {
+  width: 20%;
+  margin: 0 2.5%
+}
 
 
 
 /* Responsive */
-@media (max-width: 940px) {
-  .productos {
+@media (min-width: 300px) {
+
+  .productos,
+  footer,
+  .accesorios,
+  .categorias {
     flex-direction: column;
   }
 
 
-  .producto {
+  .producto,
+  .categoria,
+  .accesorio {
     width: 70%;
     margin: 20px auto;
   }
@@ -75,11 +107,44 @@ main {
   }
 
 
-  
+  .footer-info {
+    width: 80%;
+    margin: 0 10%;
+  }
+
 }
 
-@media (max-width: 535px) {
 
 
+@media (min-width: 769px) {
+
+  .productos,
+  footer,
+  .accesorios,
+  .categorias {
+    flex-direction: row;
+  }
+
+
+  .producto,
+  .categoria,
+  .accesorio {
+    width: 17%;
+    margin: 20px auto;
+  }
+
+
+
+
+  .container {
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+
+  .footer-info {
+  width: 20%;
+    margin: 0 2.5%;
+  }
 
 }
