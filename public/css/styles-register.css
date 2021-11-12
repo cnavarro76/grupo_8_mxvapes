@@ -1,0 +1,8 @@
+/* Basic Styling */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Fira Sans bold 700', 'Poppins Light300';
+}
