@@ -6,6 +6,16 @@ body {
   width: 100%;
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  color: #87868a;
+}
+
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  color: #d27825;
+  font-weight: bold;
+  margin: 32px 0;
 }
 
 .container {
@@ -19,6 +29,32 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 15px;
+}
+
+nav {
+  background: #d27825;
+  color: #FFF;
+  height: 60px;
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+
+nav ul li a {
+  padding: 20px;
+  color: #FFF;
+  text-decoration: none;
 }
 
 .carousel .fas {
@@ -43,6 +79,20 @@ footer {
 }
 
 
+.productos,
+.categorias,
+.accesorios {
+  margin-bottom: 100px;
+
+}
+
+.productos p,
+.categorias p,
+.accesorios p {
+  text-align: center;
+}
+
+
 .producto {
   width: 17%;
 }
@@ -60,7 +110,7 @@ footer {
 .categoria img,
 .accesorio img {
   width: 100%;
-
+  border: 2px solid #d27825;
 }
 
 
@@ -69,6 +119,12 @@ footer {
   margin: 20px auto;
 }
 
+
+h2 {
+  width: 100%;
+  text-align: center;
+
+}
 
 
 h3 {
@@ -80,7 +136,20 @@ h3 {
 input {
   width: 100%;
   padding: 10px;
+  float: left;
 
+}
+
+.centro {
+  text-align: center;
+}
+
+.btn-enviar {
+  width: 100%;
+  background: #d27825;
+  color: #FFF;
+  border: 0;
+  font-size: 30px;
 }
 
 
@@ -89,7 +158,19 @@ input {
   margin: 0 2.5%
 }
 
+footer h6 {
+  font-weight: bold;
+  text-align: center;
+}
 
+
+article p {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #d27825;
+  font-weight: bold;
+  margin-top: 13px;
+}
 
 /* Responsive */
 @media (min-width: 300px) {
@@ -100,6 +181,14 @@ input {
   .categorias {
     flex-direction: column;
   }
+
+
+
+  footer .fab {
+    font-size: 40px;
+    color: #d27825;
+  }
+
 
 
   .producto,
@@ -129,6 +218,17 @@ input {
 
 @media (min-width: 769px) {
 
+
+  input {
+    width: 90%;
+  }
+
+
+  .btn-enviar {
+    width: 10%;
+  }
+
+
   .productos,
   footer,
   .accesorios,
@@ -137,14 +237,18 @@ input {
   }
 
 
-  .producto,
-  .categoria,
-  .accesorio {
+  .producto {
     width: 17%;
     margin: 20px auto;
   }
 
+  .accesorio {
+    width: 40%;
+  }
 
+  .categoria {
+    width: 25%;
+  }
 
 
   .container {
