@@ -9,13 +9,12 @@ body {
 
 .container {
   max-width: 1200px;
+  max-height: 800px;
   margin: 0 auto;
   padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
- 
-  
 }
 
 main {
@@ -186,12 +185,7 @@ main {
   background-color: #d27825;
   cursor: pointer;
   transition: all .5s;
-<<<<<<< HEAD
   margin-top: 5px;
-  
-=======
-
->>>>>>> f2770981f15eaece15176f2b9ce2beadc0623f7f
 }
 
 .kit-choose button:hover,
@@ -291,4 +285,4 @@ main {
     width: 45%;
   }
 
-@media (min-width: 769px) {
+@media (min-width: 769px) {}}
