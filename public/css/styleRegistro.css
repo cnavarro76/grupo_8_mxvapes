@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background: url(bgVape.jpg);
+    background: url(../img/LogReg/bgVape.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -21,12 +21,6 @@ body {
     padding: 3px;
 }
 
-.formulario2 {
-    background: #ffff;
-    margin-top: 15px;
-    padding: 3px;
-}
-
 h1 {
     text-align: center;
     color: #444242;
@@ -38,10 +32,6 @@ h1 {
     width: 90%;
     padding: 10px;
     border: none;
-}
-
-.ckbox {
-    text-align: justify;
 }
 
 i{
@@ -59,15 +49,6 @@ i{
     min-width: 50px;
     text-align: center;
     color: #999;
-}
-
-.img {
-    width: 75px;
-    height: 75px;
-    min-width: 50px;
-    min-height: 50px;
-    display: block;
-    margin: auto;
 }
 
 .button {
@@ -103,13 +84,6 @@ p {
         margin: auto;
         width: 500px;
         margin-top: 100px;
-        border-radius: 2%;
-    }
-
-    .formulario2{
-        margin: auto;
-        width: 500px;
-        margin-top: 15px;
         border-radius: 2%;
     }
 }
