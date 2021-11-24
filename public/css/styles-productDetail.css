@@ -9,11 +9,40 @@ body {
 
 .container {
   max-width: 1200px;
+  max-height: 800px;
   margin: 0 auto;
   padding: 15px;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   position: absolute;
+=======
+  justify-content: flex-start;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/*productos index*/
+.productos {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.producto {
+  width: 17%;
+}
+
+
+.producto img {
+  width: 100%;
+
+>>>>>>> bdb273243f98bcdb1ada27456f2372239e81d4ce
 }
 
 /* Columns */
@@ -163,7 +192,10 @@ body {
   cursor: pointer;
   transition: all .5s;
   margin-top: 5px;
+<<<<<<< HEAD
   
+=======
+>>>>>>> bdb273243f98bcdb1ada27456f2372239e81d4ce
 }
 
 .kit-choose button:hover,
@@ -293,4 +325,8 @@ body {
     width: 45%;
   }
 
+<<<<<<< HEAD
 }
+=======
+@media (min-width: 769px) {}}
+>>>>>>> bdb273243f98bcdb1ada27456f2372239e81d4ce

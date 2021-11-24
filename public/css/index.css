@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #87868a;
+}
+
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  color: #d27825;
+  font-weight: bold;
+  margin: 32px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+nav {
+  background: #d27825;
+  color: #FFF;
+  height: 60px;
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+
+nav ul li a {
+  padding: 20px;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.carousel .fas {
+  font-size: 45px;
+  color: #d27825;
+}
+
+.carousel-indicators li {
+  background-color: #d27825;
+}
+
+
+
+/*productos index*/
+.productos,
+.categorias,
+.accesorios,
+footer {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.productos,
+.categorias,
+.accesorios {
+  margin-bottom: 100px;
+
+}
+
+.productos p,
+.categorias p,
+.accesorios p {
+  text-align: center;
+}
+
+
+.producto {
+  width: 17%;
+}
+
+
+.accesorio {
+  width: 40%;
+}
+
+.categoria {
+  width: 20%;
+}
+
+.producto img,
+.categoria img,
+.accesorio img {
+  width: 100%;
+  border: 2px solid #d27825;
+}
+
+
+.newsletter {
+  width: 80%;
+  margin: 20px auto;
+}
+
+
+h2 {
+  width: 100%;
+  text-align: center;
+
+}
+
+
+h3 {
+  text-align: center;
+}
+
+
+
+input {
+  width: 100%;
+  padding: 10px;
+  float: left;
+
+}
+
+.centro {
+  text-align: center;
+}
+
+.btn-enviar {
+  width: 100%;
+  background: #d27825;
+  color: #FFF;
+  border: 0;
+  font-size: 30px;
+}
+
+
+.footer-info {
+  width: 20%;
+  margin: 0 2.5%
+}
+
+footer h6 {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+article p {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #d27825;
+  font-weight: bold;
+  margin-top: 13px;
+}
+
+/* Responsive */
+@media (min-width: 300px) {
+
+  .productos,
+  footer,
+  .accesorios,
+  .categorias {
+    flex-direction: column;
+  }
+
+
+
+  footer .fab {
+    font-size: 40px;
+    color: #d27825;
+  }
+
+
+
+  .producto,
+  .categoria,
+  .accesorio {
+    width: 70%;
+    margin: 20px auto;
+  }
+
+
+
+
+  .container {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+
+  .footer-info {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+}
+
+
+
+@media (min-width: 769px) {
+
+
+  input {
+    width: 90%;
+  }
+
+
+  .btn-enviar {
+    width: 10%;
+  }
+
+
+  .productos,
+  footer,
+  .accesorios,
+  .categorias {
+    flex-direction: row;
+  }
+
+
+  .producto {
+    width: 17%;
+    margin: 20px auto;
+  }
+
+  .accesorio {
+    width: 40%;
+  }
+
+  .categoria {
+    width: 25%;
+  }
+
+
+  .container {
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+
+  .footer-info {
+    width: 20%;
+    margin: 0 2.5%;
+  }
+
+}
