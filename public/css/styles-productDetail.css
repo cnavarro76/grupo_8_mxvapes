@@ -14,9 +14,6 @@ body {
   padding: 15px;
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
-  position: absolute;
-=======
   justify-content: flex-start;
 }
 
@@ -42,7 +39,6 @@ main {
 .producto img {
   width: 100%;
 
->>>>>>> bdb273243f98bcdb1ada27456f2372239e81d4ce
 }
 
 /* Columns */
@@ -64,6 +60,7 @@ main {
   border-color: #87868a;
   border-style: solid;
   border-width: 1px;
+  margin-bottom: 1px;
 }
 
 /* center Column */
@@ -284,6 +281,8 @@ main {
 
 .cart-btn:hover {
   background-color: #d27825;
+  border: 2px solid #86939E;
+  outline: none;
 }
 
 
@@ -321,8 +320,4 @@ main {
     width: 45%;
   }
 
-<<<<<<< HEAD
-}
-=======
 @media (min-width: 769px) {}}
->>>>>>> bdb273243f98bcdb1ada27456f2372239e81d4ce
