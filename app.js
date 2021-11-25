@@ -4,11 +4,13 @@ const app = express();
 
 const path = require('path');
 
-const port = 3030;
+
 
 app.use(express.static('public'));
 
-app.listen(port, () => console.log(`Servidor corriendo en el puerto ${port}`));
+app.listen(process.env.PORT || 3000, function () {
+    console.log('Servidor corriendo en puerto 3000');    
+})
 
 app.get('/', function (req, res) {
     res.sendFile(path.resolve(__dirname + '/views/index.html'));
