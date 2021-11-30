@@ -12,18 +12,14 @@ Aspectos positivos:
     sencillo escoger y asignar las consignas propuestas para este primer sprint. 
 
 3.- Eficiente subida de consignas con GitHub.
-    GitHub nos ha permitido independencia y sincronicidad para el resguardo, subida 
-    y actualización de los archivos que conforman nuestro proyecto.
+    GitHub nos ha permitido independencia y sincronicidad para el resguardo, subida y actualización de los archivos que conforman nuestro proyecto.
 
 
 Areas de oportunidad (fuentes de mejora): 
 
-1.- Dificultad en el uso de Slack debido a la poca familiaridad con esta aplicación 
-    enfocada a la comunicación en el trabajo colaborativo.
+1.- Dificultad en el uso de Slack debido a la poca familiaridad con esta aplicación enfocada a la comunicación en el trabajo colaborativo.
 
-2.- Debido a que cada integrante lleva un ritmo de aprendizaje diferente, hemos tenido
-    que sortear diferentes retos en el perfeccionamiento de los procedimientos de subida, 
-    bajada y actualización del repositorio del proyecto. 
+2.- Debido a que cada integrante lleva un ritmo de aprendizaje diferente,hemos tenido que sortear diferentes retos en el perfeccionamiento de los  procedimientos de subida,bajada y actualización del repositorio del proyecto. 
 
 3.- Sincronización de archivos comunes o generales.
     En el proyecto, existe un flujo que en ocasiones su avance depende la selección y/o
