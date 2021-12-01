@@ -9,11 +9,22 @@ body {
   color: #87868a;
 }
 
+header {
+  padding: 20px;
+  background-color: #d27825;
+
+}
+
+.clear {
+  clear: both;
+}
+
 
 h1 {
+  float: left;
   font-size: 50px;
   text-align: center;
-  color: #d27825;
+  color: #FFF;
   font-weight: bold;
   margin: 32px 0;
 }
@@ -31,7 +42,28 @@ main {
   padding: 15px;
 }
 
+
+.menuMobile {
+  float: right;
+
+}
+
+.menuMobile button .fas {
+  font-size: 30px;
+}
+
+.menu {
+  display: none;
+}
+
+.backgroundOrange {
+  background: #d27825 !important;
+  border: 0 !important;
+}
+
+
 nav {
+  display: none;
   background: #d27825;
   color: #FFF;
   height: 60px;
@@ -260,6 +292,21 @@ article p {
   .footer-info {
     width: 20%;
     margin: 0 2.5%;
+  }
+
+}
+
+
+@media (min-width: 1024px) {
+
+
+  .menu {
+    display: block;
+  }
+
+
+  .menuMobile {
+    display: none;
   }
 
 }
