@@ -9,7 +9,6 @@ body {
   color: #87868a;
 }
 
-<<<<<<< HEAD
 header {
   padding: 20px;
   background-color: #d27825;
@@ -21,8 +20,6 @@ header {
 }
 
 
-=======
->>>>>>> d49041058814799d0c0c53e25c625b6475b8405c
 h1 {
   float: left;
   font-size: 50px;
@@ -32,11 +29,22 @@ h1 {
   margin: 32px 0;
 }
 
-.carrito{
+.carrito {
   padding: 10px 10px 5px 10px;
-  color:cornflowerblue;
+  color: cornflowerblue;
   display: flex;
-  flex-direction: row-reverse; 
+  flex-direction: row-reverse;
+}
+
+.compras {
+  font-size: 29px;
+  color: #FFF;
+  float: right;
+
+}
+
+.compras a {
+  color: #FFF;
 }
 
 
@@ -309,6 +317,10 @@ article p {
 
 
 @media (min-width: 1024px) {
+  .compras {
+    margin-top: 15px;
+
+  }
 
 
   .menu {
