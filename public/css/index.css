@@ -9,6 +9,7 @@ body {
   color: #87868a;
 }
 
+<<<<<<< HEAD
 header {
   padding: 20px;
   background-color: #d27825;
@@ -20,6 +21,8 @@ header {
 }
 
 
+=======
+>>>>>>> d49041058814799d0c0c53e25c625b6475b8405c
 h1 {
   float: left;
   font-size: 50px;
@@ -28,6 +31,14 @@ h1 {
   font-weight: bold;
   margin: 32px 0;
 }
+
+.carrito{
+  padding: 10px 10px 5px 10px;
+  color:cornflowerblue;
+  display: flex;
+  flex-direction: row-reverse; 
+}
+
 
 .container {
   max-width: 1200px;

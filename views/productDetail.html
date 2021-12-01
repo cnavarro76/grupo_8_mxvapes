@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxe S Kit</title>
-    <link rel="stylesheet" href="../public/css/styles-productDetail.css">
+    <link rel="stylesheet" href="../css/styles-productDetail.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
     
     
@@ -16,20 +19,20 @@
 
       <!-- left Column / Vape Image -->
     <div class="left-column">
-      <img src="../public/img/productDetail/Luxe-S-Black.jpg" alt="Luxe-S-Black">
-      <img src="../public/img/productDetail/Luxe-S-Silver.jpg" alt="Luxe-S-Silver">
-      <img src="../public/img/productDetail/Luxe-S-Red.jpg" alt="Luxe-S-Red">
-      <img src="../public/img/productDetail/Luxe-S-Bronze.jpg" alt="Luxe-S-Bronze">
-      <img src="../public/img/productDetail/Luxe-S-Kit.jpg" alt="Luxe-S-Kit">
+      <img src="img/productDetail/Luxe-S-Black.jpg" alt="Luxe-S-Black">
+      <img src="img/productDetail/Luxe-S-Silver.jpg" alt="Luxe-S-Silver">
+      <img src="img/productDetail/Luxe-S-Red.jpg" alt="Luxe-S-Red">
+      <img src="img/productDetail/Luxe-S-Bronze.jpg" alt="Luxe-S-Bronze">
+      <img src="img/productDetail/Luxe-S-Kit.jpg" alt="Luxe-S-Kit">
     </div>
  
     <!-- Center Column / Vape Image -->
     <div class="center-column">
-      <img data-image="black" src="../public/img/productDetail/Luxe-S-Black.jpg" alt="Luxe-S-Black">
-      <img data-image="silver" src="../public/img/productDetail/Luxe-S-Silver.jpg" alt="Luxe-S-Silver">
-      <img data-image="red" src="../public/img/productDetail/Luxe-S-Red.jpg" alt="Luxe-S-Red">
-      <img data-image="bronze" src="../public/img/productDetail/Luxe-S-Bronze.jpg" alt="Luxe-S-Bronze">
-      <img data-image="kit"  src="../public/img/productDetail/Luxe-S-Kit.jpg" alt="Luxe-S-Kit">
+      <img data-image="black" src="img/productDetail/Luxe-S-Black.jpg" alt="Luxe-S-Black">
+      <img data-image="silver" src="img/productDetail/Luxe-S-Silver.jpg" alt="Luxe-S-Silver">
+      <img data-image="red" src="img/productDetail/Luxe-S-Red.jpg" alt="Luxe-S-Red">
+      <img data-image="bronze" src="img/productDetail/Luxe-S-Bronze.jpg" alt="Luxe-S-Bronze">
+      <img data-image="kit" class="active" src="img/productDetail/Luxe-S-Kit.jpg" alt="Luxe-S-Kit">
     </div>
    
    
@@ -53,22 +56,22 @@
           <div class="color-choose">
             <div>
                 <input data-image="black" type="radio" id="black" name="color" value="black">
-                <label for="black"><span style= "color: #000000;font-weight:bold">Black</span></label>
+                <label for="black"><span></span></label>
             <div>
                 <input data-image="silver" type="radio" id="silver" name="color" value="silver">
-                <label for="silver"><span style= "color: #87868a;font-weight:bold">Silver</span></label>
+                <label for="silver"><span></span></label>
               </div>
             <div>
               <input data-image="red" type="radio" id="red" name="color" value="red" checked>
-              <label for="red"><span style= "color: #FF0000;font-weight:bold">Red</span></label>
+              <label for="red"><span></span></label>
             </div>
             <div>
               <input data-image="bronze" type="radio" id="bronze" name="color" value="bronze">
-              <label for="bronze"><span style="color: #CD7F32;font-weight:bold">Bronze</span></label>
+              <label for="bronze"><span></span></label>
             </div>
             <div>
                 <input data-image="kit" type="radio" id="kit" name="color" value="kit">
-                <label for="kit"><span style= "color: #000000">Kit</span></label>
+                <label for="kit"><span></span></label>
             </div>
           </div>
    
@@ -76,7 +79,7 @@
    
         <!-- kit Configuration -->
         <div class="kit-config">
-          <span>Kit configuration</span>
+          <span>Accesorios</span>
    
           <div class="kit-choose">
             <button>Atomizador</button>
@@ -87,17 +90,33 @@
           <a href="#">Configura tu vape</a>
         </div>
       </div>
-   
+
       <!-- Product Pricing -->
       <div class="product-price">
         <span>$999</span>
-        <a href="#" class="cart-btn">Añadir al carrito</a>
+        <div class="quantity-choose">
+          <input class="quantity" min="0" name="quantity" value="1" type="number">
+          <p></p>
+        </div>
       </div>
+          
+          <div class="product-quantity">
+            <span>Cantidad</span>
+          </div>
+      
+          <div class="cart-btn">
+            <a href="#">Añadir al carrito</a>
+          </div>
+      
+  
+
+      
     </div>
   </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="../js/script.js" charset="utf-8"></script>
 </body>
 </html>
 

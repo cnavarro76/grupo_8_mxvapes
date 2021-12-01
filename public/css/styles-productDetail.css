@@ -41,15 +41,14 @@ main {
 
 }
 
-
 /* Columns */
 
-
+/*left column*/
 .left-column {
   display: none;
   width: 10vw;
   margin-top: 30px;
-  position:relative;
+  
   
 }
 
@@ -57,38 +56,43 @@ main {
   display: none;
   width: 100%;
   flex-direction: column;
-  justify-content: center;
-  border-color: black;
+  justify-content: space-between;
+  border-color: #87868a;
   border-style: solid;
   border-width: 1px;
+  margin-bottom: 1px;
 }
-
-
-
-
 
 /* center Column */
 
 .center-column {
-  width: 100%;
-  
+  width: 90vw;
+  position: relative;
 }
 
 .center-column img {
   width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; 
 }
 
 .center-column img.active {
   opacity: 1;
+  position: relative;
 }
 
+
+/* right column */
+
 .right-column {
-  width: 100%;
-  margin-top: 20px;
-  position:relative;
+  width: 90vw;
+  margin-top: 60px;
 }
+
+
 /* Product Description */
 .product-description {
   border-bottom: 1px solid #E1E8EE;
@@ -114,6 +118,7 @@ main {
 .product-description p {
   font-size: 16px;
   text-align: justify;
+  margin-right: 10px;
   font-weight: 300;
   color: #87868a;
   line-height: 24px;
@@ -124,15 +129,17 @@ main {
   margin-bottom: 30px;
 }
 
+
 .color-choose div {
   display: inline-block;
+  margin-top: 10px;
 }
 
-.color-choose input[type="checkbox"] {
+.color-choose input[type="radio"] {
   display: none;
 }
 
-.color-choose input[type="checkbox"]+label span {
+.color-choose input[type="radio"]+label span {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -144,29 +151,29 @@ main {
 
 /*input[type="checkbox"]:checked*/
 
-.color-choose input[type="checkbox"] label span {
+.color-choose input[type="radio"] label span {
   border: 2px solid #FFFFFF;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
 }
 
-.color-choose input[type="checkbox"]#black+label span {
+.color-choose input[type="radio"]#black + label span {
   background-color: #000000;
 }
 
-.color-choose input[type="checkbox"]#silver+label span {
+.color-choose input[type="radio"]#silver + label span {
   background-color: #C0C0C0;
 }
 
-.color-choose input[type="checkbox"]#red+label span {
+.color-choose input[type="radio"]#red + label span {
   background-color: #FF0000;
 }
 
-.color-choose input[type="checkbox"]#bronze+label span {
+.color-choose input[type="radio"]#bronze + label span {
   background-color: #CD7F32;
 }
 
-.color-choose input[type="checkbox"]:checked+label span {
-  background-image: url(img/productDetail/check-icn.svg);
+.color-choose input[type="radio"]:checked + label span {
+  background-image: url(../img/productDetail/check-icn.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -206,7 +213,7 @@ main {
   text-decoration: none;
   font-size: 12px;
   position: relative;
-  margin: 10px 0px;
+  margin: 0px 0px;
   display: inline-block;
 }
 
@@ -217,24 +224,48 @@ main {
   border: 2px solid rgba(53, 142, 215, 0.5);
   display: inline-block;
   text-align: center;
-  line-height: 16px;
+  line-height: 30px;
   opacity: 0.5;
   margin-right: 5px;
 }
+
 
 /* Product Price */
 .product-price {
   display: flex;
   align-items: center;
+  position: relative;
+  top: -20px;
 }
 
 .product-price span {
   font-size: 26px;
   font-weight: 300;
   color: #444242;
-  margin-right: 20px;
 }
 
+.product-quantity {
+  position: relative;
+  left: 120px;
+}
+
+.quantity-choose {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 30px;
+} 
+
+.product-quantity span {
+  font-size: 16px;
+  font-weight: 300;
+  color: #444242;
+  position: relative;
+  left: 110px;
+  top: -17px;
+
+  
+}
 .cart-btn {
   display: inline-block;
   background-color: #d27825;
@@ -244,10 +275,18 @@ main {
   text-decoration: none;
   padding: 12px 30px;
   transition: all .5s;
+  position: relative;
+  top: -10px;
+  left: 110px;
+
+  
+  
 }
 
 .cart-btn:hover {
   background-color: #d27825;
+  border: 2px solid #86939E;
+  outline: none;
 }
 
 
@@ -255,7 +294,7 @@ main {
 
 /* Responsive */
 
-@media (min-width: 361px) {
+@media (min-width: 630px) {
 
   .container {
     flex-direction: row;
@@ -271,18 +310,17 @@ main {
     display: block;
   }
 
-  .center-column {
-    width: 45%;
-  }
-  .center-column img {
-    width: 100%;
-    flex-direction: row;
-    
-  }
 
+  .center-column {
+    width: 40%;
+  }
+  .center-column img.active {
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 100px;
+  }
 
   .right-column {
-    width: 45%;
+    width: 50%;
   }
-
-@media (min-width: 769px) {}}
+};
