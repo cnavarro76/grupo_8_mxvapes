@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/styleLogin.css">
+        <title>Login MXVapes</title>
+    </head>
+    <body>
+        <form class="formulario">
+            <h1>Iniciar sesión</h1>
+            <div>
+              <img src="img/LogReg/user.png" class="img"/>
+            </div>
+            <div class="contenedor">
+                    <div class="input-contenedor">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Usuario" class="txt">
+                    </div>
+
+                    <div class="input-contenedor">
+                        <i class="fas fa-key"></i>
+                        <input type="password" placeholder="Contraseña" class="txt"> 
+                    </div>
+                
+                <p class="ckbox"><input type="checkbox">Recordar mis credenciales</p>
+                <input class="button" type="button" onclick="location.href='index.html';" value="Iniciar sesión" />
+                <p>¿Olvidaste tu <a class="link" href="#">contraseña</a>?</p> 
+            </div>   
+        </form>
+
+        <form class="formulario2">
+          <p>¿No posees una cuenta? <a class="link" href="register.html">Crea una</a></p>
+          <p>o inicia sesión con</p>
+          <p class="iconos">
+            <a href="#"><i class="fab fa-google"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </p>
+          </form>
+    </body>
+</html>
