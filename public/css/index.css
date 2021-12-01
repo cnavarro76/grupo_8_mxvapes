@@ -9,19 +9,42 @@ body {
   color: #87868a;
 }
 
+header {
+  padding: 20px;
+  background-color: #d27825;
+
+}
+
+.clear {
+  clear: both;
+}
+
+
 h1 {
+  float: left;
   font-size: 50px;
   text-align: center;
-  color: #d27825;
+  color: #FFF;
   font-weight: bold;
   margin: 32px 0;
 }
 
-.carrito{
+.carrito {
   padding: 10px 10px 5px 10px;
-  color:cornflowerblue;
+  color: cornflowerblue;
   display: flex;
-  flex-direction: row-reverse; 
+  flex-direction: row-reverse;
+}
+
+.compras {
+  font-size: 29px;
+  color: #FFF;
+  float: right;
+
+}
+
+.compras a {
+  color: #FFF;
 }
 
 
@@ -38,7 +61,28 @@ main {
   padding: 15px;
 }
 
+
+.menuMobile {
+  float: right;
+
+}
+
+.menuMobile button .fas {
+  font-size: 30px;
+}
+
+.menu {
+  display: none;
+}
+
+.backgroundOrange {
+  background: #d27825 !important;
+  border: 0 !important;
+}
+
+
 nav {
+  display: none;
   background: #d27825;
   color: #FFF;
   height: 60px;
@@ -267,6 +311,25 @@ article p {
   .footer-info {
     width: 20%;
     margin: 0 2.5%;
+  }
+
+}
+
+
+@media (min-width: 1024px) {
+  .compras {
+    margin-top: 15px;
+
+  }
+
+
+  .menu {
+    display: block;
+  }
+
+
+  .menuMobile {
+    display: none;
   }
 
 }
