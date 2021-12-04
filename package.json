@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/cnavarro76/grupo_8_mxvapes#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }
