@@ -1,6 +1,5 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+.fondo {
+
     background: url(../img/LogReg/bgVape.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -10,7 +9,7 @@ body {
     box-sizing: border-box;
 }
 
-.contenedor {
+.formulario .contenedor {
     width: 100%;
     padding: 15px;
 }
@@ -27,41 +26,51 @@ body {
     padding: 3px;
 }
 
-h1 {
+.formulario h1 {
     text-align: center;
     color: #444242;
     font-size: 40px;
+    width: 100%;
 }
 
-.txt{
+.formulario .txt {
     font-size: 20px;
     width: 90%;
-    padding: 10px;
-    border: none;
+    padding: 5px;
+    border: 0;
+    border-bottom: 1px solid #aaa;
 }
 
-.ckbox {
+.formulario .ckbox {
+    clear: both;
     text-align: justify;
+    margin: 20px 0;
 }
 
-i{
+
+.ckbox input {
+    width: 20px;
+    margin-top: 5px;
+}
+
+.formulario i {
     font-size: 20px;
     padding: 10px;
     border: none;
 }
 
-.input-contenedor {
+.formulario .input-contenedor {
     margin-bottom: 15px;
     border: 1px solid #aaa;
 }
 
-.icon {
+.formulario .icon {
     min-width: 50px;
     text-align: center;
     color: #999;
 }
 
-.img {
+.formulario .img {
     width: 75px;
     height: 75px;
     min-width: 50px;
@@ -70,7 +79,7 @@ i{
     margin: auto;
 }
 
-.button {
+.formulario .button {
     border: none;
     width: 100%;
     color: white;
@@ -79,38 +88,46 @@ i{
     padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 17px;
 }
 
-.button:hover{
+.formulario .button:hover {
     background: #d27825;
 }
 
-p {
+.formulario p {
     text-align: center;
 }
 
-.link {
+.formulario .link {
     text-decoration: none;
     font-weight: 600;
 }
 
-.link:hover{
+.link:hover {
     color: #d27825;
 }
 
-@media(min-width:768px){
-    .formulario{
+.iconos .fab {
+    font-size: 40px;
+    margin: 0 14px;
+}
+
+
+@media(min-width:768px) {
+    .formulario {
         margin: auto;
         width: 500px;
         margin-top: 100px;
         border-radius: 2%;
+        padding: 20px;
     }
 
-    .formulario2{
-        margin: auto;
+    .formulario2 {
+        margin: 15px auto 45px;
         width: 500px;
-        margin-top: 15px;
+
         border-radius: 2%;
+        padding: 20px;
     }
 }
-

@@ -48,8 +48,8 @@ main {
   display: none;
   width: 10vw;
   margin-top: 30px;
-  
-  
+
+
 }
 
 .left-column img {
@@ -76,7 +76,7 @@ main {
   left: 0;
   top: 0;
   opacity: 0;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 .center-column img.active {
@@ -113,6 +113,7 @@ main {
   font-size: 52px;
   color: #444242;
   letter-spacing: -2px;
+  width: 100%;
 }
 
 .product-description p {
@@ -156,23 +157,23 @@ main {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
 }
 
-.color-choose input[type="radio"]#black + label span {
+.color-choose input[type="radio"]#black+label span {
   background-color: #000000;
 }
 
-.color-choose input[type="radio"]#silver + label span {
+.color-choose input[type="radio"]#silver+label span {
   background-color: #C0C0C0;
 }
 
-.color-choose input[type="radio"]#red + label span {
+.color-choose input[type="radio"]#red+label span {
   background-color: #FF0000;
 }
 
-.color-choose input[type="radio"]#bronze + label span {
+.color-choose input[type="radio"]#bronze+label span {
   background-color: #CD7F32;
 }
 
-.color-choose input[type="radio"]:checked + label span {
+.color-choose input[type="radio"]:checked+label span {
   background-image: url(../img/productDetail/check-icn.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -184,6 +185,8 @@ main {
 }
 
 .kit-choose button {
+  font-family: 'Poppins',
+    sans-serif;
   border: 2px solid #E1E8EE;
   border-radius: 6px;
   padding: 13px 20px;
@@ -254,7 +257,7 @@ main {
   align-items: center;
   position: relative;
   left: 30px;
-} 
+}
 
 .product-quantity span {
   font-size: 16px;
@@ -264,14 +267,15 @@ main {
   left: 110px;
   top: -17px;
 
-  
+
 }
+
 .cart-btn {
   display: inline-block;
   background-color: #d27825;
   border-radius: 6px;
   font-size: 16px;
-  color: #f4f4f4;
+  color: #FFF;
   text-decoration: none;
   padding: 12px 30px;
   transition: all .5s;
@@ -279,13 +283,21 @@ main {
   top: -10px;
   left: 110px;
 
-  
-  
+
+
 }
+
+
+.cart-btn a {
+  color: #FFF;
+  text-decoration: none;
+}
+
 
 .cart-btn:hover {
   background-color: #d27825;
   border: 2px solid #86939E;
+  color: #FFF;
   outline: none;
 }
 
@@ -298,7 +310,7 @@ main {
 
   .container {
     flex-direction: row;
-    
+
   }
 
   .left-column {
@@ -314,6 +326,7 @@ main {
   .center-column {
     width: 40%;
   }
+
   .center-column img.active {
     width: 90%;
     margin-left: 10%;
@@ -323,4 +336,6 @@ main {
   .right-column {
     width: 50%;
   }
-};
+}
+
+;

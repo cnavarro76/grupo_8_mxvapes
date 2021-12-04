@@ -2,8 +2,7 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
+
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: #87868a;
@@ -22,11 +21,11 @@ header {
 
 h1 {
   float: left;
-  font-size: 50px;
+  font-size: 33px;
   text-align: center;
   color: #FFF;
   font-weight: bold;
-  margin: 32px 0;
+  margin: 0;
 }
 
 .carrito {
@@ -117,14 +116,16 @@ nav ul li a {
   background-color: #d27825;
 }
 
-
+footer {
+  background-color: #FFF;
+}
 
 /*productos index*/
 .productos,
 .categorias,
 .accesorios,
 footer {
-  margin: 20px 0;
+  padding: 40px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -212,6 +213,8 @@ input {
 footer h6 {
   font-weight: bold;
   text-align: center;
+  font-size: 18px;
+  margin: 0
 }
 
 
@@ -222,6 +225,7 @@ article p {
   font-weight: bold;
   margin-top: 13px;
 }
+
 
 /* Responsive */
 @media (min-width: 300px) {
