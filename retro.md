@@ -1,3 +1,25 @@
+Starfish retrospective del segundo sprint. 
+
+Empezar a hacer:
+Visualizar las metas a alcanzar de una manera clara y acda vez más palpable, como equipo e individualmente pues esta acción mantendrá el enfoque y la motivación para dar lo mejor de cada uno. Practicar, practicar, mantener la calma y el dinamismo, practicar, resolver dudas, practicar e innovar. 
+
+Hacer más:
+Más atención a los canales de comunicación, confianza en comunicar dudas, ideas e inconformidades. 
+
+Seguir haciendo:
+Matener la buena disposición, mantener la calma pero con dinamismo, seguir utiizando recursos simples, organizados y funionales. 
+
+Hacer menos:
+Perder la calma, perder el enfoque, perder la confianza, perder la motivación, perder de vista la(s) meta(s).  
+
+Dejar de hacer:
+No tomar las clases completas del Playground antes de la clase en vivo. Faltar a clase. No atender Slack.
+
+
+
+
+
+
 Conclusiones del primer sprint (primera iteración):
 
 Aspectos positivos:
@@ -27,6 +49,10 @@ Areas de oportunidad (fuentes de mejora):
     que son interdependientes como las diferentes vistas del proyecto (archivos html linkeados
     en el Home o index.html), por lo tanto para la conlusión plena de los ejercicios estamos
     anclados al avance general de cada miembro del equipo. 
+
+
+  
+
 
 
 
