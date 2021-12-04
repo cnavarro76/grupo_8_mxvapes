@@ -1,20 +1,21 @@
+const { render } = require('ejs');
 const path = require('path');
 
 const mainController = {
     index: (req,res) => {
-        res.sendFile(path.join(__dirname,'../views/index.html'));
+        res.render('index');
     },
     login: (req,res) => {
-        res.sendFile(path.join(__dirname,'../views/login.html'));
+        res.render('login');
     },
     productCart: (req,res) => {
-        res.sendFile(path.join(__dirname,'../views/productCart.html'));
+        res.render('productCart');
     },
     productDetail: (req,res) => {
-        res.sendFile(path.join(__dirname,'../views/productDetail.html'));
+        res.render('productDetail');
     },
     register: (req,res) => {
-        res.sendFile(path.join(__dirname,'../views/register.html'));
+        res.render('register');
     },
     err404: (req,res) => {
         res.status(404).send('404 not found. <br> ¡Houston, we have a problem!');

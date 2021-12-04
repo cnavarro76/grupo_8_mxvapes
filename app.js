@@ -1,7 +1,10 @@
 const express = require('express');
 const mainRouters = require('./routers/mainRouters')
 const path = require('path');
+
 const app = express();
+
+app.set('view engine','ejs');
 
 /*Add static Files */
 app.use(express.static(path.join(__dirname, 'public')));
