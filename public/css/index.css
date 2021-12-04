@@ -210,6 +210,10 @@ input {
   margin: 0 2.5%
 }
 
+footer p {
+  text-align: justify;
+}
+
 footer h6 {
   font-weight: bold;
   text-align: center;

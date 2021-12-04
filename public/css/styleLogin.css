@@ -22,7 +22,7 @@
 
 .formulario2 {
     background: #ffff;
-    margin-top: 15px;
+    margin: 15px 0 25px 0;
     padding: 3px;
 }
 
@@ -38,7 +38,7 @@
     width: 90%;
     padding: 5px;
     border: 0;
-    border-bottom: 1px solid #aaa;
+
 }
 
 .formulario .ckbox {
@@ -126,7 +126,6 @@
     .formulario2 {
         margin: 15px auto 45px;
         width: 500px;
-
         border-radius: 2%;
         padding: 20px;
     }
