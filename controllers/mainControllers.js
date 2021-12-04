@@ -1,0 +1,24 @@
+const path = require('path');
+
+const mainController = {
+    index: (req,res) => {
+        res.sendFile(path.join(__dirname,'../views/index.html'));
+    },
+    login: (req,res) => {
+        res.sendFile(path.join(__dirname,'../views/login.html'));
+    },
+    productCart: (req,res) => {
+        res.sendFile(path.join(__dirname,'../views/productCart.html'));
+    },
+    productDetail: (req,res) => {
+        res.sendFile(path.join(__dirname,'../views/productDetail.html'));
+    },
+    register: (req,res) => {
+        res.sendFile(path.join(__dirname,'../views/register.html'));
+    },
+    err404: (req,res) => {
+        res.status(404).send('404 not found. <br> ¡Houston, we have a problem!');
+    }
+};
+
+module.exports = mainController;
