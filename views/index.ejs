@@ -5,12 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MXVApes</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/index.css">
- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+      <%- include('./partials/script-header') %>
 </head>
 <body>
 
@@ -56,28 +51,28 @@
 <div class="productos">
 
 <div class="producto">
-<img src="img/img-index/producto1.jpg">
+<a href="/productDetail"><img src="img/img-index/producto1.jpg"></a>
 <p>KITS DE INICIO</p>
 </div>
 
 <div class="producto">
-<img src="img/img-index/producto2.jpg">
+<a href="/productDetail"><img src="img/img-index/producto2.jpg"></a>
 <p>KITS DE INICIO</p>
 </div>
 
 
 <div class="producto">
-<img src="img/img-index/producto3.jpg">
+<a href="/productDetail"><img src="img/img-index/producto3.jpg"></a>
 <p>KITS DE INICIO</p>
 </div>
 
 <div class="producto">
-<img src="img/img-index/producto4.jpg">
+<a href="/productDetail"><img src="img/img-index/producto4.jpg"></a>
 <p>KITS DE INICIO</p>
 </div>
 
 <div class="producto">
-<img src="img/img-index/producto5.jpg">
+<a href="/productDetail"><img src="img/img-index/producto5.jpg"></a>
 <p>KITS DE INICIO</p>
 </div>
 
@@ -90,14 +85,14 @@
 
 <div class="categoria">
   <h3>E_JUICE</h3>
-<img src="img/img-index/juice.jpg">
+<a href="/productDetail"><img src="img/img-index/juice.jpg"></a>
 
 </div>
 
 
 <div class="categoria">
   <h3>NIC SALTS</h3>
-<img src="img/img-index/salt.jpg">
+<a href="/productDetail"><img src="img/img-index/salt.jpg"></a>
 
 </div>
 
@@ -105,7 +100,7 @@
 
 <div class="categoria">
     <h3>PODS</h3>
-<img src="img/img-index/pods.jpg">
+<a href="/productDetail"><img src="img/img-index/pods.jpg"></a>
 
 </div>
 
@@ -117,14 +112,14 @@
 
 <div class="accesorio">
       <h3>CBD</h3>
-<img src="img/img-index/cbd.jpg">
+<a href="/productDetail"><img src="img/img-index/cbd.jpg"></a>
 
 </div>
 
 
 <div class="accesorio">
    <h3>ACCESORIOS</h3>
-<img src="img/img-index/accesorios.jpg">
+<a href="/productDetail"><img src="img/img-index/accesorios.jpg"></a>
 
 </div>
 
@@ -134,28 +129,28 @@
 <div class="productos">
  
 <div class="producto">
-<img src="img/img-index/bebidas.jpg">
+<a href="/productDetail"><img src="img/img-index/bebidas.jpg"></a>
 
 </div>
 
 <div class="producto">
-<img src="img/img-index/frutales.jpg">
+<a href="/productDetail"><img src="img/img-index/frutales.jpg"></a>
 
 </div>
 
 
 <div class="producto">
-<img src="img/img-index/mentoles.jpg">
+<a href="/productDetail"><img src="img/img-index/mentoles.jpg"></a>
 
 </div>
 
 <div class="producto">
-<img src="img/img-index/tabacos.jpg">
+<a href="/productDetail"><img src="img/img-index/tabacos.jpg"></a>
 
 </div>
 
 <div class="producto">
-<img src="img/img-index/postres.jpg">
+<a href="/productDetail"><img src="img/img-index/postres.jpg"></a>
 
 </div>
 
@@ -166,20 +161,20 @@
 <div class="categorias">
 
 <article class="categoria">
-<img src="img/img-index/art1.jpg">
+<a href="/productDetail"><img src="img/img-index/art1.jpg"></a>
 <p>¿Qué es y para que sirve CBD?</p>
 </article>
 
 
 <article class="categoria">
-<img src="img/img-index/art2.jpg">
+<a href="/productDetail"><img src="img/img-index/art2.jpg"></a>
 <p>¿Qué son las sales de nicotina?</p>
 </article>
 
 
 
 <article class="categoria">
-<img src="img/img-index/art3.jpg">
+<a href="/productDetail"></a><img src="img/img-index/art3.jpg"></a>
 <p>¿Qué es el vapeo?</p>
 </article>
 
@@ -202,6 +197,12 @@
   </main>
 
   <%- include('./partials/footer') %>
+
+
+<%- include('./partials/menu') %>
+
+
+
 
 
 </body>

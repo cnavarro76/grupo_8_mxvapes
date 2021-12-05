@@ -14,6 +14,13 @@ header {
 
 }
 
+header h1 a,
+header h1 a:hover,
+header h1 a:active {
+  color: #FFF;
+  text-decoration: none;
+}
+
 .clear {
   clear: both;
 }
@@ -36,13 +43,63 @@ h1 {
 }
 
 .compras {
-  font-size: 29px;
+  display: none;
+  font-size: 18px;
   color: #FFF;
   float: right;
+  margin: 0 15px;
+
 
 }
 
+
+.compras .fas {
+  font-size: 29px;
+}
+
 .compras a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+
+.menu-bottom {
+  position: fixed;
+  bottom: 0;
+  background-color: #d27825;
+  width: 100%;
+  display: flex;
+}
+
+.menu-bottom ul {
+
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.menu-bottom ul li a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.compras-bottom {
+
+  font-size: 29px;
+  color: #FFF;
+  float: right;
+  margin: 0 15px;
+
+
+}
+
+.compras-bottom a {
   color: #FFF;
 }
 
@@ -62,7 +119,9 @@ main {
 
 
 .menuMobile {
+
   float: right;
+
 
 }
 
@@ -82,6 +141,7 @@ main {
 
 nav {
   display: none;
+  clear: both;
   background: #d27825;
   color: #FFF;
   height: 60px;
@@ -95,7 +155,7 @@ nav ul {
   padding: 0;
   margin: 0;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   align-items: center;
 }
@@ -104,7 +164,18 @@ nav ul {
 nav ul li a {
   padding: 20px;
   color: #FFF;
+  font-size: 21px;
+  font-weight: bold;
   text-decoration: none;
+
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+
+  color: #FFF;
+  text-decoration: none;
+
 }
 
 .carousel .fas {
@@ -131,12 +202,7 @@ footer {
 }
 
 
-.productos,
-.categorias,
-.accesorios {
-  margin-bottom: 100px;
 
-}
 
 .productos p,
 .categorias p,
@@ -212,13 +278,17 @@ input {
 
 footer p {
   text-align: justify;
+  margin-top: 12px;
 }
 
 footer h6 {
   font-weight: bold;
   text-align: center;
   font-size: 18px;
-  margin: 0
+  margin: 0;
+  border-bottom: 1px solid #d27825;
+  padding-bottom: 13px;
+
 }
 
 
@@ -233,6 +303,10 @@ article p {
 
 /* Responsive */
 @media (min-width: 300px) {
+
+
+
+
 
   .productos,
   footer,
@@ -276,6 +350,19 @@ article p {
 
 
 @media (min-width: 769px) {
+  .menuMobile {
+    clear: both;
+  }
+
+
+  .menu-bottom {
+    display: none;
+  }
+
+
+  .compras {
+    display: block;
+  }
 
 
   input {
@@ -326,7 +413,8 @@ article p {
 
 @media (min-width: 1024px) {
   .compras {
-    margin-top: 15px;
+    margin: 0 15px;
+    font-size: 17px;
 
   }
 

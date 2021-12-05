@@ -22,10 +22,12 @@
     padding: 3px;
 }
 
-h1 {
+.formulario h1 {
     text-align: center;
     color: #444242;
     font-size: 40px;
+    width: 100%;
+    padding: 20px 0;
 }
 
 .txt {
