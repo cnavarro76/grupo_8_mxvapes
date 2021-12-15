@@ -9,7 +9,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 
-const productsController = {
+const productController = {
     index: (req, res) => {
         res.render('index');
     },
