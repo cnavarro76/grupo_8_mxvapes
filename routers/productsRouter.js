@@ -1,10 +1,10 @@
 const express = require('express');
-const mainController = require('../controllers/productsControllers');
+const productsControllers = require('../controllers/productsControllers');
 
 const mainRouters = express.Router();
 
 
-mainRouters.get('/detail/:id/', mainController.productDetail);
+mainRouters.get('/detail/:id/', productsControllers.productDetail);
 
 
 
