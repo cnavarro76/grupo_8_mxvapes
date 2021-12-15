@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MXVApes</title>
+      <%- include('./partials/script-header') %>
+</head>
+<body>
+
+
+
+
+
+
+  <%- include('./partials/header') %>
+
+
+
+  <main>
+
+	<%for(const product of products) {%>
+	<a href="/products/detail/<%=product.id%>">
+	  <figure class="product-box_image">
+	    <img src="/img/productos/<%=product.imagenes>" alt="imagen de producto">
+	  </figure>
+	  <article class="product-box_data">
+	    <h2>FINAL PRICE</h2>
+	    <span>DISCOUNT % OFF</span>
+	    <p>PRODUCT NAME</p>
+	 
+	  </article>
+	</a>
+	<%}%>
+
+
+
+  </main>
+
+  <%- include('./partials/footer') %>
+
+
+<%- include('./partials/menu') %>
+
+
+
+
+
+</body>
+</html>

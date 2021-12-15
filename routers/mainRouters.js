@@ -8,6 +8,8 @@ mainRouters.get('/login', mainController.login);
 mainRouters.get('/productCart', mainController.productCart);
 mainRouters.get('/productDetail', mainController.productDetail);
 mainRouters.get('/register', mainController.register);
+mainRouters.get('/products', mainController.products);
 mainRouters.get('*', mainController.err404);
+
 
 module.exports = mainRouters;
