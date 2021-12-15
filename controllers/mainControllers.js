@@ -29,11 +29,6 @@ const mainController = {
         res.status(404).send('404 not found. <br> ¡Houston, we have a problem!');
     },
 
-    products: (req, res) => {
-        res.render('products', {
-            products
-        })
-    },
 
 
 
