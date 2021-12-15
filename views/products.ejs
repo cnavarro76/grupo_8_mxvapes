@@ -19,22 +19,20 @@
 
 
   <main>
-
+    <div class="accesorios">
+<div class="accesorio">
 	<%for(const product of products) {%>
-	<a href="/products/detail/<%=product.id%>">
-	  <figure class="product-box_image">
-	    <img src="/img/productos/<%=product.imagenes>" alt="imagen de producto">
-	  </figure>
-	  <article class="product-box_data">
-	    <h2>FINAL PRICE</h2>
-	    <span>DISCOUNT % OFF</span>
-	    <p>PRODUCT NAME</p>
-	 
-	  </article>
-	</a>
+
+	    <a href="/products/detail/<%=product.id%>"><img src="/img/productos/<%=product.imagenes%>" alt="imagen de producto"></a>
+<p>Categoría:<%=product.categoriaProducto%></p>
+<p>Descripción<%=product.descripcion%></p>
+	  <p>Precio:<%=product.precio%></p>
+    <p>Descuento:<%=product.discount%></p>
+
 	<%}%>
 
-
+  </div>
+</div>
 
   </main>
 

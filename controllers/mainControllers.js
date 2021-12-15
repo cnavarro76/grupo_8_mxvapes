@@ -33,7 +33,10 @@ const mainController = {
         res.render('products', {
             products
         })
-    }
+    },
+
+
+    
 
 
 };
