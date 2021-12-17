@@ -60,6 +60,7 @@
 }
 
 .formulario .input-contenedor {
+    clear: both;
     margin-bottom: 15px;
     border: 1px solid #aaa;
 }

@@ -24,6 +24,11 @@ const productController = {
     },
 
 
+    productEdit: (req, res) => {
+        res.render('products-edit')
+    },
+
+
 
 };
 

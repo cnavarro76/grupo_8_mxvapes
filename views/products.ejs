@@ -23,7 +23,7 @@
 <div class="accesorio">
 	<%for(const product of products) {%>
 
-	    <a href="/products/detail/<%=product.id%>"><img src="/img/productos/<%=product.imagenes%>" alt="imagen de producto"></a>
+	    <a href="/products/<%=product.id%>"><img src="/img/productos/<%=product.imagenes%>" alt="imagen de producto"></a>
 <p>Categoría:<%=product.categoriaProducto%></p>
 <p>Descripción<%=product.descripcion%></p>
 	  <p>Precio:<%=product.precio%></p>

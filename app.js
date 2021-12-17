@@ -16,5 +16,7 @@ app.listen(process.env.PORT || 3000, function () {
 
 /*require routers*/
 
+
+
+app.use('/products', productsRouter);
 app.use('/', mainRouters);
-app.use('/products', productsRouter)
