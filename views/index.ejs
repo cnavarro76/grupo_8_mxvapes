@@ -48,40 +48,26 @@
   </a>
 </div>
 
+
+<center>
+          <div class="cart-btn">
+            <a href="/products">Ver todos los productos</a>
+          </div>
+</center>
+
 <div class="productos">
-
+	<%for(const product of products) {%>
 <div class="producto">
-<a href="/productDetail"><img src="img/img-index/producto1.jpg"></a>
-<p>KITS DE INICIO</p>
+  <h3><%=product.name%></h3>
+ <a href="/products/<%=product.id%>"><img src="/img/productos/<%=product.imagenes%>" alt="imagen de producto"></a>
+
 </div>
-
-<div class="producto">
-<a href="/productDetail"><img src="img/img-index/producto2.jpg"></a>
-<p>KITS DE INICIO</p>
-</div>
-
-
-<div class="producto">
-<a href="/productDetail"><img src="img/img-index/producto3.jpg"></a>
-<p>KITS DE INICIO</p>
-</div>
-
-<div class="producto">
-<a href="/productDetail"><img src="img/img-index/producto4.jpg"></a>
-<p>KITS DE INICIO</p>
-</div>
-
-<div class="producto">
-<a href="/productDetail"><img src="img/img-index/producto5.jpg"></a>
-<p>KITS DE INICIO</p>
-</div>
-
-
+	<%}%>
 </div>
 
 
 
-<div class="categorias">
+<!--<div class="categorias">
 
 <div class="categoria">
   <h3>E_JUICE</h3>
@@ -105,10 +91,10 @@
 </div>
 
 
-</div>
+</div>-->
 
 
-<div class="accesorios">
+<!--<div class="accesorios">
 
 <div class="accesorio">
       <h3>CBD</h3>
@@ -123,33 +109,33 @@
 
 </div>
 
-</div>
+</div>-->
 
   <h2><strong>ENCUENTRA TU SABOR FAVORITO</strong></h2>
-<div class="productos">
+<div class="sabores">
  
-<div class="producto">
+<div class="sabor">
 <a href="/productDetail"><img src="img/img-index/bebidas.jpg"></a>
 
 </div>
 
-<div class="producto">
+<div class="sabor">
 <a href="/productDetail"><img src="img/img-index/frutales.jpg"></a>
 
 </div>
 
 
-<div class="producto">
+<div class="sabor">
 <a href="/productDetail"><img src="img/img-index/mentoles.jpg"></a>
 
 </div>
 
-<div class="producto">
+<div class="sabor">
 <a href="/productDetail"><img src="img/img-index/tabacos.jpg"></a>
 
 </div>
 
-<div class="producto">
+<div class="sabor">
 <a href="/productDetail"><img src="img/img-index/postres.jpg"></a>
 
 </div>

@@ -20,6 +20,8 @@
     padding: 3px;
 }
 
+
+
 .formulario2 {
     background: #ffff;
     margin: 15px 0 25px 0;
@@ -63,6 +65,7 @@
     clear: both;
     margin-bottom: 15px;
     border: 1px solid #aaa;
+
 }
 
 .formulario .icon {
@@ -113,6 +116,22 @@
     font-size: 40px;
     margin: 0 14px;
 }
+
+.formulario.edicion .input-contenedor {
+    clear: both;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    min-height: 44px
+}
+
+.input-contenedor textarea {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
 
 
 @media(min-width:768px) {

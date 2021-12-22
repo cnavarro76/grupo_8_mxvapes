@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
+
+        <title>Login MXVapes</title>
+ <link rel="stylesheet" href="/css/styleLogin.css">
+      <%- include('./partials/script-header') %>
+
+
+
+    </head>
+    <body class="fondo"> 
+
+
+<%- include('./partials/header') %>
+
+        <form action="/products" method="POST" class="formulario edicion">
+            <h1>Creación productos<br><br></h1>
+           
+            <div class="contenedor">
+
+<div class="input-contenedor"><label>Imagen</label></div>
+
+
+                    <div class="input-contenedor">
+
+<label>Categoría</label>
+ <select name="categoria" id="categoria">
+  <option value="volvo">Accesorios</option>
+  <option value="saab">E-juice</option>
+  <option value="mercedes">Pods</option>
+  <option value="audi">CBD</option>
+  <option value="audi">Kits</option>
+</select>
+                    </div>
+
+
+                      <div class="input-contenedor">
+
+<textarea placeholder="Descripción" name="descripcion"></textarea>
+
+                      </div>
+
+<div class="input-contenedor">
+   
+     <input type="text" placeholder="Precio" name="precio" class="txt">
+</div>
+                    
+<div class="input-contenedor">
+ <input type="text" placeholder="Descuento" name="descuento" class="txt">
+</div>
+                
+               <input type="submit" value="Crear producto">  
+            </div>   
+        </form><br><br>
+
+    
+
+            <%- include('./partials/footer') %>
+            <%- include('./partials/menu') %>
+    </body>
+</html>

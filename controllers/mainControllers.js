@@ -10,8 +10,12 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const mainController = {
+
     index: (req, res) => {
-        res.render('index');
+        let id = req.params.id;
+        res.render('index', {
+            products
+        });
     },
     login: (req, res) => {
         res.render('login');
@@ -20,11 +24,19 @@ const mainController = {
         res.render('productCart');
     },
     productDetail: (req, res) => {
-        res.render('productDetail');
+        let id = req.params.id;
+        res.render('productDetail', {
+            product: products[id - 1]
+        });
     },
     register: (req, res) => {
         res.render('register');
     },
+
+    editarProducto: (req, res) => {
+        res.render('products-edit');
+    },
+
     err404: (req, res) => {
         res.status(404).send('404 not found. <br> ¡Houston, we have a problem!');
     },

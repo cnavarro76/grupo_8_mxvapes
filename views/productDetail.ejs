@@ -18,39 +18,49 @@
     <main class="container">
 
       <!-- left Column / Vape Image -->
-    <div class="left-column">
+   <!-- <div class="left-column">
       <img src="/img/productDetail/Luxe-S-Black.jpg" alt="Luxe-S-Black">
       <img src="/img/productDetail/Luxe-S-Silver.jpg" alt="Luxe-S-Silver">
       <img src="/img/productDetail/Luxe-S-Red.jpg" alt="Luxe-S-Red">
       <img src="/img/productDetail/Luxe-S-Bronze.jpg" alt="Luxe-S-Bronze">
       <img src="/img/productDetail/Luxe-S-Kit.jpg" alt="Luxe-S-Kit">
-    </div>
+    </div>-->
  
     <!-- Center Column / Vape Image -->
     <div class="center-column">
-      <img data-image="black" src="/img/productDetail/Luxe-S-Black.jpg" alt="Luxe-S-Black">
+
+<img src="/img/productos/<%=product.imagenes%>" alt="imagen de producto">
+
+     <!-- <img data-image="black" src="/img/productDetail/Luxe-S-Black.jpg" alt="Luxe-S-Black">
       <img data-image="silver" src="/img/productDetail/Luxe-S-Silver.jpg" alt="Luxe-S-Silver">
       <img data-image="red" src="/img/productDetail/Luxe-S-Red.jpg" alt="Luxe-S-Red">
       <img data-image="bronze" src="/img/productDetail/Luxe-S-Bronze.jpg" alt="Luxe-S-Bronze">
-      <img data-image="kit" class="active" src="/img/productDetail/Luxe-S-Kit.jpg" alt="Luxe-S-Kit">
+      <img data-image="kit" class="active" src="/img/productDetail/Luxe-S-Kit.jpg" alt="Luxe-S-Kit">-->
+ 
+    
     </div>
    
    
     <!-- Right Column -->
     <div class="right-column">
-   
+   <p><span class="title-p">Categoría:</span> <%=product.categoriaProducto%></p>
+<p><span class="descripcion-p">Descripción</span> <%=product.descripcion%></p>
+	  <p><span class="title-p">Precio:</span> <%=product.precio%></p>
+    <p><span class="title-p">Descuento: </span><%=product.discount%></p>
       <!-- Product Description -->
+
+      <!--
       <div class="product-description">
         <span>Vape Kits</span>
         <h1>Luxe-S-Kit</h1>
         <p>LUXE-S 220W Starter Kit con SKRR-S Tank 8ml es la nueva versión de LUXE. El mod de caja de LUXE-S es alimentado por baterías de alta velocidad dual y soporta 220 vatios. El mod utiliza una puerta de batería magnética intercambiable, lo que facilita el reemplazo de la batería.</p>
-      </div>
+      </div>-->
    
       <!-- Product Configuration -->
-      <div class="product-configuration">
+      <!-- <div class="product-configuration">-->
    
         <!-- Product Color -->
-        <div class="product-color">
+        <!-- <div class="product-color">
           <span>Color</span>
    
           <div class="color-choose">
@@ -75,10 +85,10 @@
             </div>
           </div>
    
-        </div>
+        </div>-->
    
         <!-- kit Configuration -->
-        <div class="kit-config">
+        <!-- <div class="kit-config">
           <span>Accesorios</span>
    
           <div class="kit-choose">
@@ -89,10 +99,10 @@
    
           <a href="#">Configura tu vape</a>
         </div>
-      </div>
+      </div>-->
 
       <!-- Product Pricing -->
-      <div class="product-price">
+       <!--<div class="product-price">
         <span>$999</span>
         <div class="quantity-choose">
           <input class="quantity" min="0" name="quantity" value="1" type="number">
@@ -102,7 +112,7 @@
           
           <div class="product-quantity">
             <span>Cantidad</span>
-          </div>
+          </div>-->
       
           <div class="cart-btn">
             <a href="/productCart">Añadir al carrito</a>
@@ -110,8 +120,12 @@
       
   
 
+          <div class="cart-btn">
+            <a href="<%=product.id%>/edit">Editar producto</a>
+          </div>
       
     </div>
+
   </main>
 
 <%- include('./partials/footer') %>

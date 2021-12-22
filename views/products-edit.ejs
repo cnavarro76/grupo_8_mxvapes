@@ -18,34 +18,53 @@
 
 <%- include('./partials/header') %>
 
-        <form class="formulario">
+        <form action='/products?_method=PUT' method='POST' class="formulario edicion">
             <h1>Edición productos<br><br></h1>
            
             <div class="contenedor">
-                    <div class="input-contenedor">
-                        
-                        <input type="text" placeholder="Usuario" class="txt"><i class="fas fa-user"></i>
-                    </div>
+
+<div class="input-contenedor">
+
+    <input type="file" name="imagen1" />
+	<input type="submit" name="subir-imagen" value="Enviar imagen" />
+
+
+</div>
+
 
                     <div class="input-contenedor">
-                        
-                        <input type="password" placeholder="Contraseña" class="txt"> <i class="fas fa-key"></i>
+
+<label>Categoría</label>
+ <select name="categoria" id="categoria">
+  <option value="volvo">Accesorios</option>
+  <option value="saab">E-juice</option>
+  <option value="mercedes">Pods</option>
+  <option value="audi">CBD</option>
+  <option value="audi">Kits</option>
+</select>
                     </div>
+
+
+                      <div class="input-contenedor">
+
+<textarea placeholder="Descripción"></textarea>
+
+                      </div>
+
+<div class="input-contenedor">
+   
+     <input type="text" placeholder="Precio" class="txt">
+</div>
+                    
+<div class="input-contenedor">
+ <input type="text" placeholder="Descuento" class="txt">
+</div>
                 
-                <p class="ckbox"><input type="checkbox">Recordar mis credenciales</p>
-                <input class="button" type="button" onclick="location.href='index.html';" value="Iniciar sesión" />
-                <p>¿Olvidaste tu <a class="link" href="#">contraseña</a>?</p> 
+               <input type="submit" value="Editar producto">   
             </div>   
-        </form>
+        </form><br><br>
 
-        <form class="formulario2">
-          <p>¿No posees una cuenta? <a class="link" href="register.html">Crea una</a></p>
-          <p>o inicia sesión con</p>
-          <p class="iconos">
-            <a href="#"><i class="fab fa-google"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-          </p>
-          </form>
+    
 
             <%- include('./partials/footer') %>
             <%- include('./partials/menu') %>

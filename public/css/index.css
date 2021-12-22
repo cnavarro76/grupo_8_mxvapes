@@ -196,13 +196,16 @@ footer {
 .productos,
 .categorias,
 .accesorios,
+.sabores,
 footer {
   padding: 40px 0;
   display: flex;
   justify-content: space-between;
 }
 
-
+.productos {
+  flex-wrap: wrap;
+}
 
 
 .productos p,
@@ -230,6 +233,16 @@ footer {
 .accesorio img {
   width: 100%;
   border: 2px solid #d27825;
+}
+
+.sabor {
+
+  width: 300px;
+}
+
+
+.sabor img {
+  width: 100%;
 }
 
 
@@ -271,6 +284,10 @@ input {
   font-size: 30px;
 }
 
+footer {
+  clear: both;
+}
+
 
 .footer-info {
   width: 20%;
@@ -302,14 +319,64 @@ article p {
 }
 
 
+.producto-m {
+  float: left;
+  width: 96%;
+  margin: 0 2%;
+
+}
+
+
+.producto-m img {
+  width: 100%;
+}
+
+
+.title-p {
+  color: #d27825;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.descripcion-p {
+  color: #d27825;
+  font-weight: bold;
+  font-size: 20px;
+  clear: both;
+  text-transform: uppercase;
+}
+
+.cart-btn {
+  display: inline-block;
+  background-color: #d27825;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+}
+
+.cart-btn a,
+.cart-btn a:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
+
 /* Responsive */
 @media (min-width: 300px) {
 
-
+  .sabor {
+    width: 50%;
+    margin: 30px auto;
+  }
 
 
 
   .productos,
+  .sabores,
   footer,
   .accesorios,
   .categorias {
@@ -351,6 +418,12 @@ article p {
 
 
 @media (min-width: 769px) {
+
+
+  .producto-m {
+    width: 46%;
+  }
+
   .menuMobile {
     clear: both;
   }
@@ -379,13 +452,19 @@ article p {
   .productos,
   footer,
   .accesorios,
-  .categorias {
+  .categorias,
+  .sabores {
     flex-direction: row;
   }
 
 
-  .producto {
+  .sabor {
     width: 17%;
+
+  }
+
+  .producto {
+    width: 30%;
     margin: 20px auto;
   }
 

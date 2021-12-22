@@ -13,7 +13,10 @@ const productController = {
 
 
     productDetail: (req, res) => {
-        res.render("productDetail")
+        let id = req.params.id;
+        res.render("productDetail", {
+            product: products[id - 1]
+        })
     },
 
 
@@ -28,7 +31,23 @@ const productController = {
         res.render('products-edit')
     },
 
+    productCreate: (req, res) => {
+        res.render('products-create')
+    },
 
+
+    productSave: (req, res) => {
+        console.log("envio por post");
+        res.send(req.body);
+        res.redirect('/')
+    },
+
+
+    productPut: (req, res) => {
+
+        res.send(req.body);
+        res.redirect('/')
+    }
 
 };
 
