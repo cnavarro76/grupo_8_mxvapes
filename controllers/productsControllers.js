@@ -37,9 +37,29 @@ const productController = {
 
 
     productSave: (req, res) => {
-        console.log("envio por post");
-        res.send(req.body);
-        res.redirect('/')
+
+        let  productSave = {
+            id: req.body.id,
+            categoria : req.body.categoria,
+            descripcion : req.body.deescripciion,
+            precio: req.body.precio,
+            descuento: req.body.descuento
+        }
+
+        let productRead = fs.readFileSync(productsFilePath, 'utf-8' );
+        let productArray; 
+
+        if(productRead == ''){
+            productArray = []
+        }else{productArray = JSON.parse(productRead);}
+
+        productArray.push(productSave);
+
+        productArray = JSON.stringify(productArray);
+        fs.writeFileSync(productsFilePath, productArray );
+        
+        res.redirect('/');
+
     },
 
 
