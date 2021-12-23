@@ -1,3 +1,24 @@
+Retrospectiva del Sprint 3:
+
+1.- Start Doing (comenzar a hacer): 
+curiosear más en el código de páginas que sean de nuestro interés para adquirir nuevos horizontes y motivación.
+
+2.- More of (hacer más): 
+Mantener el enfoque en que más allá de replicar lo que en el curso se muestra, hay que comprender la lógica de los procesos para apropiarnos verdaderamente de este conocimiento, perseverar y formarnos como profesionles de la programación.
+
+3.- Keep Doing (seguir haciendo): 
+mantener la buena disposición e independencia aún a costa de rezago o errores propios o de los demás integrantes del equipo
+
+4.- Less of (hacer menos):
+No consolidar dudas claras para expresarlas a los profesores, compañeros y equipo. No tener vergûenza pues estamos en un proceso  rigurozo de aprendizaje.
+
+5.- Stop Doing (dejar de hacer): 
+No tolerar la frustración.
+
+
+
+
+
 Starfish retrospective del segundo sprint. 
 
 Empezar a hacer:
