@@ -45,7 +45,7 @@
     <div class="right-column">
    <p><span class="title-p">Categoría:</span> <%=product.categoriaProducto%></p>
 <p><span class="descripcion-p">Descripción</span> <%=product.descripcion%></p>
-	  <p><span class="title-p">Precio:</span> <%=product.precio%></p>
+	  <p><span class="title-p">Precio:</span> <%= toThousand (product.precio)%></p>
     <p><span class="title-p">Descuento: </span><%=product.discount%></p>
       <!-- Product Description -->
 
@@ -121,7 +121,12 @@
   
 
           <div class="cart-btn">
-            <a href="<%=product.id%>/edit">Editar producto</a>
+            <a href="edit/<%=product.id%>">Editar producto</a>
+          </div>
+          
+          <div class="cart-btn">
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+              <button type="submit">ELIMINAR</button>
           </div>
       
     </div>

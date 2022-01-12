@@ -26,7 +26,7 @@
 	    <a href="/products/<%=product.id%>"><img src="/img/productos/<%=product.imagenes%>" alt="imagen de producto"></a>
 <p><span class="title-p">Categoría:</span> <%=product.categoriaProducto%></p>
 <p><span class="descripcion-p">Descripción </span><br><hr> <%=product.descripcion%></p>
-	  <p><span class="title-p">Precio:</span> <%=product.precio%></p>
+	  <p><span class="title-p">Precio:</span> <%= toThousand (product.precio) %></p>
     <p><span class="title-p">Descuento:</span> <%=product.discount%></p>
 </div>
 	<%}%>

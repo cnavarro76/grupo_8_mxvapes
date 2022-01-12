@@ -1,72 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/7a57e2dd08.js"
+      crossorigin="anonymous"
+    ></script>
 
-        <title>Login MXVapes</title>
- <link rel="stylesheet" href="/css/styleLogin.css">
-      <%- include('./partials/script-header') %>
+    <title>Login MXVapes</title>
+    <link rel="stylesheet" href="/css/styleLogin.css" />
+    <%- include('./partials/script-header') %>
+  </head>
+  <body class="fondo">
+    <%- include('./partials/header') %>
 
+    <form
+      action="/products/edit/<%= productToEdit.id %>?_method=PUT"
+      method="POST"
+      enctype="multipart/form-data"
+      class="formulario edicion"
+    >
+      <h1>Edición productos<br /><br /></h1>
 
+      <div class="contenedor">
+        <div class="input-contenedor">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Nombre"
+            class="form-input"
+            value="<%=productToEdit.name %>"
+          />
+        </div>
 
-    </head>
-    <body class="fondo"> 
+        <div class="input-contenedor">
+          <label for="imagen" class="form-label">Cambia la imagen</label>
+          <input type="file" name="imagenes" id="file" />
+        </div>
 
+        <div class="input-contenedor">
+          <label>Categoría</label>
+          <select name="categoriaProducto" id="categoria">
+            <option value="Accesorios">Accesorios</option>
+            <option value="E-juice">E-juice</option>
+            <option value="Pods">Pods</option>
+            <option value="CBD">CBD</option>
+            <option value="Kits">Kits</option>
+          </select>
+        </div>
 
-<%- include('./partials/header') %>
+        <div class="input-contenedor">
+          <textarea placeholder="Descripción" name="descripcion">
+<%= productToEdit.descripcion %></textarea
+          >
+        </div>
 
-        <form action='/products?_method=PUT' method='POST' class="formulario edicion">
-            <h1>Edición productos<br><br></h1>
-           
-            <div class="contenedor">
+        <div class="input-contenedor">
+          <input
+            type="text"
+            placeholder="Precio"
+            name="precio"
+            class="txt"
+            value="<%= productToEdit.precio %>"
+          />
+        </div>
 
-<div class="input-contenedor">
+        <div class="input-contenedor">
+          <input
+            type="text"
+            placeholder="Descuento"
+            name="discount"
+            class="txt"
+            value="<%= productToEdit.discount %>"
+          />
+        </div>
 
-    <input type="file" name="imagen1" />
-	<input type="submit" name="subir-imagen" value="Enviar imagen" />
+        <input type="submit" value="Editar producto" />
+      </div>
+    </form>
+    <br /><br />
 
-
-</div>
-
-
-                    <div class="input-contenedor">
-
-<label>Categoría</label>
- <select name="categoria" id="categoria">
-  <option value="volvo">Accesorios</option>
-  <option value="saab">E-juice</option>
-  <option value="mercedes">Pods</option>
-  <option value="audi">CBD</option>
-  <option value="audi">Kits</option>
-</select>
-                    </div>
-
-
-                      <div class="input-contenedor">
-
-<textarea placeholder="Descripción"></textarea>
-
-                      </div>
-
-<div class="input-contenedor">
-   
-     <input type="text" placeholder="Precio" class="txt">
-</div>
-                    
-<div class="input-contenedor">
- <input type="text" placeholder="Descuento" class="txt">
-</div>
-                
-               <input type="submit" value="Editar producto">   
-            </div>   
-        </form><br><br>
-
-    
-
-            <%- include('./partials/footer') %>
-            <%- include('./partials/menu') %>
-    </body>
+    <%- include('./partials/footer') %> <%- include('./partials/menu') %>
+  </body>
 </html>

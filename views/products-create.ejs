@@ -18,23 +18,28 @@
 
 <%- include('./partials/header') %>
 
-        <form action="/products/create" method="POST" class="formulario edicion">
+        <form action="/products/create" method="POST" enctype="multipart/form-data" class="formulario edicion">
             <h1>Creación productos<br><br></h1>
             
             
              <div class="contenedor">  
 
+                    <div class="input-contenedor">
+                    <input type="text" placeholder="Nombre" name="name" class="txt">
+                    </div>
+
                     <div class="input-id">
                         <input type="text" name="id" placeholder="id_number"> 
                     </div>
 
-                    <div class="input-contenedor"><label>Imagen</label></div>
+                    <div class="input-contenedor"><label for="imagen" class="form-label">Sube la imagen</label>
+                        <input type="file" name="imagenes" id="file"></div>
 
 
                     <div class="input-contenedor">
 
                     <label>Categoría</label>
-                    <select name="categoria" id="categoria">
+                    <select name="categoriaProducto" id="categoria">
                      <option value="Accesorios">Accesorios</option>
                      <option value="E-juice">E-juice</option>
                      <option value="Pods">Pods</option>
@@ -56,7 +61,7 @@
                     </div>
                     
                     <div class="input-contenedor">
-                    <input type="text" placeholder="Descuento" name="descuento" class="txt">
+                    <input type="text" placeholder="Descuento" name="discount" class="txt">
                     </div>
                 
                     <input type="submit" value="CrearProducto">
