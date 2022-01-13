@@ -35,10 +35,12 @@ const mainController = {
 
     editarProducto: (req, res) => {
         res.render('products-edit');
+        
     },
 
     err404: (req, res) => {
-        res.status(404).send('404 not found. <br> ¡Houston, we have a problem!');
+       res.render('err404');
+        
     },
 
 

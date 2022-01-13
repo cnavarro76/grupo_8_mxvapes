@@ -247,9 +247,26 @@ footer {
 
 
 .newsletter {
+  position: relative;
   width: 80%;
   margin: 20px auto;
+  align-items: center;
+  
 }
+
+input[type=text] {
+  margin-bottom: 20px;
+  padding: 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+ 
+input[type=checkbox] {
+  margin-top: 16px;
+  
+}
+
 
 
 h2 {
@@ -278,10 +295,14 @@ input {
 
 .btn-enviar {
   width: 100%;
+  position: relative;
   background: #d27825;
   color: #FFF;
   border: 0;
   font-size: 30px;
+  right: 50px;
+  
+  
 }
 
 footer {

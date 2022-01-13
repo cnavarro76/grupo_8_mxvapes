@@ -1,0 +1,81 @@
+html,
+.fondo {
+    
+    background: url(../img/404/error404.jpg);
+    background-size: ;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
+
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    color: var(--color);
+    perspective: 1200px;
+  }
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    background: var(--button);
+    color: var(--button-color);
+    padding: 1rem 4rem;
+    border-radius: 4rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.05rem;
+  }
+  p {
+    font-weight: 100;
+  }
+  h1 {
+
+    font-size: clamp(15rem, 10vmin, 10rem);
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    margin-bottom: 1rem;
+    letter-spacing: 1rem;
+    color: #c4c2cc;
+  }
+
+  h2 {
+    font-size: clamp(10rem, 10vmin, 10rem);
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    margin-bottom: 1rem;
+    letter-spacing: 1rem;
+    color: #c4c2cc;
+  }
+
+  h3 {
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    
+    
+    color: #c4c2cc;
+  }
+  .info {
+    text-align: center;
+    line-height: 1.5;
+    max-width: clamp(16rem, 45vmin, 25rem);
+    color: white;
+  }
+  .info > p {
+    margin-bottom: 1rem;
+    color:white;
+  
+  }
+  
