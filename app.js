@@ -1,6 +1,7 @@
 const express = require('express');
 const mainRouters = require('./routers/mainRouters')
 const productsRouter = require('./routers/productsRouter');
+const usersRouter = require('./routers/usersRouter');
 const path = require('path');
 const methodOverride = require('method-override');
 
@@ -19,6 +20,6 @@ app.listen(process.env.PORT || 3000, function () {
 })
 
 /*require routers*/
-
+app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/', mainRouters);

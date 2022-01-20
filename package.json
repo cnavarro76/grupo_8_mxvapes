@@ -2,7 +2,7 @@
   "name": "grupo_8_mxvapes",
   "version": "1.0.0",
   "description": "Proyecto Integrador Digital House. Pagina web de venta de vapes y subproductos en México.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/cnavarro76/grupo_8_mxvapes#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "debug": "^4.3.3",
     "ejs": "^3.1.6",

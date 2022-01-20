@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link rel="stylesheet" href="css/styleRegistro.css">
+         <link rel="stylesheet" href="/css/styleRegistro.css">
 
         <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
   
 
  
-                      <link rel="stylesheet" href="css/index.css">
+                      <link rel="stylesheet" href="/css/index.css">
         <title>Registro MXVapes</title>
     </head>
     <body class="fondo">
@@ -28,37 +28,45 @@
 
 
 
-        <form class="formulario">
+        <form action="/users/register" method="POST" enctype="multipart/form-data" class="formulario edicion">
             <h1>Registrate</h1>
             <div class="contenedor">
+                    <div class="input-contenedor"><label for="imagen" class="form-label">Sube tu imagen de usuario</label>
+                        <input type="file" name="imagenes" id="file">
+                    </div>
                     <div class="input-contenedor">
                        
-                        <input type="text" placeholder="Nombre" class="txt"> <i class="fas fa-user"></i>
+                        <input type="text" name="nombre" placeholder="Nombre" class="txt"> <i class="fas fa-user"></i>
                     </div>
 
                     <div class="input-contenedor">
                         
-                        <input type="text" placeholder="Apellidos" class="txt"><i class="fas fa-user"></i>
+                        <input type="text" name="apellidos" placeholder="Apellidos" class="txt"><i class="fas fa-user"></i>
                     </div>
 
                     <div class="input-contenedor">
-                       
-                        <input type="text" placeholder="Usuario" class="txt"> <i class="fas fa-user"></i>
+ 
+                        <input type="text" name="correoElectronico" placeholder="E - Mail" class="txt">  <i class="fas fa-envelope"></i>
                     </div>
-
+                    
                     <div class="input-contenedor">
                        
-                        <input type="text" placeholder="E - Mail" class="txt">  <i class="fas fa-envelope"></i>
+                        <input type="text" name="usuario" placeholder="Usuario" class="txt"> <i class="fas fa-user"></i>
                     </div>
 
                     <div class="input-contenedor">
                         
-                        <input type="password" placeholder="Contraseña" class="txt"> <i class="fas fa-key"></i>
+                        <input type="password" name="contrasenia" placeholder="Contraseña" class="txt"> <i class="fas fa-key"></i>
                     </div>
 
-                    <input class="button" type="button" onclick="location.href='login.html';" value="Registrar" />
+                    <div class="input-contenedor">
+
+                        <input type="text" name="direccion" placeholder="Direccion" class="txt"> <i class="fas fa-map-marked-alt"></i>
+                    </div>
+
+                    <input class="button" type="submit" value="Registrar" />
                 <p class="terminos"><input class="ck" type="checkbox">Acepto los <a class="link" href="#">Términos y condiciones de uso</a></p>
-                <p>¿Ya tienes cuenta? <a class="link" href="login.html">Inicia sesión</a></p>
+                <p>¿Ya tienes cuenta? <a class="link" href="/login">Inicia sesión</a></p>
             </div>
         </form>
 
