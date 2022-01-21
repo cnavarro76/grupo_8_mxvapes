@@ -30,11 +30,9 @@ main {
   justify-content: space-between;
 }
 
-
 .producto {
   width: 17%;
 }
-
 
 .producto img {
   width: 100%;
@@ -279,11 +277,6 @@ main {
   text-decoration: none;
   padding: 12px 30px;
   transition: all .5s;
-  
- 
-
-
-
 }
 
 
@@ -300,6 +293,27 @@ main {
   outline: none;
 }
 
+.cart-btn-button {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 12px 30px;
+  background-color: red;
+  font-size: 14px;
+  transition: all .5s;
+}
+
+.cart-btn-button:hover {
+  background-color: red;
+  border: 2px solid #86939E;
+  color: #FFF;
+  outline: none;
+}
+
+.cart-btn-button button {
+  border: 1px solid red;
+  color: white;
+  background-color: red;
+}
 
 
 

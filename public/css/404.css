@@ -2,80 +2,87 @@ html,
 .fondo {
     
     background: url(../img/404/error404.jpg);
-    background-size: ;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100% 80%;
+    background-size: 100% 100%;
 
 }
 .buttons {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     margin-top: 10px;
+    margin-left: 4rem;
   }
 
-  }
+
   body {
-    min-height: 100vh;
     display: flex;
-    font-family: 'Roboto', sans-serif;
+    font-family: Poppins Light300, Fira Sans bold 700;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
-    background: var(--bg);
-    color: var(--color);
-    perspective: 1200px;
+    color: #e2e2e2;
   }
   a {
     text-transform: uppercase;
     text-decoration: none;
-    background: var(--button);
-    color: var(--button-color);
     padding: 1rem 4rem;
     border-radius: 4rem;
     font-size: 0.875rem;
     letter-spacing: 0.05rem;
+    color:black;
   }
   p {
     font-weight: 100;
+    justify-content: center;
   }
   h1 {
-
-    font-size: clamp(15rem, 10vmin, 10rem);
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
+    
+    font-size: clamp(8rem, 10vmin, 8rem);
+    font-family: Poppins Light300, Fira Sans bold 700;
     margin-bottom: 1rem;
+    margin-left: 6rem;
+    margin-top: 15rem;
     letter-spacing: 1rem;
-    color: #c4c2cc;
+    color: #e2e2e2;
   }
 
   h2 {
-    font-size: clamp(10rem, 10vmin, 10rem);
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    margin-bottom: 1rem;
+    font-size: clamp(5rem, 10vmin, 5rem);
+    font-family: Poppins Light300, Fira Sans bold 700;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+    margin-top: -3rem;
     letter-spacing: 1rem;
-    color: #c4c2cc;
+    color: #e2e2e2;
   }
 
   h3 {
     font-size: 40px;
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
+    font-family: Poppins Light300, Fira Sans bold 700;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+   
     
     
-    color: #c4c2cc;
+    color: #e2e2e2;
   }
   .info {
-    text-align: center;
+    text-align: left;
+    justify-content: center;
     line-height: 1.5;
-    max-width: clamp(16rem, 45vmin, 25rem);
-    color: white;
+    color: #e2e2e2;
+    margin-left: 4rem;
+    
   }
-  .info > p {
+  .info p {
     margin-bottom: 1rem;
-    color:white;
+    color:#e2e2e2;
+    margin-top: -1rem;
+    margin-left: 1.6rem;
+    
   
   }
   

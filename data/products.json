@@ -64,12 +64,12 @@
  },
  {
   "id": 8,
-  "categoriaProducto": "Kit",
-  "descripcion": "eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam",
-  "precio": 2035.69,
-  "discount": 7,
-  "imagenes": "accesorios.jpg",
-  "name": "ACCESORIOS"
+  "name": "Battery Charger ",
+  "categoriaProducto": "Accesorios",
+  "descripcion": "Cargador universal inteligente de 2 vías para baterías de diferentes tamaños incluyendo 14500, 18350, 18490, 18500, 18650 y 26650.\r\n\r\nCompatible para baterías:\r\n\r\n    3.6V/3.7V Lithium Ion IMR Batteries – 10340, 10350, 10440, 10500, 12340, 12500, 12650, 13450, 13500, 13650, 14350, 14430, 14500, 14650, 16500, 16340, 16650, 17350, 17500, 17650, 17670, 18350, 18490, 18500, 18650, 18700, 22500, 22650, 25500, 26500, 26650.\r\n    1.48V NiMh/NiCd batteries – AA, AAA, AAAA, C, D\r\n\r\nPuedes cargar hasta 2 baterías al mismo tiempo de diferentes estilos y se monitorea la carga individualmente de cada una.\r\n",
+  "precio": "500",
+  "discount": "5",
+  "imagenes": "1642786214693-accesorios.jpg"
  },
  {
   "id": "9",

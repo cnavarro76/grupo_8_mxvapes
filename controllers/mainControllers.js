@@ -35,11 +35,20 @@ const mainController = {
         res.render('products-edit');
         
     },
-
-    err404: (req, res) => {
-       res.render('err404');
-        
+    vapeo: (req, res) => {
+        res.render('vapeo');
     },
+
+    cbd: (req, res) => {
+        res.render('cbd');
+    },
+    sal: (req, res) => {
+        res.render('sales');
+    },
+//     err404: (req, res) => {
+//        res.render('err404');
+        
+//     },
 
 };
 
