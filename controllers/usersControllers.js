@@ -76,11 +76,11 @@ const usersController = {
                 delete userToLogin.contrasenia;
                 req.session.userLogged = userToLogin;
 
-                if(req.body.remember_user){
+                if(req.body.recuerdame){
                     res.cookie('userEmail', req.body.correoElectronico, {maxAge: (1000 *60) *60})
                 }
 
-                return res.redirect ('/users/Profile');
+                return res.redirect ('/users/profile');
             }
             return res.render ('login', {
                 errors: {
@@ -101,7 +101,7 @@ const usersController = {
 
     profile: (req, res) => {
         return res.render('userProfile', {
-            //user: req.session.userLogged        
+            user: req.session.userLogged        
         });
     },
 

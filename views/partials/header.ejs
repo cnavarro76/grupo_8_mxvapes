@@ -3,25 +3,11 @@
 
 <h1><a href="/">MXVAPES</a></h1>
 
+<% if (locals.isLogged) { %>
 
-
-
-<div class="compras">
-  <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
-</div>
-
-<div class="compras">
-  <a href="/users/register">Regístrate</a>
-</div>
-
-<div class="compras">
-  <a href="/users/login"> Identifícate</a>
-</div>
-
-<!--<div class="navbar-user">-->
-  
   <div class="dropdown">
-    <button class="dropbtn">Hi User 
+    <img src="/img/usuarios/<%= locals.userLogged.imagenes %>" width="30" style="border-radius: 100%;">
+    <button class="dropbtn">Hi <%= locals.userLogged.nombre%>  
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
@@ -30,10 +16,28 @@
       <a href="/users/logout">Logout</a>
     </div>
   </div> 
-<!--</div>-->
-    
-    
-    
+
+<% } else { %>
+
+
+
+  <div class="compras">
+    <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+  </div>
+  
+  <div class="compras">
+    <a href="/users/register">Regístrate</a>
+  </div>
+  
+  <div class="compras">
+    <a href="/users/login"> Identifícate</a>
+  </div>  
+ 
+
+ <% } %>
+ 
+
+
 
   <div class="menu">
 <nav>

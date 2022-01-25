@@ -1,22 +1,23 @@
 const express = require('express');
-// const session = require('express-session');
+const session = require('express-session');
 const cookies = require('cookie-parser');
 const methodOverride = require('method-override');
 
 const app = express();
 
-//const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
-// app.use(session({
-// 	secret: "Shhh, It's a secret",
-// 	resave: false,
-// 	saveUninitialized: false,
-// }));
+
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
+
 
 app.use(cookies());
-//app.use(userLoggedMiddleware);
 
-
+app.use(userLoggedMiddleware);
 
 
 app.use(express.json());

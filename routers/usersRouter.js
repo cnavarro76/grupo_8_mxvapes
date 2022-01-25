@@ -25,19 +25,19 @@ var storage = multer.diskStorage({
 
   //*****Registrar un cliente**********
   //Usuarios registro (GET)
-    usersRouter.get('/register', usersController.register); //falla el guestMiddleware
+    usersRouter.get('/register', guestMiddleware, usersController.register); //falla el guestMiddleware
   //Usuarios registro (POST)
     var upload = multer({ storage: storage })
     usersRouter.post('/register', upload.single('imagenes'), validations, usersController.registerSave);  
 
   // Formulario de login
-  usersRouter.get('/login', usersController.login); //falla el guestMiddleware
+  usersRouter.get('/login', guestMiddleware, usersController.login); //falla el guestMiddleware
   
   // Procesar el login
   usersRouter.post('/login', usersController.loginProcess);
 
   //Perfil de Usuario
-  usersRouter.get('/profile', usersController.profile); //falla el authMiddleware
+  usersRouter.get('/profile', authMiddleware, usersController.profile); //falla el authMiddleware
 
   // Logout
   usersRouter.get('/logout', usersController.logout);
