@@ -1,6 +1,6 @@
 [
  {
-  "id": null,
+  "id": 1,
   "nombre": "Carlos",
   "apellidos": "Navarro",
   "correoElectronico": "ncarlos47@hotmail.com",
@@ -11,12 +11,12 @@
  },
  {
   "id": null,
-  "nombre": "pedro",
+  "nombre": "Julio",
   "apellidos": "Perez",
-  "correoElectronico": "pedro@hotmail.com",
-  "usuario": "pedroperez",
-  "contrasenia": "$2a$10$n5I3R1OJYbOijnNU8p3qwOCKs7qx5J1FlLnPNf5tU5ZgSD56E/O0O",
-  "direccion": "Av. Pedro Perez",
-  "imagenes": "1642780037123-Carlos.jpeg"
+  "correoElectronico": "julioperez@gmail.com",
+  "usuario": "julioperez",
+  "contrasenia": "$2a$10$FD1gdHOeQfmjMCQKTlAXi.4HqPojWtag.EyNu9SrrZyElT9nyDSwG",
+  "direccion": "Av Juan Perez",
+  "imagenes": "1643078082921-Carlos.jpg"
  }
 ]
