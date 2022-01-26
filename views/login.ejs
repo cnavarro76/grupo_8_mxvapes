@@ -26,17 +26,17 @@
             <div class="contenedor">
                     <div class="input-contenedor">
                         
-                        <input type="text" placeholder="Correo electrónico" name="correoElectronico" class="txt"><i class="fas fa-user"></i>
-                        <% if (locals.errors && errors.correoElectronico) { %>
-									<div class="text-danger">
-										<%= errors.correoElectronico.msg %>
-									</div>
-								<% } %>
+                        <input type="text" placeholder="Correo electrónico" name="email" class="txt"><i class="fas fa-user"></i>
+                        <% if (locals.errors && errors.email) { %>
+                          <div class="text-danger">
+                            <%= errors.email.msg %>
+                          </div>
+                        <% } %>
                     </div>
 
                     <div class="input-contenedor">
                         
-                        <input type="password" placeholder="Contraseña" name="contrasenia" class="txt"> <i class="fas fa-key"></i>
+                        <input type="password" placeholder="Contraseña" name="password" class="txt"> <i class="fas fa-key"></i>
                     </div>
                 
                 <p class="ckbox"><input type="checkbox" name="recuerdame">Recordar mis credenciales</p>
@@ -46,7 +46,7 @@
         </form>
 
         <form class="formulario2">
-          <p>¿No posees una cuenta? <a class="link" href="register.html">Crea una</a></p>
+          <p>¿No posees una cuenta? <a class="link" href="/users/register">Crea una</a></p>
           <p>o inicia sesión con</p>
           <p class="iconos">
             <a href="#"><i class="fab fa-google"></i></a>

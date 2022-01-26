@@ -7,23 +7,23 @@
          <link rel="stylesheet" href="/css/styleRegistro.css">
 
         <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
   
 
  
-                      <link rel="stylesheet" href="/css/styleRegistro.css">
-                      <%- include('./partials/script-header') %>
+        <link rel="stylesheet" href="/css/styleRegistro.css">
+        <%- include('./partials/script-header') %>
                       
                       
-        <title>Registro MXVapes</title>
-    </head>
-    <body class="fondo">
+<title>Registro MXVapes</title>
+</head>
+<body class="fondo">
 
 
 
@@ -35,36 +35,63 @@
             <h1>Registrate</h1>
             <div class="contenedor">
                     <div class="input-contenedor"><label for="imagen" class="form-label">Sube tu imagen de usuario</label>
-                        <input type="file" name="imagenes" id="file">
+                        <input type="file" name="image" id="file" class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>">
+                        <% if (locals.errors && errors.image) { %>
+                            <div class="text-danger">
+                                <%= errors.image.msg %>
+                            </div>
+                        <% } %>
                     </div>
-                    <div class="input-contenedor">
+            
+            <div class="input-contenedor">
                        
-                        <input type="text" name="nombre" placeholder="Nombre" class="txt"> <i class="fas fa-user"></i>
+                        <input type="text" name="fullName" placeholder="Nombre Completo" class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>"> <i class="fas fa-user"></i>
+                        <% if (locals.errors && errors.fullName) { %>
+                            <div class="text-danger">
+                                <%= errors.fullName.msg %> 
+                            </div>
+                        <% } %>
                     </div>
 
-                    <div class="input-contenedor">
-                        
-                        <input type="text" name="apellidos" placeholder="Apellidos" class="txt"><i class="fas fa-user"></i>
-                    </div>
 
-                    <div class="input-contenedor">
+            <div class="input-contenedor">
  
-                        <input type="text" name="correoElectronico" placeholder="E - Mail" class="txt">  <i class="fas fa-envelope"></i>
+                        <input type="text" name="email" placeholder="Correo Electronico" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"><i class="fas fa-envelope"></i>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
                     </div>
                     
                     <div class="input-contenedor">
                        
-                        <input type="text" name="usuario" placeholder="Usuario" class="txt"> <i class="fas fa-user"></i>
+                        <input type="text" name="user_type" placeholder="Tipo de usuario" class="form-control <%= locals.errors && errors.user_type ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.user_type : null %>"> <i class="fas fa-user"></i>
+                        <% if (locals.errors && errors.user_type) { %>
+                            <div class="text-danger">
+                                <%= errors.user_type.msg %>
+                            </div>
+                        <% } %>
                     </div>
 
                     <div class="input-contenedor">
                         
-                        <input type="password" name="contrasenia" placeholder="Contraseña" class="txt"> <i class="fas fa-key"></i>
+                        <input type="password" name="password" placeholder="Contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"> <i class="fas fa-key"></i>
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
                     </div>
 
                     <div class="input-contenedor">
 
-                        <input type="text" name="direccion" placeholder="Direccion" class="txt"> <i class="fas fa-map-marked-alt"></i>
+                        <input type="text" name="address" placeholder="Direccion" class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.address : null %>"> <i class="fas fa-map-marked-alt"></i>
+                        <% if (locals.errors && errors.address) { %>
+                            <div class="text-danger">
+                                <%= errors.address.msg %>
+                            </div>
+                        <% } %>
                     </div>
 
                     <input class="button" type="submit" value="Registrar" />

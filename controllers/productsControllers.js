@@ -62,7 +62,7 @@ const productController = {
         productToEdit = {
             id: productToEdit.id,
             ...req.body,
-            imagenes: req.file.filename,
+            image: req.file.filename,
         };
 
         let newProducts = products.map(product => {

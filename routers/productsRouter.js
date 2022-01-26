@@ -22,8 +22,8 @@ mainRouters.get('/', productsController.products);
 
 //******* Create One Product **********
 mainRouters.get('/create', productsController.productCreate);
-var upload = multer({ storage: storage })
-mainRouters.post('/create', upload.single('imagenes'), productsController.productSave);  
+var uploadFile = multer({ storage: storage })
+mainRouters.post('/create', uploadFile.single('image'), productsController.productSave);  
 
 //********** Get One Product **********
 mainRouters.get('/:id/', productsController.productDetail);
@@ -31,7 +31,7 @@ mainRouters.get('/:id/', productsController.productDetail);
 //********** Edit One Product **********
 mainRouters.get('/edit/:id', productsController.productEdit);
 var upload = multer({ storage: storage })
-mainRouters.put('/edit/:id', upload.single('imagenes'),productsController.productUpdate);
+mainRouters.put('/edit/:id', uploadFile.single('image'),productsController.productUpdate);
 
 //********** Delete One Product **********
 mainRouters.delete('/delete/:id', productsController.productDelete);

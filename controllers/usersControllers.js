@@ -10,14 +10,14 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 var bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(10);
-//var hash = bcrypt.hashSync(req.body.contrasenia, salt);
+//var hash = bcrypt.hashSync(req.body.password, salt);
 
 const usersController = {
     register: (req, res) => {
         res.render('register');
     },
     // Create - Metodo para registro de Usuarios
-    registerSave: (req, res) => {
+    processRegister: (req, res) => {
             const resultValidation = validationResult(req);
     
             if (resultValidation.errors.length > 0) {
@@ -27,13 +27,13 @@ const usersController = {
                 });
             }
     
-            let userInDB = User.findByField('correoElectronico', req.body.correoElectronico);
+            let userInDB = User.findByField('email', req.body.email);
     
             if (userInDB) {
                 return res.render('register', {
                     errors: {
-                        correoElectronico: {
-                            msg: 'Este email ya está registrado'
+                        email: {
+                            msg: 'Este correo ya está registrado'
                         }
                     },
                     oldData: req.body
@@ -42,8 +42,8 @@ const usersController = {
     
             let userToCreate = {
                 ...req.body,
-                contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
-                imagenes: req.file.filename
+                password: bcryptjs.hashSync(req.body.password, 10),
+                image: req.file.filename
             }
     
             let userCreated = User.create(userToCreate);
@@ -53,9 +53,9 @@ const usersController = {
     //     let newUser = {
     //     id: users [users.length - 1].id + 1,
     //     ...req.body,
-    //     contrasenia: bcrypt.hashSync(req.body.contrasenia, salt),
+    //     password: bcrypt.hashSync(req.body.password, salt),
     //     tipoUsuario: "Usuario",
-    //     imagenes: req.file.filename
+    //     image: req.file.filename
     //     };
     //     users.push(newUser);
     //     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
@@ -68,23 +68,23 @@ const usersController = {
     },
 
     loginProcess: (req, res) => {
-        let userToLogin = User.findByField('correoElectronico', req.body.correoElectronico);
+        let userToLogin = User.findByField('email', req.body.email);
 
         if (userToLogin) {
-            let isOkThePassword = bcryptjs.compareSync(req.body.contrasenia, userToLogin.contrasenia);
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
-                delete userToLogin.contrasenia;
+                delete userToLogin.password;
                 req.session.userLogged = userToLogin;
 
                 if(req.body.recuerdame){
-                    res.cookie('userEmail', req.body.correoElectronico, {maxAge: (1000 *60) *60})
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 *60) *60})
                 }
 
                 return res.redirect ('/users/profile');
             }
             return res.render ('login', {
                 errors: {
-                    correoElectronico: {
+                    email: {
                         msg: 'las credenciales son invalidas'
                     }
                 },
@@ -92,8 +92,8 @@ const usersController = {
         } 
         return res.render('login', {
             errors: {
-                correoElectronico: {
-                    msg: 'No se encuentra este email en nuestra base de datos'
+                email: {
+                    msg: 'No se encuentra este correo en nuestra base de datos'
                 }
             }
         });

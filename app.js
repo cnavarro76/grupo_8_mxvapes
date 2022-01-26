@@ -24,9 +24,7 @@ app.use(express.json());
 
 app.use(methodOverride('_method'));
 
-app.use(express.urlencoded({
-    extended: false
-}));
+app.use(express.urlencoded({ extended: false }));
 
 /*Add static Files */
 app.use(express.static('./public'));

@@ -23,7 +23,7 @@
 
 	<%for(const product of products) {%>
 <div class="producto-m">
-	    <a href="/products/<%=product.id%>"><img src="/img/productos/<%=product.imagenes%>" alt="imagen de producto"></a>
+	    <a href="/products/<%=product.id%>"><img src="/img/productos/<%=product.image%>" alt="imagen de producto"></a>
 <p><span class="title-p">Categoría:</span> <%=product.categoriaProducto%></p>
 <p><span class="descripcion-p">Descripción </span><br><hr> <%=product.descripcion%></p>
 	  <p><span class="title-p">Precio:</span> <%= toThousand (product.precio) %></p>

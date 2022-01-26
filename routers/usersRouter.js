@@ -1,7 +1,5 @@
 const express = require('express');
 const usersRouter = express.Router();
-const multer = require('multer');
-const path = require('path');
 
 // Controller
 const usersController = require('../controllers/usersControllers');
@@ -14,21 +12,11 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
 
 
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, path.join(__dirname, '../public/img/usuarios'))
-    },
-    filename: function (req, file, cb) {
-        cb(null, Date.now() + '-' + file.originalname)
-    }
-  }) 
-
   //*****Registrar un cliente**********
   //Usuarios registro (GET)
     usersRouter.get('/register', guestMiddleware, usersController.register); //falla el guestMiddleware
   //Usuarios registro (POST)
-    var upload = multer({ storage: storage })
-    usersRouter.post('/register', upload.single('imagenes'), validations, usersController.registerSave);  
+    usersRouter.post('/register', uploadFile.single('image'), validations, usersController.processRegister);  
 
   // Formulario de login
   usersRouter.get('/login', guestMiddleware, usersController.login); //falla el guestMiddleware

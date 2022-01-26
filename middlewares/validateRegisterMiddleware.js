@@ -2,26 +2,26 @@ const path = require('path');
 const {body} = require ('express-validator');
 
 module.exports = [
-    body('nombre').notEmpty().withMessage('Tienes que escribir un nombre'),
-    body('apellidos').notEmpty().withMessage('Tienes que escribir un apellido'),
-    body('correoElectronico').notEmpty().withMessage('Tienes que escribir un correo electronico').bail()
-    .isEmail().withMessage('Debes de escribir un formato correo valido'),
-    body('usuario').notEmpty().withMessage('Tienes que escribir un usuario'),
-    body('contrasenia').notEmpty().withMessage('Tienes que escribir una contraseña'),
-    body('direccion').notEmpty().withMessage('Tienes que escribir una direccion'),
-    body('imagenes').custom((value, {req}) => {
-        let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
+	body('fullName').notEmpty().withMessage('Tienes que escribir tu nombre completo'),
+	body('email')
+		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
+		.isEmail().withMessage('Debes escribir un formato de correo válido'),
+	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('address').notEmpty().withMessage('Tienes que escribir tu dirección'),
+	body('user_type').notEmpty().withMessage('Tienes que elegir un tipo de usuario'),
+	body('image').custom((value, { req }) => {
+		let file = req.file;
+		let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 
-        if (!file) {
-            throw new error ('Tienes que subir una imagen');
-        } else {
-            let fileExtension = path.extname(file.originalname);
-            if (!acceptedExtensions.includes(fileExtension)) {
-                throw new error (`Las extenciones de archivo permitidos son: ${acceptedExtensions.join(', ')}`);
-            }
-        }
-        return true;
-    })
+		if (!file) {
+			throw new Error('Tienes que subir una imagen');
+		} else {
+			let fileExtension = path.extname(file.originalname);
+			if (!acceptedExtensions.includes(fileExtension)) {
+				throw new Error(`Los archivos permitidos son ${acceptedExtensions.join(', ')}`);
+			}
+		}
+
+		return true;
+	})
 ]
-
