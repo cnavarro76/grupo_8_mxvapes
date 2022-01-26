@@ -66,7 +66,7 @@
                     
                     <div class="input-contenedor">
                        
-                        <input type="text" name="user_type" placeholder="Tipo de usuario" class="form-control <%= locals.errors && errors.user_type ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.user_type : null %>"> <i class="fas fa-user"></i>
+                        <input type="text" name="user_type" placeholder="Tipo de usuario" class="form-select <%= locals.errors && errors.user_type ? 'is-invalid' : null %>"> <i class="fas fa-user"></i>
                         <% if (locals.errors && errors.user_type) { %>
                             <div class="text-danger">
                                 <%= errors.user_type.msg %>
