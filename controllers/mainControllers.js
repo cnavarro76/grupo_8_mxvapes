@@ -45,10 +45,11 @@ const mainController = {
     sal: (req, res) => {
         res.render('sales');
     },
-//     err404: (req, res) => {
-//        res.render('err404');
+   
+    // err404: (req, res) => {
+    //    res.render('err404');
         
-//     },
+    // },
 
 };
 

@@ -14,26 +14,25 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
   //*****Registrar un cliente**********
   //Usuarios registro (GET)
-    usersRouter.get('/register', guestMiddleware, usersController.register); //falla el guestMiddleware
+    usersRouter.get('/register', guestMiddleware, usersController.register); 
   //Usuarios registro (POST)
     usersRouter.post('/register', uploadFile.single('image'), validations, usersController.processRegister);  
 
   // Formulario de login
-  usersRouter.get('/login', guestMiddleware, usersController.login); //falla el guestMiddleware
+  usersRouter.get('/login', guestMiddleware, usersController.login); 
   
   // Procesar el login
   usersRouter.post('/login', usersController.loginProcess);
 
   //Perfil de Usuario
-  usersRouter.get('/profile', authMiddleware, usersController.profile); //falla el authMiddleware
+  usersRouter.get('/profile', authMiddleware, usersController.profile); 
 
   // Logout
   usersRouter.get('/logout', usersController.logout);
 
 
 
-
-  //Error 404
-   usersRouter.get('*', usersController.err404);
+  // usersRouter.get('/*', usersController.err404);
+  
 
 module.exports = usersRouter;
