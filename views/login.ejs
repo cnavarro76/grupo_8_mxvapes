@@ -18,7 +18,7 @@
 
 <%- include('./partials/header') %>
 
-        <form method="POST" action="/user/login" class="formulario">
+        <form method="POST" action="/users/login" class="formulario">
             <h1>Iniciar sesión</h1>
             <div>
               <img src="../img/LogReg/user.png" class="img"/>
@@ -40,7 +40,7 @@
                     </div>
                 
                 <p class="ckbox"><input type="checkbox" name="recuerdame">Recordar mis credenciales</p>
-                <input class="button" type="button" onclick="location.href='profile';" value="Iniciar sesión" />
+                <input class="button" type="submit" value="Iniciar sesión" />
                 <p>¿Olvidaste tu <a class="link" href="#">contraseña</a>?</p> 
             </div>   
         </form>

@@ -1,1 +1,11 @@
-[]
+[
+ {
+  "id": null,
+  "fullName": "Carlos Navarro",
+  "email": "ncarlos47@hotmail.com",
+  "user_type": "Admin",
+  "password": "$2a$10$fWJ0ymFLzoTWBmW6mRgKzuXxoZz4.bhVgMJBw9uhvSbzM2tFTRQ1S",
+  "address": "Santa Fe, Alvaro Obregon",
+  "image": "1643305350964_img.jpeg"
+ }
+]
