@@ -15,17 +15,17 @@ var storage = multer.diskStorage({
   }) 
 
 mainRouters.get('/', mainController.index);
-mainRouters.get('/login', mainController.login);
 mainRouters.get('/productCart', mainController.productCart);
-mainRouters.get('/productDetail', mainController.productDetail);
-mainRouters.get('/products-edit', mainController.editarProducto);
-mainRouters.get('/detail/:id/', mainController.productDetail);
 mainRouters.get('/vapeo', mainController.vapeo);
 mainRouters.get('/cbd', mainController.cbd);
 mainRouters.get('/sales', mainController.sal);
+//mainRouters.get('/productDetail', mainController.productDetail);
+//mainRouters.get('/products-edit', mainController.editarProducto);
+//mainRouters.get('/detail/:id/', mainController.productDetail);
+//mainRouters.get('/login', mainController.login);
 
 
-//mainRouters.get('*', mainController.err404);
+// mainRouters.get('*', mainController.err404);
 
 
 module.exports = mainRouters;

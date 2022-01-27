@@ -1,6 +1,6 @@
 //********** Require's **********
 const express = require('express');
-const mainRouters = express.Router();
+const productsRouter = express.Router();
 const multer = require('multer');
 const path = require('path');
 
@@ -18,23 +18,23 @@ var storage = multer.diskStorage({
 const productsController = require('../controllers/productsControllers');
 
 //********** Get All Products **********
-mainRouters.get('/', productsController.products);
+productsRouter.get('/', productsController.products);
 
 //******* Create One Product **********
-mainRouters.get('/create', productsController.productCreate);
+productsRouter.get('/create', productsController.productCreate);
 var uploadFile = multer({ storage: storage })
-mainRouters.post('/create', uploadFile.single('image'), productsController.productSave);  
+productsRouter.post('/create', uploadFile.single('image'), productsController.productSave);  
 
 //********** Get One Product **********
-mainRouters.get('/:id/', productsController.productDetail);
+productsRouter.get('/:id/', productsController.productDetail);
 
 //********** Edit One Product **********
-mainRouters.get('/edit/:id', productsController.productEdit);
+productsRouter.get('/edit/:id', productsController.productEdit);
 var upload = multer({ storage: storage })
-mainRouters.put('/edit/:id', uploadFile.single('image'),productsController.productUpdate);
+productsRouter.put('/edit/:id', uploadFile.single('image'),productsController.productUpdate);
 
 //********** Delete One Product **********
-mainRouters.delete('/delete/:id', productsController.productDelete);
+productsRouter.delete('/delete/:id', productsController.productDelete);
 
 
-module.exports = mainRouters;
+module.exports = productsRouter;
