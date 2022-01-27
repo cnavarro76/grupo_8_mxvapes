@@ -43,14 +43,15 @@
 
 }
 
-.formulario .ckbox {
+.label form-check-label {
     clear: both;
     text-align: justify;
     margin: 20px 0;
+    
 }
 
 
-.ckbox input {
+.input form-check-input {
     width: 20px;
     margin-top: 5px;
 }

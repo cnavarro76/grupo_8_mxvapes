@@ -18,7 +18,7 @@
 
 <%- include('./partials/header') %>
 
-        <form method="POST" action="/user/login" class="formulario">
+        <form method="POST" action="/users/login" class="formulario">
             <h1>Iniciar sesión</h1>
             <div>
               <img src="../img/LogReg/user.png" class="img"/>
@@ -39,8 +39,8 @@
                         <input type="password" placeholder="Contraseña" name="password" class="txt"> <i class="fas fa-key"></i>
                     </div>
                 
-                <p class="ckbox"><input type="checkbox" name="recuerdame">Recordar mis credenciales</p>
-                <input class="button" type="button" onclick="location.href='profile';" value="Iniciar sesión" />
+                <label class="form-check-label"><input type="checkbox" class="form-check-input" name="recuerdame">Recordar mis usuario</label>
+                <input class="button" type="submit" value="Iniciar sesión" />
                 <p>¿Olvidaste tu <a class="link" href="#">contraseña</a>?</p> 
             </div>   
         </form>
