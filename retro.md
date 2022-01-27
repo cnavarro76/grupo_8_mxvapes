@@ -1,3 +1,56 @@
+Retrospectiva del Sprint 5:
+
+1.- Start Doing (comenzar a hacer): 
+Consultar lecturas en páginas especializadas como W3 para ampliar el pánorama, aclarar dudas y ordenar el aprendizaje.
+Revisar más a detalle slack, no sólo el grupo general sino también los mensajes privados y si es posiible, apoyar en las dudas ed los compñeros. 
+
+2.- More of (hacer más): 
+Como equipo, reunirnos para  destacar cuestiones e inquietudes así como hacer co-coding.
+Revisar el código y jugar con la funcionaliddad de páginas web inspiradoras o de reelevancia global. 
+
+
+3.- Keep Doing (seguir haciendo): 
+Buena comunicacaión. 
+Buena actitud para coolaborar, comunicarse y expresar dudas o inconformidades.
+
+
+4.- Less of (hacer menos):
+Utilizar código en el que no se comprende su funcionamiento y relación con la función de las demás partes.
+
+
+5.- Stop Doing (dejar de hacer): 
+Faltar a las reniones.
+No avanzar en las clases de Play ground.
+
+
+
+
+Retrospectiva del Sprint 4:
+
+1.- Start Doing (comenzar a hacer): 
+Anunciar dificultades en las consignas asignadas para colaborar en conjunto y mantener el avance.
+
+2.- More of (hacer más): 
+Comunicación continua así como asistencia a la reuniones del equipo.
+
+
+3.- Keep Doing (seguir haciendo): 
+Comunicarse con claridad, calma y acertividad. 
+Mantener una actitud positiva ante las frustraciones.
+
+
+4.- Less of (hacer menos):
+Perder compromiso con el equipo y con las propias metas de aprovechamiento del curso.
+Dejar de avanzar en las consignas.
+
+
+5.- Stop Doing (dejar de hacer): 
+Enojarse, perder la calma.
+
+
+
+
+
 Retrospectiva del Sprint 3:
 
 1.- Start Doing (comenzar a hacer): 
