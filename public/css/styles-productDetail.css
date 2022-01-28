@@ -271,12 +271,13 @@ main {
 .cart-btn {
   display: inline-block;
   background-color: #d27825;
-  border-radius: 6px;
   font-size: 16px;
   color: #FFF;
   text-decoration: none;
   padding: 12px 30px;
   transition: all .5s;
+  border-radius: 15px;
+  box-shadow: 0 3px #999;
 }
 
 
@@ -287,7 +288,7 @@ main {
 
 
 .cart-btn:hover {
-  background-color: #d27825;
+  background-color: green;
   border: 2px solid #86939E;
   color: #FFF;
   outline: none;
@@ -300,6 +301,8 @@ main {
   background-color: red;
   font-size: 14px;
   transition: all .5s;
+  border-radius: 15px;
+  box-shadow: 0 3px #999;
 }
 
 .cart-btn-button:hover {

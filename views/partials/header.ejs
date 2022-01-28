@@ -5,6 +5,10 @@
 
 <% if (locals.isLogged) { %>
 
+  <div class="compras">
+    <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+  </div>
+
   <div class="dropdown">
     <img src="/img/usuarios/<%= locals.userLogged.image %>" width="35" style="border-radius: 100%;">
     <button class="dropbtn">Hi <%= locals.userLogged.fullName%>  
@@ -21,9 +25,7 @@
 
 
 
-  <div class="compras">
-    <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
-  </div>
+  
   
   <div class="compras">
     <a href="/users/register">Regístrate</a>
