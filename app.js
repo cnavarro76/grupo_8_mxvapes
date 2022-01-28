@@ -1,7 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const cookies = require('cookie-parser');
-//const methodOverride = require('method-override');
+const methodOverride = require('method-override');
 
 const app = express();
 
@@ -20,9 +20,9 @@ app.use(cookies());
 app.use(userLoggedMiddleware);
 
 
-//app.use(express.json());
+app.use(express.json());
 
-//app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 
 app.use(express.urlencoded({ extended: false }));
 

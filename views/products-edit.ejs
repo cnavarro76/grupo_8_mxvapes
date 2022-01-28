@@ -43,7 +43,7 @@
 
         <div class="input-contenedor">
           <label>Categoría</label>
-          <select name="categoriaProducto" id="categoria">
+          <select name="category" id="categoria">
             <option value="Accesorios">Accesorios</option>
             <option value="CBD">CBD</option>
             <option value="E-juice">E-juice</option>
@@ -56,8 +56,8 @@
         </div>
 
         <div class="input-contenedor">
-          <textarea placeholder="Descripción" name="descripcion">
-<%= productToEdit.descripcion %></textarea
+          <textarea placeholder="Descripción" name="description">
+<%= productToEdit.description %></textarea
           >
         </div>
 
@@ -65,9 +65,9 @@
           <input
             type="text"
             placeholder="Precio"
-            name="precio"
+            name="price"
             class="txt"
-            value="<%= productToEdit.precio %>"
+            value="<%= productToEdit.price %>"
           />
         </div>
 

@@ -39,7 +39,7 @@ const productController = {
     let newProduct = {
         id: products [products.length - 1].id + 1,
         ...req.body,
-        imagenes: req.file.filename
+        image: req.file.filename
     };
     products.push(newProduct);
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
