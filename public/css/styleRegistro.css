@@ -17,6 +17,7 @@
 }
 
 .formulario {
+
     background: #ffff;
     margin: 100px 0 25px 0;
     padding: 3px;
@@ -39,8 +40,16 @@
 }
 
 .terminos {
+    
     clear: both;
     text-align: left;
+    
+}
+
+.ck {
+    float: left;
+    width: 20px;
+    
 }
 
 i {
@@ -49,18 +58,72 @@ i {
     border: none;
 }
 
+
 .input-contenedor {
-    margin-bottom: 15px;
-    border: 1px solid #aaa;
-
-
+    
+    margin-bottom: 10px;
     clear: both;
     float: left;
     width: 100%;
 }
 
-.input-contenedor .fas {
+.input-contenedor-firstName {
+    width: 49%;
+    float: left;
+}
+
+.input-contenedor-lastName {
+    width: 49%;
     float: right;
+}
+
+.input-contenedor .fas.fa-user {
+    float: right;
+    margin-top: -60px;
+}
+
+.input-contenedor-firstName .fas.fa-user {
+    float: right;
+    margin-top: -60px;
+}
+
+.input-contenedor-lastName .fas.fa-user {
+    float: right;
+    margin-top: -60px;
+    margin-bottom: 20px;
+}
+
+.input-contenedor .fas.fa-envelope {
+    float: right;
+    margin-top: -60px;
+    margin-bottom: 20px;
+}
+
+.input-contenedor-password {
+    width: 49%;
+    float: left;
+}
+
+.input-contenedor-confirm {
+    width: 49%;
+    float: right;
+}
+
+
+.input-contenedor-password .fas.fa-key {
+    float: right;
+    margin-top: -38px;
+}
+
+.input-contenedor-confirm .fas.fa-key {
+    float: right;
+    margin-top: -38px;
+    margin-bottom: 20px;
+}
+
+.input-contenedor .fas.fa-map-marked-alt {
+    float: right;
+    margin-top: -60px;
 }
 
 
@@ -80,6 +143,7 @@ i {
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 17px;
+    margin-top: 25px;
 }
 
 .button:hover {
@@ -99,10 +163,7 @@ p {
     color: #d27825;
 }
 
-.ck {
-    width: 20px;
-    margin-top: 4px;
-}
+
 
 @media(min-width:768px) {
     .formulario {

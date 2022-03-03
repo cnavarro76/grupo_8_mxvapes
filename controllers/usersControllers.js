@@ -6,12 +6,7 @@ const User = require('../database/models/User');
 const path = require('path');
 const fs = require('fs');
 
-//const usersFilePath = path.join(__dirname, '../data/users.json');
-//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-//var bcrypt = require('bcryptjs');
-//var salt = bcrypt.genSaltSync(10);
-//var hash = bcrypt.hashSync(req.body.password, salt);
 
 const usersController = {
     register: (req, res) => {
@@ -51,17 +46,7 @@ const usersController = {
     
             return res.redirect('/users/login');
         },
-    //     let newUser = {
-    //     id: users [users.length - 1].id + 1,
-    //     ...req.body,
-    //     password: bcrypt.hashSync(req.body.password, salt),
-    //     tipoUsuario: "Usuario",
-    //     image: req.file.filename
-    //     };
-    //     users.push(newUser);
-    //     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-    //     res.redirect('/login');
-    // },
+   
 
     login: (req, res) => {
 
@@ -86,7 +71,7 @@ const usersController = {
 			return res.render('login', {
 				errors: {
 					email: {
-						msg: 'Las credenciales son inválidas'
+						msg: 'Contraeña incorrecta'
 					}
 				}
 			});
@@ -95,7 +80,7 @@ const usersController = {
 		return res.render('login', {
 			errors: {
 				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
+					msg:'No se encuentra este email en la base de datos'
 				}
 			}
 		});

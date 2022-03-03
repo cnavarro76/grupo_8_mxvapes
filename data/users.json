@@ -1,11 +1,14 @@
 [
  {
   "id": 1,
-  "fullName": "Carlos Navarro",
+  "firstName": "Carlos",
+  "lastName": "Antonio",
   "email": "ncarlos47@hotmail.com",
+  "password": "$2a$10$qALDTpjfd23LVlDLGC2EGO920HalmhY.opq3Z0mD/ShswA56r/0ti",
+  "confirmPassword": "3Chifl@dos3",
   "user_type": "Admin",
-  "password": "$2a$10$mgmN5x/Y86OH0lNyVLtRsuYTg/RXvBYI0Ys.vO.PxzkfDBtR0hYFC",
-  "address": "Santa Fe, Alvaro Obregon",
-  "image": "1643306242498_img.jpeg"
+  "address": "Av. Carlos Lazo",
+  "checkbox": "on",
+  "image": "1646264963288_img.jpeg"
  }
 ]

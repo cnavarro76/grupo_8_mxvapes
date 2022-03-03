@@ -33,50 +33,41 @@
 
         <form action="/users/register" method="POST" enctype="multipart/form-data" class="formulario edicion">
             <h1>Registrate</h1>
-            <div class="contenedor">
-                    <div class="input-contenedor"><label for="imagen" class="form-label">Sube tu imagen de usuario</label>
-                        <input type="file" name="image" id="file" class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>">
-                        <% if (locals.errors && errors.image) { %>
+            
+            
+            <div class="input-contenedor-firstName">
+                       
+                    <input type="text" name="firstName" placeholder="Nombre(s)" class="form-control <%= locals.errors && errors.firstName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.firstName : null %>" />
+                        <% if (locals.errors && errors.firstName) { %>
                             <div class="text-danger">
-                                <%= errors.image.msg %>
+                                <%= errors.firstName.msg %> 
                             </div>
                         <% } %>
                     </div>
             
-            <div class="input-contenedor">
-                       
-                        <input type="text" name="fullName" placeholder="Nombre Completo" class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>"> <i class="fas fa-user"></i>
-                        <% if (locals.errors && errors.fullName) { %>
+            <div class="input-contenedor-lastName">
+
+                    <input type="text" name="lastName" placeholder="Apellido(s)" class="form-control <%= locals.errors && errors.lastName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>"> <i class="fas fa-user"></i>
+                        <% if (locals.errors && errors.lastName) { %>
                             <div class="text-danger">
-                                <%= errors.fullName.msg %> 
+                                <%= errors.lastName.msg %> 
                             </div>
                         <% } %>
                     </div>
 
-
             <div class="input-contenedor">
  
-                        <input type="text" name="email" placeholder="Correo Electronico" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"><i class="fas fa-envelope"></i>
+                    <input type="text" name="email" placeholder="Correo Electronico" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"><i class="fas fa-envelope"></i>
                         <% if (locals.errors && errors.email) { %>
                             <div class="text-danger">
                                 <%= errors.email.msg %>
                             </div>
                         <% } %>
                     </div>
-                    
-                    <div class="input-contenedor">
-                       
-                        <input type="text" name="user_type" placeholder="Tipo de usuario" class="form-select <%= locals.errors && errors.user_type ? 'is-invalid' : null %>"> <i class="fas fa-user"></i>
-                        <% if (locals.errors && errors.user_type) { %>
-                            <div class="text-danger">
-                                <%= errors.user_type.msg %>
-                            </div>
-                        <% } %>
-                    </div>
 
-                    <div class="input-contenedor">
+            <div class="input-contenedor-password">
                         
-                        <input type="password" name="password" placeholder="Contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"> <i class="fas fa-key"></i>
+                        <input type="password" name="password" placeholder="Contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>">
                         <% if (locals.errors && errors.password) { %>
                             <div class="text-danger">
                                 <%= errors.password.msg %>
@@ -84,18 +75,57 @@
                         <% } %>
                     </div>
 
-                    <div class="input-contenedor">
+            <div class="input-contenedor-confirm">
+                        
+                        <input type="password" name="confirmPassword" placeholder="Confirmar Contraseña" class="form-control <%= locals.errors && errors.confirmPassword ? 'is-invalid' : null %>"> <i class="fas fa-key"></i>
+                        <% if (locals.errors && errors.confirmPassword) { %>
+                            <div class="text-danger">
+                                <%= errors.confirmPassword.msg %>
+                            </div>
+                        <% } %>
+                    </div>
+                    
+            <div class="input-contenedor">
+                       
+                        <input type="text" name="user_type" placeholder="Tipo de usuario" class="form-control <%= locals.errors && errors.user_type ? 'is-invalid' : null %>"> <i class="fas fa-user"></i>
+                        <% if (locals.errors && errors.user_type) { %>
+                            <div class="text-danger">
+                                <%= errors.user_type.msg %>
+                            </div>
+                        <% } %>
+                    </div>
 
-                        <input type="text" name="address" placeholder="Direccion" class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.address : null %>"> <i class="fas fa-map-marked-alt"></i>
+            <div class="input-contenedor">
+
+                        <input type="text" name="address" placeholder="Dirección" class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.address : null %>"> <i class="fas fa-map-marked-alt"></i>
                         <% if (locals.errors && errors.address) { %>
                             <div class="text-danger">
                                 <%= errors.address.msg %>
                             </div>
                         <% } %>
                     </div>
+ 
+            <div class="input-contenedor">
+                            <label for="imagen" class="form-label">Sube tu imagen de usuario </label>
+                            <input type="file" name="image" id="file" class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>"> </i>
+                            <% if (locals.errors && errors.image) { %>
+                                <div class="text-danger">
+                                    <%= errors.image.msg %>
+                                    
+                                </div>
+                            <% } %>
+                        </div>
 
-                    <input class="button" type="submit" value="Registrar" />
-                <p class="terminos"><input class="ck" type="checkbox">Acepto los <a class="link" href="#">Términos y condiciones de uso</a></p>
+            <div class="contenedor">
+                        <input class="button" type="submit" value="Registrar" />
+                            <p class="terminos"><input class="ck" type="checkbox" name="checkbox"<%= locals.errors && errors.checkbox ? 'is-invalid' : null %>">Acepto los <a class="link" href="#">Términos y condiciones de uso</a></p>
+                            <% if (locals.errors && errors.checkbox) { %>
+                                <div class="text-danger">
+                                    <%= errors.checkbox.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+
                 <p>¿Ya tienes cuenta? <a class="link" href="/login">Inicia sesión</a></p>
             </div>
         </form>
