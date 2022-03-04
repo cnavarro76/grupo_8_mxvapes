@@ -121,6 +121,12 @@ i {
     margin-bottom: 20px;
 }
 
+.input-contenedor-usuario .fas.fa-user {
+    float: right;
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+
 .input-contenedor .fas.fa-map-marked-alt {
     float: right;
     margin-top: -60px;

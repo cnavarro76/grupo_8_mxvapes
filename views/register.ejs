@@ -85,15 +85,25 @@
                         <% } %>
                     </div>
                     
-            <div class="input-contenedor">
+            <div class="input-contenedor-usuario">
                        
-                        <input type="text" name="user_type" placeholder="Tipo de usuario" class="form-control <%= locals.errors && errors.user_type ? 'is-invalid' : null %>"> <i class="fas fa-user"></i>
+                <label for="user_type" class="form-label">Tipo de Usuario </label>
+                <select name="user_type" id="user_type" class="form-control">
+                    <option value="">Selecciona una opción</option>
+                    <option value="1">Cliente</option>
+                    <option value="2">Vendedor</option>
+                    <option value="2">Administrador</option>
+                </select>
+
+                <input type="hidden" name="user_type" placeholder="Tipo de usuario" class="form-control <%= locals.errors && errors.user_type ? 'is-invalid' : null %>"> <i class="fas fa-user"></i>
                         <% if (locals.errors && errors.user_type) { %>
                             <div class="text-danger">
                                 <%= errors.user_type.msg %>
                             </div>
                         <% } %>
+                        <br>
                     </div>
+                
 
             <div class="input-contenedor">
 

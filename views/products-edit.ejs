@@ -37,11 +37,6 @@
         </div>
 
         <div class="input-contenedor">
-          <label for="imagen" class="form-label">Cambia la imagen</label>
-          <input type="file" name="image" id="file" />
-        </div>
-
-        <div class="input-contenedor">
           <label>Categoría</label>
           <select name="category" id="categoria">
             <option value="Accesorios">Accesorios</option>
@@ -56,8 +51,8 @@
         </div>
 
         <div class="input-contenedor">
-          <textarea placeholder="Descripción" name="description">
-<%= productToEdit.description %></textarea
+        <textarea placeholder="Descripción" name="description">
+        <%= productToEdit.description %></textarea
           >
         </div>
 
@@ -81,10 +76,24 @@
           />
         </div>
 
-        <input type="submit" value="Editar producto" />
+        <div class="input-contenedor-image">
+          <label for="image" class="form-label">Cambia tu Imagen de producto </label>
+          <input type="file" name="image" id="file" class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>"> </i>
+          <% if (locals.errors && errors.image) { %>
+              <div class="text-danger">
+                  <%= errors.image.msg %>
+                  
+              </div>
+          <% } %>
+      </div>   
+       
+      <input type="submit" value="Editar producto" />
       </div>
+      <br />
+      <br />
+      <br />
     </form>
-    <br /><br />
+    
 
     <%- include('./partials/footer') %> <%- include('./partials/menu') %>
   </body>

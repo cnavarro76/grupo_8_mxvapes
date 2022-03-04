@@ -4,6 +4,9 @@ const productsRouter = express.Router();
 const multer = require('multer');
 const path = require('path');
 
+// Middlewares
+const validations = require('../middlewares/validateMiddleware');
+
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.join(__dirname, '../public/img/productos'))
@@ -21,9 +24,9 @@ const productsController = require('../controllers/productsControllers');
 productsRouter.get('/', productsController.products);
 
 //******* Create One Product **********
-productsRouter.get('/create', productsController.productCreate);
+productsRouter.get('/create',  productsController.productCreate);
 var uploadFile = multer({ storage: storage })
-productsRouter.post('/create', uploadFile.single('image'), productsController.productSave);  
+productsRouter.post('/create', uploadFile.single('image'), validations, productsController.productSave);  
 
 //********** Get One Product **********
 productsRouter.get('/:id/', productsController.productDetail);
@@ -31,7 +34,7 @@ productsRouter.get('/:id/', productsController.productDetail);
 //********** Edit One Product **********
 productsRouter.get('/edit/:id', productsController.productEdit);
 var upload = multer({ storage: storage })
-productsRouter.put('/edit/:id', uploadFile.single('image'),productsController.productUpdate);
+productsRouter.put('/edit/:id', uploadFile.single('image'), validations, productsController.productUpdate);
 
 //********** Delete One Product **********
 productsRouter.delete('/delete/:id', productsController.productDelete);

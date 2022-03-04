@@ -1,9 +1,8 @@
-const {
-    render
-} = require('ejs');
+const {render} = require('ejs');
 const path = require('path');
 const fs = require('fs');
 const { fileURLToPath } = require('url');
+const {validationResult} = require('express-validator');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -36,6 +35,15 @@ const productController = {
 
 // Create - Method to Store
     productSave: (req, res) => {
+        const resultValidation = validationResult(req);
+    
+        if (resultValidation.errors.length > 0) {
+            return res.render('products-create', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
     let newProduct = {
         id: products [products.length - 1].id + 1,
         ...req.body,
@@ -56,6 +64,8 @@ const productController = {
 
 // Update - Method to Update
     productUpdate: (req, res) => {
+       
+
         let id = req.params.id;
         let productToEdit = products.find(product => product.id == id)
 

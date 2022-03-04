@@ -1,8 +1,9 @@
 .fondo {
-
+    margin: 0;
     background: url(../img/LogReg/bgVape.jpg);
     background-size: cover;
     background-attachment: fixed;
+
 }
 
 * {
@@ -39,7 +40,7 @@
     font-size: 20px;
     width: 90%;
     padding: 5px;
-    border: 0;
+    border: 1px solid #aaa;
 
 }
 
@@ -65,8 +66,6 @@
 .formulario .input-contenedor {
     clear: both;
     margin-bottom: 15px;
-    border: 1px solid #aaa;
-
 }
 
 .formulario .icon {
@@ -121,18 +120,49 @@
 .formulario.edicion .input-contenedor {
     clear: both;
     margin-bottom: 15px;
-    border: 1px solid #aaa;
+    
     min-height: 44px
 }
 
 .input-contenedor textarea {
     border: 0;
-    width: 100%;
+    width: 90%;
     height: 100%;
+    border: 1px solid #aaa;
 }
 
+.input-contenedor-name {
+    width: 49%;
+    float: left;
+    margin-bottom: 10px;
+}
 
+.input-contenedor-id {
+    width: 49%;
+    float: right;
+    margin-bottom: 50px;
+}
 
+.input-contenedor-price {
+    width: 49%;
+    float: left;
+}
+
+.input-contenedor-discount {
+    width: 49%;
+    float: right;
+}
+
+.input-contenedor-category {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.input-contenedor-image {
+    width: 90%;
+    margin-bottom:60px;
+}
 
 
 @media(min-width:768px) {
