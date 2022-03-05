@@ -64,7 +64,7 @@ const productController = {
 
 // Update - Method to Update
     productUpdate: (req, res) => {
-       
+        
 
         let id = req.params.id;
         let productToEdit = products.find(product => product.id == id)

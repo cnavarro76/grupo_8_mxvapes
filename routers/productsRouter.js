@@ -5,7 +5,8 @@ const multer = require('multer');
 const path = require('path');
 
 // Middlewares
-const validations = require('../middlewares/validateMiddleware');
+const validations = require('../middlewares/validateProductsMiddleware');
+const validation = require('../middlewares/validateEditMiddleware');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -34,7 +35,7 @@ productsRouter.get('/:id/', productsController.productDetail);
 //********** Edit One Product **********
 productsRouter.get('/edit/:id', productsController.productEdit);
 var upload = multer({ storage: storage })
-productsRouter.put('/edit/:id', uploadFile.single('image'), validations, productsController.productUpdate);
+productsRouter.put('/edit/:id', uploadFile.single('image'), validation, productsController.productUpdate);
 
 //********** Delete One Product **********
 productsRouter.delete('/delete/:id', productsController.productDelete);

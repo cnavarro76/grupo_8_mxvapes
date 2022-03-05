@@ -6,7 +6,7 @@ const usersController = require('../controllers/usersControllers');
 
 // Middlewares
 const uploadFile = require('../middlewares/multerMiddleware');
-const validations = require('../middlewares/validateMiddleware');
+const validations = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
