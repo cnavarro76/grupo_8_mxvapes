@@ -1,0 +1,38 @@
+<%- include('header') -%>
+    <h1>Crear producto</h1>
+    <form action="/products/crear" method="post">
+        <div>
+            <label for="">Nombre del producto</label>
+            <input type="text" name="nombre">
+        </div>
+        <div>
+            <label for="">Categoria</label>
+            <select name="categoria">
+                <% for(let i = 0; i < categorias.length; i ++){ %>
+                <option value="<%=categorias[i].id%>">
+                    <%=categorias[i].productCat%>
+                </option>
+            <% } %>
+            </select>
+        </div>
+        <div>
+            <label for="">Descripción</label>
+            <input type="text" name="descripcion">
+        </div>
+        <div>
+            <label for="">Precio</label>
+            <input type="text" name="precio" placeholder="$$$">
+        </div>
+        <div>
+            <label for="">Descuento</label>
+            <input type="text" name="descuento">
+        </div>
+        <button type="submit">Crear</button>
+
+    </form>
+
+    
+
+
+
+<%- include('footer') -%>

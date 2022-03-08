@@ -1,0 +1,13 @@
+<%- include('header') -%>
+  <h1>Listado de productos</h1>
+  <ul>
+    <% for(let i = 0; i < productos.length; i ++){ %>
+        <li>
+            <a href="/products/<%=productos[i].id%>">
+            <%= productos[i].product_name%>
+            </a>
+        </li>
+
+    <% } %>
+  </ul>
+<%- include('footer') -%>

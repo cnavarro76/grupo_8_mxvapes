@@ -1,0 +1,55 @@
+<%- include('header') -%>
+
+<body>
+    <form method="POST" action="/users/register">
+        <div class="form-signin">
+            <div class="title">
+                <span>Mx Vapes</span>
+                <p>
+                <h1>Registrate </h1>
+                </p>
+            </div>
+    
+            <div>
+                <input name="name" placeholder="Username" type="text" required="required">
+            </div>
+            <div>
+                <input name="lastName" placeholder="apellido" type="text" required="required">
+            </div>
+            <div>
+                <input name="email" placeholder="Email" type="text" required="required">
+            </div>
+            <div>
+                <label for="">Tipo de usuario</label>
+                <select name="userType">
+                    <% for(let i = 0; i < tipoUsuario.length; i ++){ %>
+                    <option value="<%=tipoUsuario[i].id%>">
+                        <%=tipoUsuario[i].utype%>
+                    </option>
+                <% } %>
+                </select>
+            </div>
+            <div>
+                <input name="password"  placeholder="Password"  type="password" required="required">
+            </div>
+            <div >
+                <input name="address"  placeholder="tu direccion completa" type="text"
+                    required="required">
+            </div>
+    
+            <div>
+                <button type="submit">
+                    registrar usuario
+                </button>
+            </div>
+    </form>
+    
+  </div>
+
+</body>
+
+<br>
+
+-footer-
+
+<%- include('footer') -%>

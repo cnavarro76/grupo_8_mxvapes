@@ -1,0 +1,25 @@
+<%- include('header') -%>
+  
+<h1><%= producto.product_name%></h1>
+
+<ul>
+    <li>
+        Precio: $<%= producto.price%> 
+    </li>
+    <li>
+        Descripció: <%= producto.product_description %>
+    </li>
+    <li>
+        Categoria : <%= producto.category_id %>
+    </li>
+</ul>
+<a href="/products/editar/<%= producto.id %>">
+    <button>
+        Editar
+    </button>
+</a>
+<form action="/products/borrar/<%=producto.id%>" method="POST" >
+    <button type="submit">Borrar</button>
+</form>
+
+<%- include('footer') -%>

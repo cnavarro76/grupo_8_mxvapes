@@ -1,0 +1,45 @@
+<%- include('header') -%>
+    <h1>Editar producto</h1>
+    <form action="/products/editar/<%=producto.id%>" method="post">
+        <div>
+            <label for="">Nombre del producto</label>
+            <input type="text" name="nombre" value="<%=producto.product_name%>" >
+        </div>
+        <div>
+            <label for="">Categoria</label>
+            <select name="categoria">
+                <% for(let i = 0; i < categorias.length; i ++){ %>
+                    <% if(categorias[i].id == producto.category_id) { %>   
+                       <option value="<%=categorias[i].id%>" selected>
+                            <%=categorias[i].productCat%>
+                       </option>
+                <% } else { %>
+                    <option value="<%=categorias[i].id%>">
+                        <%=categorias[i].productCat%>
+                    </option>
+            <% } %>
+
+            <% } %>
+            </select>
+        </div>
+        <div>
+            <label for="">Descripción</label>
+            <input type="text" name="descripcion" value="<%=producto.product_description%>">
+        </div>
+        <div>
+            <label for="">Precio</label>
+            <input type="text" name="precio" placeholder="$$$" value="<%=producto.price%>">
+        </div>
+        <div>
+            <label for="">Descuento</label>
+            <input type="text" name="descuento" value="<%=producto.discount%>">
+        </div>
+        <button type="submit">Editar</button>
+
+    </form>
+
+    
+
+
+
+<%- include('footer') -%>

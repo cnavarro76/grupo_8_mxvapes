@@ -1,0 +1,31 @@
+<%- include('header') -%>
+
+    <h1>Soy el login</h1>
+
+    <div class="login-form">
+        <h2 class="login-title">- Inicia sesion -</h2>
+        <div>
+            <div class="panel-body">
+                <form>
+                    <div >
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input id="txtUser" type="text" class="form-control" name="username" placeholder="Username">
+                    </div>
+                    <div>
+                        <input name="password"  placeholder="Password"  type="password" required="required">
+                    </div>
+                    <button type="submit"><i class="fa fa-sign-in"></i>
+                        Login</button>
+                    <div>
+                        <label><input type="checkbox" />Recuerdame, like gancito</label>
+                        <a href="#">¿olvidaste tu nombre de usuario o contraseña?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<br>
+
+-footer-
+    <%- include('footer') -%>
