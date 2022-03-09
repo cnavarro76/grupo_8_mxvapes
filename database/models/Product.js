@@ -10,7 +10,7 @@ module.exports = function(sequelize, dataTypes){
         product_name: {
             type: dataTypes.STRING
         },
-        category_id: {
+        category: {
             type: dataTypes.INTEGER
         },
         product_description: {

@@ -6,9 +6,7 @@ module.exports = function(sequelize, dataTypes){
             primaryKey: true,
             autoIncrement: true,
         },
-        product_id : {
-            type: dataTypes.INTEGER
-        },
+        
         productCat: {
             type: dataTypes.STRING
         }
