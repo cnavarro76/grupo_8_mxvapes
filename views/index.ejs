@@ -1,4 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MxVapes</title>
+      <%- include('./partials/script-header') %>
+</head>
+<body>
+
+  <%- include('./partials/header') %>
+
+
+
 <%- include('header') -%>
-  <h1><%= title %></h1>
+  <!--<h1><%= title %></h1>-->
+
+
+
+
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="img/banners/vape_1.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/banners/vape_2.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/banners/vape_3.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  
+    <span class="sr-only">Previous</span><i class="fas fa-chevron-left"></i>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+   
+    <span class="sr-only">Next</span><i class="fas fa-chevron-right"></i>
+  </a>
+</div>
+
+
+
+ <h2><strong>ENCUENTRA TU SABOR FAVORITO</strong></h2>
+<div class="sabores">
+ 
+<div class="sabor">
+<a href="/productDetail"><img src="img/img-index/bebidas.jpg"></a>
+
+</div>
+
+<div class="sabor">
+<a href="/productDetail"><img src="img/img-index/frutales.jpg"></a>
+
+</div>
+
+
+<div class="sabor">
+<a href="/productDetail"><img src="img/img-index/mentoles.jpg"></a>
+
+</div>
+
+<div class="sabor">
+<a href="/productDetail"><img src="img/img-index/tabacos.jpg"></a>
+
+</div>
+
+<div class="sabor">
+<a href="/productDetail"><img src="img/img-index/postres.jpg"></a>
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="categorias">
+
+<article class="categoria">
+<a href="/cbd"><img src="img/img-index/art1.jpg"></a>
+<p>¿Qué es y para que sirve CBD?</p>
+</article>
+
+
+<article class="categoria">
+<a href="/sales"><img src="img/img-index/art2.jpg"></a>
+<p>¿Qué son las sales de nicotina?</p>
+</article>
+
+
+<article class="categoria">
+<a href="/vapeo"><img src="img/img-index/art3.jpg"></a>
+<p>¿Qué es el vapeo?</p>
+</article>
+
+
+</div>
+
+<h2><strong>SUSCRÍBETE A NUESTRO BOLETÍN DE NOTICIAS</strong></h2>
+
+
+<div class="newsletter">
+ 
+<form action="/action_page.php">
+<input type="text" placeholder="Nombre completo" name="name" required>   
+<input type="text" placeholder="correo@.com">
+</form>
+<label>
+  <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+</label> 
+
+<button class="btn-enviar" type="submit"><i class="fas fa-envelope"></i></button>
+
+
+
+</div>
+
+
+
+
+  <%- include('./partials/footer') %>
+
+
+<%- include('./partials/menu') %>
+
+
+
   <p>Welcome team 8 to <%= title %></p>
-<%- include('footer') -%>
+<!--<%- include('footer') -%>-->
