@@ -1,0 +1,356 @@
+/* Basic Styling */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Fira Sans bold 700', 'Poppins Light300';
+}
+
+.container {
+  max-width: 1200px;
+  max-height: 800px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/*productos index*/
+.productos {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.producto {
+  width: 17%;
+}
+
+.producto img {
+  width: 100%;
+
+}
+
+/* Columns */
+
+/*left column*/
+.left-column {
+  display: none;
+  width: 10vw;
+  margin-top: 30px;
+
+
+}
+
+.left-column img {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  border-color: #87868a;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 1px;
+}
+
+/* center Column */
+
+.center-column {
+  width: 90vw;
+  position: relative;
+}
+
+.center-column img {
+  width: 100%;
+  /*position: absolute;*/
+  left: 0;
+  top: 0;
+  /*opacity: 0;*/
+  transition: all 0.3s ease;
+}
+
+.center-column img.active {
+  opacity: 1;
+  position: relative;
+}
+
+
+/* right column */
+
+.right-column {
+  width: 90vw;
+  margin-top: 60px;
+}
+
+
+/* Product Description */
+.product-description {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+
+.product-description span {
+  font-size: 12px;
+  color: #d27825;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.product-description h1 {
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 52px;
+  color: #444242;
+  letter-spacing: -2px;
+  width: 100%;
+}
+
+.product-description p {
+  font-size: 16px;
+  text-align: justify;
+  margin-right: 10px;
+  font-weight: 300;
+  color: #87868a;
+  line-height: 24px;
+}
+
+/* Product Color */
+.product-color {
+  margin-bottom: 30px;
+}
+
+
+.color-choose div {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.color-choose input[type="radio"] {
+  display: none;
+}
+
+.color-choose input[type="radio"]+label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/*input[type="checkbox"]:checked*/
+
+.color-choose input[type="radio"] label span {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+}
+
+.color-choose input[type="radio"]#black+label span {
+  background-color: #000000;
+}
+
+.color-choose input[type="radio"]#silver+label span {
+  background-color: #C0C0C0;
+}
+
+.color-choose input[type="radio"]#red+label span {
+  background-color: #FF0000;
+}
+
+.color-choose input[type="radio"]#bronze+label span {
+  background-color: #CD7F32;
+}
+
+.color-choose input[type="radio"]:checked+label span {
+  background-image: url(../img/productDetail/check-icn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* kit Configuration */
+.kit-choose {
+  margin-bottom: 20px;
+}
+
+.kit-choose button {
+  font-family: 'Poppins',
+    sans-serif;
+  border: 2px solid #E1E8EE;
+  border-radius: 6px;
+  padding: 13px 20px;
+  font-size: 14px;
+  color: #f4f4f4;
+  background-color: #d27825;
+  cursor: pointer;
+  transition: all .5s;
+  margin-top: 5px;
+}
+
+.kit-choose button:hover,
+.kit-choose button:active,
+.kit-choose button:focus {
+  border: 2px solid #86939E;
+  outline: none;
+}
+
+.kit-config {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.kit-config a {
+  color: #d27825;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  margin: 0px 0px;
+  display: inline-block;
+}
+
+.kit-config a:before {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
+
+/* Product Price */
+.product-price {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -20px;
+}
+
+.product-price span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #444242;
+}
+
+.product-quantity {
+  position: relative;
+  left: 120px;
+}
+
+.quantity-choose {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 30px;
+}
+
+.product-quantity span {
+  font-size: 16px;
+  font-weight: 300;
+  color: #444242;
+  position: relative;
+  left: 110px;
+  top: -17px;
+
+
+}
+
+.cart-btn {
+  display: inline-block;
+  background-color: #d27825;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+  border-radius: 15px;
+  box-shadow: 0 3px #999;
+}
+
+
+.cart-btn a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+
+.cart-btn:hover {
+  background-color: green;
+  border: 2px solid #86939E;
+  color: #FFF;
+  outline: none;
+}
+
+.cart-btn-button {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 12px 30px;
+  background-color: red;
+  font-size: 14px;
+  transition: all .5s;
+  border-radius: 15px;
+  box-shadow: 0 3px #999;
+}
+
+.cart-btn-button:hover {
+  background-color: red;
+  border: 2px solid #86939E;
+  color: #FFF;
+  outline: none;
+}
+
+.cart-btn-button button {
+  border: 1px solid red;
+  color: white;
+  background-color: red;
+}
+
+
+
+/* Responsive */
+
+@media (min-width: 630px) {
+
+  .container {
+    flex-direction: row;
+
+  }
+
+  .left-column {
+    width: 10%;
+    display: block;
+  }
+
+  .left-column img {
+    display: block;
+  }
+
+
+  .center-column {
+    width: 40%;
+  }
+
+  .center-column img.active {
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 100px;
+  }
+
+  .right-column {
+    width: 50%;
+    margin-left: 2%;
+  }
+}
