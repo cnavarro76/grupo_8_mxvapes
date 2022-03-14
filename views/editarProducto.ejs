@@ -1,6 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
+
+        <title>MXVapes</title>
+ 
+ <link rel="stylesheet" href="/css/styleLogin.css">
+      <%- include('./partials/script-header') %>
+    </head>
+    <body class="fondo"> 
+
+  <%- include('./partials/header') %>
 <%- include('header') -%>
-    <h1>Editar producto</h1>
-    <form action="/products/editar/<%=producto.id%>" method="post">
+    
+    <form action="/products/editar/<%=producto.id%>" method="post" class="formulario">
+
+            <h1 class="formularios-t">Editar producto</h1>
         <div>
             <label for="">Nombre del producto</label>
             <input type="text" name="nombre" value="<%=producto.product_name%>" >
@@ -34,12 +53,20 @@
             <label for="">Descuento</label>
             <input type="text" name="descuento" value="<%=producto.discount%>">
         </div>
-        <button type="submit">Editar</button>
+        <button class="boton" type="submit">Editar</button>
 
-    </form>
+    </form><br>
 
     
 
 
 
-<%- include('footer') -%>
+
+  <%- include('./partials/footer') %>
+
+
+<%- include('./partials/menu') %>
+
+
+</body>
+</html>

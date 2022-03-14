@@ -1,12 +1,30 @@
-<%- include('header') -%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
+
+        <title>MXVapes</title>
+ 
+ <link rel="stylesheet" href="/css/styleLogin.css">
+      <%- include('./partials/script-header') %>
+    </head>
+    <body class="fondo"> 
+        
+  <%- include('./partials/header') %>
+        <%- include('header') -%>
 
 <body>
-    <form method="POST" action="/users/register">
+    <form method="POST" action="/users/register" class="formulario">
         <div class="form-signin">
             <div class="title">
-                <span>Mx Vapes</span>
+         
                 <p>
-                <h1>Registrate </h1>
+                <h1 class="formularios-t">Regístrate </h1>
                 </p>
             </div>
     
@@ -38,8 +56,8 @@
             </div>
     
             <div>
-                <button type="submit">
-                    registrar usuario
+                <button class="boton" type="submit">
+                    Registrar usuario
                 </button>
             </div>
     </form>
@@ -50,6 +68,10 @@
 
 <br>
 
--footer-
+  <%- include('./partials/footer') %>
 
-<%- include('footer') -%>
+
+<%- include('./partials/menu') %>
+
+</body>
+</html>

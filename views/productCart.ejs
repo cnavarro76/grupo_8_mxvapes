@@ -6,27 +6,20 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/style_productCart.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9d20c25172.js" crossorigin="anonymous"></script>
+   <title>MXVapes</title>
+    <%- include('./partials/script-header') %>
+
 </head>
 
 <body>
 
-    <div class="CartContainer">
-        <p> Vapes MX </p>
-        <nav>
-            <ul>
-                <li class="crear-verProducto">
-                    <a href="/products/crear">Crear producto</a>
+    
+ <%- include('./partials/header') %>
 
-                    <a href="/products">Ver productos</a>
-
-                </li>
-
-                <ul class="login-register">
-                    <li><a href="/users/login">Iniciar sesion</a></li>
-                    <li> <a href="/users/register"> Registrate </a></li>
-
-                </ul>
-        </nav>
+<%- include('header') -%>
+<div class="container fl">
+   <!--<div class="CartContainer">-->
+       
         <div class="Header">
             <h3 class="Heading">Carrito de compras</h3>
             <h5 class="Action">Vaciar carrito</h5>
@@ -82,9 +75,13 @@
                 </div>
                 <div class="total-amount">$6.18</div>
             </div>
-            <button class="button">Checkout</button>
+            <button class="boton">Checkout</button>
         </div>
     </div>
+
+
+    <%- include('./partials/footer') %>
+<%- include('./partials/menu') %>
 </body>
 
 </html>

@@ -48,7 +48,7 @@ header h1 a:active {
 
 h1 {
   float: left;
-  font-size: 33px;
+  font-size: 40px;
   text-align: center;
   color: #FFF;
   font-weight: bold;
@@ -494,7 +494,8 @@ article p {
   text-align: center;
   width: 100%;
   margin-top: 20px;
-  padding: 5px;
+  padding: 12px;
+  height: 65px;
   border-radius: 10px;
 
 }
@@ -503,7 +504,7 @@ article p {
 .boton:active,
 .boton:link,
 .boton:visited {
-  background-color: #d27825;
+  background-color: #9b4d0d;
   color: #FFF;
 
 }
@@ -514,6 +515,11 @@ article p {
   float: left;
   margin: 0 20px;
   padding: 11px;
+  height: 50px;
+}
+
+.formularios-t {
+  margin-bottom: 20px;
 }
 
 
@@ -525,6 +531,56 @@ ul.listado {
   float: left;
   clear: both;
   text-align: left;
+}
+
+.buscador {
+  width: 300px;
+}
+
+
+.buscar-txt {
+  width: 200px;
+
+}
+
+.buscar-icon {
+  background: #d27825;
+  width: 75px;
+  border: 0;
+  float: left;
+  color: #FFF;
+  height: 47.5px;
+}
+
+
+.buscar-icon:hover,
+.buscar-icon:active,
+.buscar-icon:link,
+.buscar-icon:visited {
+  background-color: #9b4d0d;
+  color: #FFF;
+
+}
+
+.opciones {
+  background: #87868a;
+}
+
+nav.menu-secundario {
+  background: initial;
+}
+
+nav.menu-secundario ul {
+
+  width: initial;
+}
+
+nav.menu-secundario ul li a {
+
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 100;
+
 }
 
 
