@@ -1,12 +1,30 @@
-<%- include('header') -%>
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
 
-    <h1>Soy el login</h1>
+        <title>MXVapes</title>
+ 
+ <link rel="stylesheet" href="/css/styleLogin.css">
+      <%- include('./partials/script-header') %>
+    </head>
+    <body class="fondo"> 
 
-    <div class="login-form">
-        <h2 class="login-title">- Inicia sesion -</h2>
-        <div>
+
+
+  <%- include('./partials/header') %>
+<!--<%- include('header') -%>-->
+
             <div class="panel-body">
-                <form>
+                <form method="POST" action="/users/login" class="formulario">
+ <h1>Iniciar sesión</h1>
+            <div>
+              <img src="../img/LogReg/user.png" class="img"/><br>
+            </div>
+
                     <div >
                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                         <input id="txtUser" type="text" class="form-control" name="username" placeholder="Username">
@@ -14,18 +32,33 @@
                     <div>
                         <input name="password"  placeholder="Password"  type="password" required="required">
                     </div>
-                    <button type="submit"><i class="fa fa-sign-in"></i>
-                        Login</button>
+ <label class="form-check-label"><input type="checkbox" class="form-check-input" name="recuerdame">Recordar mis usuario</label>
+
+
+                    <button class="boton" type="submit"><i class="fa fa-sign-in"></i>
+                      Iniciar sesión</button>
                     <div>
-                        <label><input type="checkbox" />Recuerdame, like gancito</label>
-                        <a href="#">¿olvidaste tu nombre de usuario o contraseña?</a>
+                          
+                      <p><br>¿Olvidaste tu <a class="link" href="#">contraseña</a>?</p> 
                     </div>
                 </form>
+                 <form class="formulario2">
+          <p>¿No posees una cuenta? <a class="link" href="/users/register">Crea una</a></p>
+          <p>o inicia sesión con</p>
+          <p class="iconos">
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <a href="#"><i class="fab fa-google"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </p>
+          </form>
             </div>
         </div>
     </div>
 
 <br>
 
--footer-
-    <%- include('footer') -%>
+
+  <%- include('./partials/footer') %>
+
+
+<%- include('./partials/menu') %>

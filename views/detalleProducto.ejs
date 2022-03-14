@@ -1,25 +1,65 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
+
+        <title>MXVapes</title>
+    <link rel="stylesheet" href="/css/styles-productDetail.css">
+      <%- include('./partials/script-header') %>
+    </head>
+
+<body> 
+
+   
+
+ <%- include('./partials/header') %>
+
 <%- include('header') -%>
-  
+   <main class="container"></main>
 <h1><%= producto.product_name%></h1>
 
+
+ <div class="center-column">
+
+    <img src="/img/productos/<%=producto.image%>" alt="imagen de producto">
+ </div>
+
+<div class="right-column">
 <ul>
     <li>
-        Precio: $<%= producto.price%> 
+       <span class="title-p"> Precio:</span> $<%= producto.price%> 
     </li>
     <li>
-        Descripció: <%= producto.product_description %>
+        <span class="title-p">Descripción:</span> <%= producto.product_description %>
     </li>
     <li>
-        Categoria : <%= producto.category_id %>
+        <span class="title-p">Categoria :</span> <%= producto.category_id %>
     </li>
 </ul>
 <a href="/products/editar/<%= producto.id %>">
-    <button>
+    <button class="boton detalle" >
         Editar
     </button>
 </a>
 <form action="/products/borrar/<%=producto.id%>" method="POST" >
-    <button type="submit">Borrar</button>
+    <button class="boton detalle" type="submit">Borrar</button>
 </form>
 
-<%- include('footer') -%>
+</div>
+
+
+
+  </main>
+
+<%- include('./partials/footer') %>
+<%- include('./partials/menu') %>
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="/js/script.js" charset="utf-8"></script>
+</body>
+</html>

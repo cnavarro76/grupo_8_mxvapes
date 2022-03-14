@@ -1,6 +1,24 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
+
+        <title>MXVapes</title>
+
+      <%- include('./partials/script-header') %>
+    </head>
+
+<body> 
+ <%- include('./partials/header') %>
 <%- include('header') -%>
-  <h1>Listado de productos</h1>
-  <ul>
+
+
+<div class="container fl">
+  <h1 class="orange">Listado de productos</h1>
+  <ul class="listado">
     <% for(let i = 0; i < productos.length; i ++){ %>
         <li>
             <a href="/products/<%=productos[i].id%>">
@@ -10,4 +28,11 @@
 
     <% } %>
   </ul>
-<%- include('footer') -%>
+</div>
+
+
+
+  <%- include('./partials/footer') %>
+
+
+<%- include('./partials/menu') %>
