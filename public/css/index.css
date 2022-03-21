@@ -347,10 +347,12 @@ footer {
   width: 80%;
   margin: 20px auto;
   align-items: center;
+  text-align: center;
 
 
 
 }
+
 
 input[type=text] {
   margin-bottom: 20px;
@@ -517,6 +519,12 @@ article p {
   padding: 11px;
   height: 50px;
 }
+
+.newsletter .ins {
+  float: initial;
+}
+
+
 
 .formularios-t {
   margin-bottom: 20px;
