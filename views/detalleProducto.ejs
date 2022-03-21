@@ -28,29 +28,34 @@
  </div>
 
 <div class="right-column">
-<ul>
-    <li>
-       <span class="title-p"> Precio:</span> $<%= producto.price%> 
-    </li>
-    <li>
-        <span class="title-p">Descripción:</span> <%= producto.product_description %>
-    </li>
-    <li>
-        <span class="title-p">Categoria :</span> <%= producto.category_id %>
-    </li>
-</ul>
-<a href="/products/editar/<%= producto.id %>">
-    <button class="boton detalle" >
-        Editar
+<p class="nombre-producto"><%=producto.product_name%></p>
+    <p><span class="title-p">Categoría:</span> <%=producto.category%></p>
+        <p><span class="title-p">Descripción:</span> <%=producto.product_description%></p>
+	  <p><span class="title-p">Precio:</span> $<%=producto.price%></p>
+    <p><span class="title-p">Descuento:</span> <%=producto.discount%>%</p>
+
+
+    
+   
+
+
+    <button class="boton detalle btn-d" >
+        <a href="/products/editar/<%= producto.id %>"></a>
+        Editar</a>
     </button>
-</a>
+
 <form action="/products/borrar/<%=producto.id%>" method="POST" >
-    <button class="boton detalle" type="submit">Borrar</button>
+    <button class="boton detalle btn-d" type="submit">Borrar</button>
 </form>
 
+  <button class="boton detalle btn-d" >
+        <a href="#"></a>
+        Agregar al carrito</a>
+    </button>
 </div>
 
 
+  
 
   </main>
 

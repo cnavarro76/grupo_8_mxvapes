@@ -465,6 +465,11 @@ article p {
   font-weight: bold;
 }
 
+.nombre-producto {
+  font-size: 30px;
+  text-align: left;
+  font-weight: bold;
+}
 
 .producto-m img {
   width: 100%;
@@ -541,6 +546,10 @@ article p {
   text-decoration: none;
 }
 
+
+.boton.btn-d {
+  margin: 20px 30px
+}
 
 .newsletter .ins {
   float: initial;
