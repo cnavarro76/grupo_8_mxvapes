@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
+
+        <title>MXVapes</title>
+
+      <%- include('./partials/script-header') %>
+    </head>
+
+<body> 
+ <%- include('./partials/header') %>
+<%- include('header') -%>
+
+  <main>
+    <div class="lista-productos">
+<h1 class="orange">Productos por categoría 
+</h1>
+
+	<%for(const producto of productos) {%>
+
+<div class="producto-m">
+	 <%=producto.image%>
+    <p class="nombre-producto"><%=producto.product_name%></p>
+    <p><span class="title-p">Categoría:</span> <%=producto.category%></p>
+	  <p><span class="title-p">Precio:</span> $<%=producto.price%></p>
+    <p><span class="title-p">Descuento:</span> <%=producto.discount%>%</p>
+     <button class="boton detalle ins"> <a href="/products/<%=producto.id%>">Ver detalle  </a></button>
+</div>
+	<%}%>
+
+  
+</div>
+
+  </main>
+
+
+
+
+
+
+
+
+
+<!--<div class="container fl">
+  <h1 class="orange">Listado de productos</h1>
+  <ul class="listado">
+    <% for(let i = 0; i < productos.length; i ++){ %>
+        <li>
+            <%= productos[i].image%><br>
+            <%= productos[i].product_name%><br>
+            $<%= productos[i].product_description%><br>
+            <%= productos[i].price%><br>
+          <button class="boton detalle"> <a href="/products/<%=productos[i].id%>">Ver detalle  </a></button>
+        </li>
+
+    <% } %>
+  </ul>
+</div>-->
+
+
+
+  <%- include('./partials/footer') %>
+
+
+<%- include('./partials/menu') %>
+
+</body>
+</html>

@@ -64,6 +64,7 @@ main {
 /* center Column */
 
 .center-column {
+  float: left;
   width: 90vw;
   position: relative;
 }
@@ -86,6 +87,7 @@ main {
 /* right column */
 
 .right-column {
+  float: left;
   width: 90vw;
   margin-top: 60px;
 }

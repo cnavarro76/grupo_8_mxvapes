@@ -6,9 +6,18 @@ var productsController = require('../controllers/productsController');
 router.get('/crear', productsController.crear);
 router.post('/crear', productsController.guardar);
 
-//Lectura
 
-router.get('/', productsController.listado);
+// rutas menu
+
+router.get('/kits', productsController.kits);
+
+router.get('/ejuice', productsController.editar);
+router.get('/salts', productsController.editar);
+router.get('/pods', productsController.editar);
+router.get('/cbd', productsController.editar);
+router.get('/acesories', productsController.editar);
+
+
 
 // Detalle
 
@@ -22,6 +31,18 @@ router.post('/editar/:id', productsController.actualizar);
 //Borrar
 
 router.post("/borrar/:id", productsController.borrar);
+
+
+
+
+//Lectura
+
+router.get('/', productsController.listado);
+
+
+
+
+
 
 
 module.exports = router;
