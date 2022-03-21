@@ -445,8 +445,24 @@ article p {
 .producto-m {
   float: left;
   width: 96%;
-  margin: 0 2%;
+  margin: 30px 2%;
+  text-align: center;
 
+}
+
+.producto-m p {
+  text-align: left;
+}
+
+.producto-m button.ins {
+  float: initial;
+
+}
+
+.producto-m .nombre-producto {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
 }
 
 
@@ -519,6 +535,12 @@ article p {
   padding: 11px;
   height: 50px;
 }
+
+.boton.detalle a {
+  color: #FFF;
+  text-decoration: none;
+}
+
 
 .newsletter .ins {
   float: initial;
