@@ -13,6 +13,21 @@ router.get('/productCart', function (req, res) {
 })
 
 
+router.get('/cbd', function (req, res) {
+  res.render('cbd')
+})
+
+
+router.get('/sales', function (req, res) {
+  res.render('sales')
+})
+
+
+router.get('/vapeo', function (req, res) {
+  res.render('vapeo')
+})
+
+
 
 
 
