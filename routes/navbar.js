@@ -5,7 +5,7 @@ var navbarController = require('../controllers/navbarController');
 
 
 // rutas menu
-
+router.get('/search', navbarController.search);
 router.get('/:id', navbarController.kits);
 
 
