@@ -29,14 +29,15 @@
         <div>
             <label for="">Categoria</label>
             <select name="categoria">
-                <% for(let i = 0; i < categorias.length; i ++){ %>
+                	
+              <% for(let i = 0; i < categorias.length; i ++){ %>
                 <option value="<%=categorias[i].id%>">
                     <%=categorias[i].productCat%>
                 </option>
             <% } %>
             </select>
         </div>
-        <div>
+        <div><br>
             <label for="">Descripción</label>
             <input type="text" name="descripcion">
         </div>

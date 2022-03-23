@@ -25,7 +25,6 @@ let navbarController = {
             busqueda
         } = req.query;
 
-        //busqueda = busqueda.toLowerCase();
         db.Product.findAll({
                 where: {
                     product_name: {
