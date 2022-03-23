@@ -21,7 +21,10 @@ module.exports = function(sequelize, dataTypes){
         },
         discount: {
             type: dataTypes.INTEGER
-        }
+        },
+        image: {    
+            type: dataTypes.BLOB,
+        },
     };
         
     let config = {

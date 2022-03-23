@@ -15,7 +15,8 @@ let productsController = {
             category: req.body.categoria,
             product_description: req.body.descripcion,
             price: req.body.precio,
-            discount: req.body.descuento
+            discount: req.body.descuento,
+            image: req.file.filename
         })
         res.redirect('/')
     },

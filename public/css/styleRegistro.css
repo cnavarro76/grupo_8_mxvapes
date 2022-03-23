@@ -60,14 +60,13 @@ i {
 
 
 .input-contenedor {
-    
     margin-bottom: 10px;
     clear: both;
     float: left;
     width: 100%;
 }
 
-.input-contenedor-firstName {
+.input-contenedor-userName {
     width: 49%;
     float: left;
 }
@@ -77,49 +76,38 @@ i {
     float: right;
 }
 
-.input-contenedor .fas.fa-user {
-    float: right;
-    margin-top: -60px;
-}
-
-.input-contenedor-firstName .fas.fa-user {
-    float: right;
-    margin-top: -60px;
-}
-
 .input-contenedor-lastName .fas.fa-user {
     float: right;
     margin-top: -60px;
     margin-bottom: 20px;
 }
 
-.input-contenedor .fas.fa-envelope {
+.input-contenedor-email .fas.fa-envelope {
     float: right;
-    margin-top: -60px;
+    margin-top: -65px;
     margin-bottom: 20px;
 }
 
-.input-contenedor-password {
+.input-contenedor-user_type {
+    margin-bottom: 20px;
+}
+
+.input-contenedor-user_pass {
     width: 49%;
     float: left;
 }
 
-.input-contenedor-confirm {
+.input-contenedor-confirm_pass {
     width: 49%;
     float: right;
-}
-
-
-.input-contenedor-password .fas.fa-key {
-    float: right;
-    margin-top: -38px;
-}
-
-.input-contenedor-confirm .fas.fa-key {
-    float: right;
-    margin-top: -38px;
     margin-bottom: 20px;
 }
+
+.input-contenedor-confirm_pass .fas.fa-key {
+    float: right;
+    margin-top: -38px;
+}
+
 
 .input-contenedor-usuario .fas.fa-user {
     float: right;
@@ -127,9 +115,9 @@ i {
     margin-bottom: 20px;
 }
 
-.input-contenedor .fas.fa-map-marked-alt {
+.input-contenedor-address .fas.fa-map-marked-alt {
     float: right;
-    margin-top: -60px;
+    margin-top: -65px;
 }
 
 

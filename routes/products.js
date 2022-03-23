@@ -2,10 +2,12 @@ var express = require('express');
 var router = express.Router();
 var productsController = require('../controllers/productsController');
 
+// Middlewares
+const uploadProductFile = require('../middlewares/multerProductMiddleware');
+
 /* creacion  */
 router.get('/crear', productsController.crear);
-router.post('/crear', productsController.guardar);
-
+router.post('/crear', uploadProductFile.single('image'), productsController.guardar);
 
 // rutas menu
 

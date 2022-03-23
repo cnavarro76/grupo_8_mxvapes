@@ -18,12 +18,14 @@ let usersController = {
     },
     guardarUsuario: function(req, res){
         db.User.create({
-            userName: req.body.name,
+            userName: req.body.userName,
             lastName: req.body.lastName,
             email: req.body.email,
-            user_type: req.body.userType,
-            user_password: req.body.password,
-            address: req.body.address
+            user_type: req.body.user_type,
+            user_pass: req.body.user_pass,
+            confirm_pass: req.body.confirm_pass,
+            address: req.body.address,
+            image: req.file.filename
         })
         res.redirect('/')        
     }

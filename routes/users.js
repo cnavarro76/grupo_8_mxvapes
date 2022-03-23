@@ -1,13 +1,17 @@
 var express = require('express');
 var router = express.Router();
+
+// Controller
 var usersController = require('../controllers/usersController');
+
+// Middlewares
+const uploadFile = require("../middlewares/multerMiddleware");
 
 /* creacion  */
 router.get('/login', usersController.login);
 
-
 router.get('/register', usersController.register);
-router.post('/register', usersController.guardarUsuario);
+router.post("/register", uploadFile.single("image"), usersController.guardarUsuario);
 
 
 

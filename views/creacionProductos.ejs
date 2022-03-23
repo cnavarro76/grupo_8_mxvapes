@@ -18,7 +18,8 @@
   <%- include('./partials/header') %>
 <%- include('header') -%>
     <div class="panel-body">
-  <form action="/products/crear" method="post" class="formulario">
+  <form action="/products/crear" method="post" class="formulario" enctype="multipart/form-data">
+    
 
     <h1 class="formularios-t">Crear producto</h1>
   
@@ -48,6 +49,18 @@
             <label for="">Descuento</label>
             <input type="text" name="descuento">
         </div>
+
+        <div class="input-contenedor">
+            <label for="imagen" class="form-label">Sube una imagen del producto </label>
+            <input type="file" name="image" id="image" class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>"> </i>
+            <% if (locals.errors && errors.image) { %>
+                <div class="text-danger">
+                    <%= errors.image.msg %>
+                    
+                </div>
+            <% } %>
+        </div>
+
         <button class="boton" type="submit">Crear</button>
 
     </form><br>

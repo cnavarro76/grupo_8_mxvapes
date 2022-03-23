@@ -68,6 +68,50 @@
     margin-bottom: 15px;
 }
 
+.input-contenedor-userName {
+    width: 49%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.input-contenedor-lastName {
+    width: 49%;
+    float: right;
+    margin-bottom: 50px;
+}
+
+.input-contenedor-lastName .fas.fa-user {
+    float: right;
+    margin-top: -65px;   
+}
+
+.input-contenedor-email .fas.fa-envelope {
+    float: right;
+    margin-top: -65px;
+}
+
+.input-contenedor-user_pass {
+    width: 49%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.input-contenedor-confirm_pass {
+    width: 49%;
+    float: right;
+    margin-bottom: 50px;
+}
+
+.input-contenedor-confirm_pass .fas.fa-key {
+    float: right;
+    margin-top: -40px;
+}
+
+.input-contenedor-address .fas.fa-map-marked-alt {
+    float: right;
+    margin-top: -65px;
+}
+
 .formulario .icon {
     min-width: 50px;
     text-align: center;

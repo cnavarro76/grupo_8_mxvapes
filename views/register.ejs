@@ -10,7 +10,7 @@
 
         <title>MXVapes</title>
  
- <link rel="stylesheet" href="/css/styleLogin.css">
+ <link rel="stylesheet" href="/css/styleRegistro.css">
       <%- include('./partials/script-header') %>
     </head>
     <body class="fondo"> 
@@ -19,7 +19,7 @@
         <%- include('header') -%>
 
 <body>
-    <form method="POST" action="/users/register" class="formulario">
+    <form method="POST" action="/users/register" class="formulario" enctype="multipart/form-data">
         <div class="form-signin">
             <div class="title">
          
@@ -28,18 +28,22 @@
                 </p>
             </div>
     
-            <div>
-                <input name="name" placeholder="Username" type="text" required="required">
+            <div class="input-contenedor-userName">
+                <input type="text" name="userName" placeholder="Nombre(s)" class="form-control" >
             </div>
-            <div>
-                <input name="lastName" placeholder="apellido" type="text" required="required">
+            
+            <div class="input-contenedor-lastName">
+                <input name="lastName" placeholder="Apellido(s)" type="text" class="form-control" > <i class="fas fa-user"></i>
             </div>
+           
             <div>
-                <input name="email" placeholder="Email" type="text" required="required">
+                <input name="email" placeholder="Email" type="text" class="form-control">
             </div>
-            <div>
-                <label for="">Tipo de usuario</label>
-                <select name="userType">
+
+            <div class="input-contenedor-user_type">
+                <label for="user_type">Tipo de usuario</label>
+                <select name="user_type">
+                    <option value="">Selecciona una opción</option>
                     <% for(let i = 0; i < tipoUsuario.length; i ++){ %>
                     <option value="<%=tipoUsuario[i].id%>">
                         <%=tipoUsuario[i].utype%>
@@ -47,13 +51,30 @@
                 <% } %>
                 </select>
             </div>
-            <div>
-                <input name="password"  placeholder="Password"  type="password" required="required">
+
+            <div class="input-contenedor-user_pass">
+                <input name="user_pass"  placeholder="Contraseña"  type="password" class="form-control" >
             </div>
-            <div >
-                <input name="address"  placeholder="tu direccion completa" type="text"
-                    required="required">
+            
+            <div class="input-contenedor-confirm_pass">
+                <input name="confirm_pass"  placeholder="Confirmar contraseña"  type="password" class="form-control"> <i class="fas fa-key"></i>
             </div>
+            
+            <div class="input-contenedor-address">
+                <input name="address"  placeholder="Direccion de envio" type="text" class="form-control"> <i class="fas fa-map-marked-alt"></i>
+            </div>
+            
+            <div class="input-contenedor">
+                <label for="imagen" class="form-label">Sube tu imagen de usuario </label>
+                <input type="file" name="image" id="image" class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>"> </i>
+                <% if (locals.errors && errors.image) { %>
+                    <div class="text-danger">
+                        <%= errors.image.msg %>
+                        
+                    </div>
+                <% } %>
+            </div>
+
     
             <div>
                 <button class="boton" type="submit">

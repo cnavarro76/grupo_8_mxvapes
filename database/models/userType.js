@@ -12,7 +12,7 @@ module.exports = function(sequelize, dataTypes){
 
     };
     let config = {
-        tableName: "usertype", //como se llama la tabla en la db
+        tableName: "userType", //como se llama la tabla en la db
         timestamps: false
     };
     

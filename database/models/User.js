@@ -23,9 +23,15 @@ module.exports = function(sequelize, dataTypes){
         user_pass: {
             type: dataTypes.INTEGER
         },
+        confirm_pass: {
+            type: dataTypes.STRING,
+        },
         address: {
             type: dataTypes.STRING
-        }
+        },
+        image: {    
+            type: dataTypes.BLOB,
+        },
     };
 
     let config = {
