@@ -1,4 +1,4 @@
-module.exports = function(sequelize, dataTypes){
+module.exports = function (sequelize, dataTypes) {
     let alias = "Product"; //como sequelize va a llamar a nuestra tabla
 
     let cols = {
@@ -23,17 +23,17 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.INTEGER
         }
     };
-        
+
     let config = {
         tableName: "products", //como se llama la tabla en la db
         timestamps: false
     }
-        
+
 
 
     const Product = sequelize.define(alias, cols, config);
 
-    Product.associate = function(modelos){
+    Product.associate = function (modelos) {
         Product.belongsToMany(modelos.User, {
             as: "usuarios",
             through: "cart",
@@ -41,12 +41,17 @@ module.exports = function(sequelize, dataTypes){
             otherkey: "idUser",
             timestamps: false
         });
-        
-        
+
+        /*Product.belongsTo(models.Category, {
+            as: "categoria"
+
+        });*/
+
+
     }
 
 
-    
+
 
     return Product;
 }

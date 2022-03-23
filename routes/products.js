@@ -9,8 +9,6 @@ router.post('/crear', productsController.guardar);
 
 // rutas menu
 
-router.get('/kits', productsController.kits);
-
 router.get('/ejuice', productsController.editar);
 router.get('/salts', productsController.editar);
 router.get('/pods', productsController.editar);
@@ -38,10 +36,6 @@ router.post("/borrar/:id", productsController.borrar);
 //Lectura
 
 router.get('/', productsController.listado);
-
-
-
-
 
 
 

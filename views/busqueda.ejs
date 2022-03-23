@@ -17,7 +17,7 @@
 
   <main>
     <div class="lista-productos">
-<h1 class="orange">Productos por categoría 
+<h1 class="orange">Resultados de la búsqueda 
 </h1>
 
 	<%for(const producto of productos) {%>
@@ -37,36 +37,3 @@
 
   </main>
 
-
-
-
-
-
-
-
-
-<!--<div class="container fl">
-  <h1 class="orange">Listado de productos</h1>
-  <ul class="listado">
-    <% for(let i = 0; i < productos.length; i ++){ %>
-        <li>
-            <%= productos[i].image%><br>
-            <%= productos[i].product_name%><br>
-            $<%= productos[i].product_description%><br>
-            <%= productos[i].price%><br>
-          <button class="boton detalle"> <a href="/products/<%=productos[i].id%>">Ver detalle  </a></button>
-        </li>
-
-    <% } %>
-  </ul>
-</div>-->
-
-
-
-  <%- include('./partials/footer') %>
-
-
-<%- include('./partials/menu') %>
-
-</body>
-</html>

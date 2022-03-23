@@ -15,14 +15,14 @@
  <%- include('./partials/header') %>
 <%- include('header') -%>
 
-  <main>
+  <!--<main>
     <div class="lista-productos">
 
 	<%for(const producto of productos) {%>
 <div class="producto-m">
 	 <%=producto.image%>
     <p class="nombre-producto"><%=producto.product_name%></p>
-    <p><span class="title-p">Categoría:</span> <%=producto.category%></p>
+ <p><span class="title-p">Categoría:</span> <%=producto[1]%></p>
 	  <p><span class="title-p">Precio:</span> $<%=producto.price%></p>
     <p><span class="title-p">Descuento:</span> <%=producto.discount%>%</p>
      <button class="boton detalle ins"> <a href="/products/<%=producto.id%>">Ver detalle  </a></button>
@@ -32,7 +32,7 @@
   
 </div>
 
-  </main>
+  </main>-->
 
 
 
@@ -42,21 +42,39 @@
 
 
 
-<!--<div class="container fl">
+<div class="container fl">
   <h1 class="orange">Listado de productos</h1>
-  <ul class="listado">
+	<%for(const producto of productos) {%>
+<div class="producto-m">
+	 <%=producto.image%>
+    <p class="nombre-producto"><%=producto.product_name%></p>
+    
+	  <p><span class="title-p">Precio:</span> $<%=producto.price%></p>
+    <p><span class="title-p">Descuento:</span> <%=producto.discount%>%</p>
+     <button class="boton detalle ins"> <a href="/products/<%=producto.id%>">Ver detalle  </a></button>
+</div>
+	<%}%>
+
+  
+</div>
+
+
+
+  <!--<ul class="listado">
     <% for(let i = 0; i < productos.length; i ++){ %>
         <li>
+           <%= productos[i].name%><br>
             <%= productos[i].image%><br>
-            <%= productos[i].product_name%><br>
+            <p style="font-size:20px"><%=productos.category%></p><br>
+          
             $<%= productos[i].product_description%><br>
             <%= productos[i].price%><br>
           <button class="boton detalle"> <a href="/products/<%=productos[i].id%>">Ver detalle  </a></button>
         </li>
 
     <% } %>
-  </ul>
-</div>-->
+  </ul>-->
+</div>
 
 
 

@@ -7,7 +7,9 @@ let productsController = {
                 return res.render('creacionProductos', {
                     categorias
                 })
+
             })
+
     },
     guardar: function (req, res) {
         db.Product.create({
@@ -61,23 +63,6 @@ let productsController = {
         });
         res.redirect("/products/" + req.params.id)
     },
-
-    kits: function (req, res) {
-        db.Product.findAll({
-                where: {
-                    category: 1
-                }
-            })
-            .then(function (productos) {
-
-                res.render("categorias", {
-                    productos
-                })
-
-            })
-    },
-
-
 
 
 
