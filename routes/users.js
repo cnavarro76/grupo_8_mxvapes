@@ -6,12 +6,13 @@ var usersController = require('../controllers/usersController');
 
 // Middlewares
 const uploadFile = require("../middlewares/multerMiddleware");
+const validations = require('../middlewares/validateRegisterMiddleware');
 
 /* creacion  */
 router.get('/login', usersController.login);
 
 router.get('/register', usersController.register);
-router.post("/register", uploadFile.single("image"), usersController.guardarUsuario);
+router.post("/register", uploadFile.single("image"), validations, usersController.guardarUsuario);
 
 
 
