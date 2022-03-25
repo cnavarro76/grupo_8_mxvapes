@@ -1,35 +1,52 @@
 let db = require("../database/models");
 const bcryptjs = require("bcryptjs");
-const {validationResult} = require('express-validator');
+const {
+  validationResult
+} = require('express-validator');
 
 let usersController = {
   login: function (req, res) {
     db.User.findAll().then(function (usuarios) {
       return res.render("login");
-    });
+    }).catch(error => console.log(error));
   },
   register: function (req, res) {
     db.userType.findAll().then(function (tipoUsuario) {
-      return res.render("register", { tipoUsuario });
-    });
+      return res.render("register", {
+        tipoUsuario
+      });
+    }).catch(error => console.log(error));
   },
+
+  profile: function (req, res) {
+    db.User.findAll().then(function (user) {
+      return res.render("userProfile", {
+        user
+      });
+    }).catch(error => console.log(error));;
+  },
+
 
   guardarUsuario: async function (req, res) {
     const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
-    const tipoUsuario = await db.userType.findAll()
+      const tipoUsuario = await db.userType.findAll()
       return res.render("register", {
         errors: resultValidation.mapped(),
         oldData: req.body,
         tipoUsuario,
       });
     }
-    const userInDB = await db.User.findOne({ where: { email: req.body.email } });
+    const userInDB = await db.User.findOne({
+      where: {
+        email: req.body.email
+      }
+    });
 
 
     if (userInDB) {
-    const tipoUsuario = await db.userType.findAll()
+      const tipoUsuario = await db.userType.findAll()
       return res.render("register", {
         errors: {
           email: {
