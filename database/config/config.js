@@ -1,8 +1,8 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "3Chifl@ados3",
-    "database": "dbMxVapes",
+    "password": "root",
+    "database": "dbmxvapes",
     "host": "127.0.0.1",
     "port": "3306",
     "dialect": "mysql"
