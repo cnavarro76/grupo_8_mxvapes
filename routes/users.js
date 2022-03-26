@@ -10,6 +10,7 @@ const validations = require('../middlewares/validateRegisterMiddleware');
 
 /* creacion  */
 router.get('/login', usersController.login);
+// router.post('/login', usersController.loginProcess);
 
 router.get('/register', usersController.register);
 router.post("/register", uploadFile.single("image"), validations, usersController.guardarUsuario);

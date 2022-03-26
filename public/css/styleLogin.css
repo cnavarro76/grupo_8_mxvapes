@@ -187,6 +187,17 @@
     margin-bottom: 50px;
 }
 
+.input-contenedor .fas.fa-envelope {
+    float: right;
+    margin-top: -65px;
+    
+}
+
+.input-contenedor-password .fas.fa-key {
+    float: right;
+    margin-top: -38px;
+}
+
 .input-contenedor-price {
     width: 49%;
     float: left;

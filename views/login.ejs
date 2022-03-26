@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
 
-        <title>MXVapes</title>
+        <title>Login MXVapes</title>
  
  <link rel="stylesheet" href="/css/styleLogin.css">
       <%- include('./partials/script-header') %>
@@ -25,14 +25,28 @@
               <img src="../img/LogReg/user.png" class="img"/><br>
             </div>
 
-                    <div >
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                        <input id="txtUser" type="text" class="form-control" name="username" placeholder="Username">
+            <div class="input-contenedor">
+ 
+              <input type="text" name="email" placeholder="Correo Electronico" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"><i class="fas fa-envelope"></i>
+                  <% if (locals.errors && errors.email) { %>
+                      <div class="text-danger">
+                          <%= errors.email.msg %>
+                      </div>
+                  <% } %>
+              </div>
+              <div class="input-contenedor">
+
+                <div class="input-contenedor-password">
+                  
+                  <input type="password" name="password" placeholder="Contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"> <i class="fas fa-key"></i>
+                  <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                        <%= errors.password.msg %>
                     </div>
-                    <div>
-                        <input name="password"  placeholder="Password"  type="password" required="required">
-                    </div>
- <label class="form-check-label"><input type="checkbox" class="form-check-input" name="recuerdame">Recordar mis usuario</label>
+                <% } %>
+                
+              </div>
+              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="recuerdame">Recordar mis usuario</label>
 
 
                     <button class="boton" type="submit"><i class="fa fa-sign-in"></i>

@@ -24,17 +24,17 @@ module.exports = [
     body('address').notEmpty().withMessage('Tienes que escribir tu dirección'),
 	body('checkbox').notEmpty().withMessage('Tienes que aceptar los términos y condiciones'),
 	body('image').custom((value, { req }) => {
-		// let file = req.file.filename;
-		// let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
+		let file = req.file;
+		let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 
-		// if (!file) {
-		// 	throw new Error('Tienes que subir una imagen');
-		// } else {
-		// 	let fileExtension = path.extname(file.originalname);
-		// 	if (!acceptedExtensions.includes(fileExtension)) {
-		// 		throw new Error(`Los archivos permitidos son ${acceptedExtensions.join(', ')}`);
-		// 	}
-		// }
+		if (!file) {
+			throw new Error('Tienes que subir una imagen');
+		} else {
+			let fileExtension = path.extname(file.originalname);
+			if (!acceptedExtensions.includes(fileExtension)) {
+				throw new Error(`Los archivos permitidos son ${acceptedExtensions.join(', ')}`);
+			}
+		}
 
 		return true;
 	})

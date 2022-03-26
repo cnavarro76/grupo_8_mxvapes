@@ -8,6 +8,11 @@ let usersController = {
       return res.render("login");
     });
   },
+
+ 
+
+
+
   register: function (req, res) {
     db.userType.findAll().then(function (tipoUsuario) {
       return res.render("register", { tipoUsuario });

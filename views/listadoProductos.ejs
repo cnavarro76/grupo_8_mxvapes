@@ -37,12 +37,6 @@
 
 
 
-
-
-
-
-
-
 <div class="container fl">
   <h1 class="orange">Listado de productos</h1>
 	<%for(const producto of productos) {%>
@@ -50,7 +44,7 @@
 	  <img src="/img/productos/<%=producto.image%>"/>  
     <p class="nombre-producto"><%=producto.product_name%></p>
 
-    <p><span class="descripcion-p">Descripción:</span> <%=producto.product_description%></p>
+    <!-- <p><span class="descripcion-p">Descripción:</span> <%=producto.product_description%></p> -->
 	  <p><span class="title-p">Precio:</span> $<%=producto.price%></p>
     <p><span class="title-p">Descuento:</span> <%=producto.discount%>%</p>
      <button class="boton detalle ins"> <a href="/products/<%=producto.id%>">Ver detalle  </a></button>

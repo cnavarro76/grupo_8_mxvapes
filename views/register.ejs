@@ -92,18 +92,24 @@
             </div>
             
             <div class="input-contenedor-address">
-                <input name="address"  placeholder="Direccion de envio" type="text" class="form-control"> <i class="fas fa-map-marked-alt"></i>
+                <input type="text" name="address" placeholder="Dirección" class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.address : null %>"> <i class="fas fa-map-marked-alt"></i>
+                <% if (locals.errors && errors.address) { %>
+                    <div class="text-danger">
+                        <%= errors.address.msg %>
+                    </div>
+                <% } %>
             </div>
             
             <div class="input-contenedor">
-                <label for="imagen" class="form-label">Sube tu imagen de usuario </label>
-                <input type="file" name="image" id="image" class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>"> </i>
-                <% if (locals.errors && errors.image) { %>
-                    <div class="text-danger">
-                        <%= errors.image.msg %>
-                        
-                    </div>
-                <% } %>
+                 <label for="imagen" class="form-label">Sube tu imagen de usuario </label>
+                            <input type="file" name="image" id="file" class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>"> </i>
+                            <% if (locals.errors && errors.image) { %>
+                                <div class="text-danger">
+                                    <%= errors.image.msg %>
+                                    
+                                </div>
+                            <% } %>
+                        </div>
             </div>
 
     

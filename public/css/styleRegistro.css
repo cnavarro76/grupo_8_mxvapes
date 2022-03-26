@@ -120,6 +120,10 @@ i {
     margin-top: -65px;
 }
 
+.text-danger {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
 
 .icon {
     min-width: 50px;

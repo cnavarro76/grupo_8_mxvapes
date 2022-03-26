@@ -1,4 +1,5 @@
 let db = require('../database/models');
+const {validationResult} = require('express-validator');
 
 let productsController = {
     crear: function (req, res) {
@@ -12,6 +13,17 @@ let productsController = {
 
     },
     guardar: function (req, res) {
+        // const resultValidation = validationResult(req);
+    
+        // if (resultValidation.errors.length > 0) {
+        //     const categoriaProducto = await db.productCategory.findAll()
+        //     return res.render('creacionProductos', {
+        //         errors: resultValidation.mapped(),
+        //         oldData: req.body,
+        //         categoriaProducto,
+        //     });
+        // }
+
         db.Product.create({
             product_name: req.body.nombre,
             category: req.body.categoria,
