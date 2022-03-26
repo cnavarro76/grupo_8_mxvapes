@@ -1,4 +1,4 @@
-module.exports = function(sequelize, dataTypes){
+module.exports = function (sequelize, dataTypes) {
     let alias = "User"; //como sequelize va a llamar a nuestra tabla
 
     let cols = {
@@ -18,18 +18,18 @@ module.exports = function(sequelize, dataTypes){
         },
         user_type: {
             type: dataTypes.INTEGER,
-            
+
         },
         user_pass: {
             type: dataTypes.INTEGER
         },
-        confirm_pass: {
+        /*confirm_pass: {
             type: dataTypes.STRING,
-        },
+        },*/
         address: {
             type: dataTypes.STRING
         },
-        image: {    
+        image: {
             type: dataTypes.BLOB,
         },
     };
@@ -38,12 +38,12 @@ module.exports = function(sequelize, dataTypes){
         tableName: "users", //como se llama la tabla en la db
         timestamps: false
     }
-        
+
 
 
     const User = sequelize.define(alias, cols, config);
 
-    User.associate = function(modelos){
+    User.associate = function (modelos) {
         User.belongsToMany(modelos.Product, {
             as: "usuarios",
             through: "cart",

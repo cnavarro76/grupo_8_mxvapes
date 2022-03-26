@@ -22,7 +22,7 @@ module.exports = function (sequelize, dataTypes) {
         discount: {
             type: dataTypes.INTEGER
         },
-        image: {    
+        image: {
             type: dataTypes.BLOB,
         },
     };
@@ -45,10 +45,7 @@ module.exports = function (sequelize, dataTypes) {
             timestamps: false
         });
 
-        /*Product.belongsTo(models.Category, {
-            as: "categoria"
 
-        });*/
 
 
     }
