@@ -4,12 +4,12 @@ var productsController = require('../controllers/productsController');
 
 // Middlewares
 const uploadProductFile = require('../middlewares/multerProductMiddleware');
-const validations = require('../middlewares/validateProductsMiddleware');
-const validation = require('../middlewares/validateEditMiddleware');
+const createvalidation = require('../middlewares/validateProductsMiddleware');
+const editvalidation = require('../middlewares/validateEditMiddleware');
 
 /* creacion  */
 router.get('/crear', productsController.crear);
-router.post('/crear', uploadProductFile.single('image'), validations, productsController.guardar);
+router.post('/crear', uploadProductFile.single('image'), createvalidation, productsController.guardar);
 
 // rutas menu
 
@@ -28,7 +28,7 @@ router.get('/:id', productsController.detalle);
 //Actualización
 
 router.get('/editar/:id', productsController.editar);
-router.post('/editar/:id', validation, productsController.actualizar);
+router.post('/editar/:id', editvalidation, productsController.actualizar);
 
 //Borrar
 

@@ -8,14 +8,17 @@ var usersController = require('../controllers/usersController');
 const uploadFile = require("../middlewares/multerMiddleware");
 const validations = require('../middlewares/validateRegisterMiddleware');
 
+
 /* creacion  */
 router.get('/login', usersController.login);
-// router.post('/login', usersController.loginProcess);
+router.post('/login', usersController.loginProcess);
 
 router.get('/profile', usersController.profile);
 
 router.get('/register', usersController.register);
 router.post("/register", uploadFile.single("image"), validations, usersController.guardarUsuario);
+
+router.get('/logout', usersController.logout);
 
 
 

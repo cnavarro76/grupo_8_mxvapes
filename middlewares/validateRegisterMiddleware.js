@@ -12,8 +12,8 @@ module.exports = [
 		.isEmail().withMessage('Debes escribir un formato de correo válido'),
 	body('user_type').notEmpty().withMessage('Tienes que elegir un tipo de usuario'),
 	body('user_pass').notEmpty().withMessage('Tienes que escribir una contraseña').bail()
-		.isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres').bail()
-		.isStrongPassword().withMessage('La contraseña debe tener al menos una letra mayúscula, una minúscula, un número y un caracter especial'),
+		.isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
+		// .isStrongPassword().withMessage('La contraseña debe tener al menos una letra mayúscula, una minúscula, un número y un caracter especial'),
 	body('confirm_pass').notEmpty().withMessage('Confirma tu contraseña').bail()
 		.custom((value, {req}) => {
 			if (value !== req.body.user_pass) {
@@ -22,7 +22,7 @@ module.exports = [
 			return true;
 		}),
     body('address').notEmpty().withMessage('Tienes que escribir tu dirección'),
-	body('checkbox').notEmpty().withMessage('Tienes que aceptar los términos y condiciones'),
+	//body('checkbox').notEmpty().withMessage('Tienes que aceptar los términos y condiciones'),
 	body('image').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];

@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 const session = require('express-session');
 const cookies = require('cookie-parser');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
@@ -30,6 +32,7 @@ app.use(cookies());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use(userLoggedMiddleware);
 app.use('/users', usersRouter);
 app.use('/navbar', navbarRouter);
 app.use('/products', productsRouter);

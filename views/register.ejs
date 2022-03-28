@@ -65,7 +65,7 @@
                     </option>
                 <% } %>
                 </select>
-                <input type="hidden" name="user_type" placeholder="Tipo de usuario" class="form-control <%= locals.errors && errors.user_type ? 'is-invalid' : null %>"> 
+                <input type="hidden" placeholder="Tipo de usuario" class="form-control <%= locals.errors && errors.user_type ? 'is-invalid' : null %>"> 
                 <% if (locals.errors && errors.user_type) { %>
                     <div class="text-danger">
                         <%= errors.user_type.msg %>

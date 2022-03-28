@@ -22,12 +22,11 @@ module.exports = function (sequelize, dataTypes) {
 
     Category.associate = function (modelos) {
 
-        /*Category.hasMany(modelos.Product, {
+        Category.hasMany(modelos.Product, {
             as: "producto",
-            foreignkey: "productCat"
-
-
-        });*/
+            foreignKey: "category",
+            sourceKey: "id"
+        });
     }
 
 

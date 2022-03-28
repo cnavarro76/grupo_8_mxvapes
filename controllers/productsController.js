@@ -12,17 +12,17 @@ let productsController = {
             })
 
     },
-    guardar: function (req, res) {
-        // const resultValidation = validationResult(req);
-    
-        // if (resultValidation.errors.length > 0) {
-        //     const categoriaProducto = await db.productCategory.findAll()
-        //     return res.render('creacionProductos', {
-        //         errors: resultValidation.mapped(),
-        //         oldData: req.body,
-        //         categoriaProducto,
-        //     });
-        // }
+    guardar: async function (req, res) {
+        const resultValidation = validationResult(req);
+        console.log (resultValidation);
+        if (resultValidation.errors.length > 0) {
+            const categoriaProducto = await db.Category.findAll()
+            return res.render('creacionProductos', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                categorias: categoriaProducto,
+            });
+        }
 
         db.Product.create({
             product_name: req.body.nombre,
@@ -43,8 +43,9 @@ let productsController = {
             })
     },
     detalle: function (req, res) {
-        db.Product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id, {include: ['categoria']})
             .then(function (producto) {
+                console.log(producto)
                 res.render('detalleProducto', {
                     producto
                 })

@@ -40,12 +40,17 @@ module.exports = function (sequelize, dataTypes) {
         Product.belongsToMany(modelos.User, {
             as: "usuarios",
             through: "cart",
-            foreignkey: "idProduct",
-            otherkey: "idUser",
-            timestamps: false
+            foreignKey: "idProduct",
+            otherKey: "idUser",
+            timestamps: false            
         });
 
-
+        Product.belongsTo(modelos.Category, {
+            as: "categoria",
+            foreignKey: "category",
+            targetKey: "id",
+            timestamps: false            
+        });
 
 
     }

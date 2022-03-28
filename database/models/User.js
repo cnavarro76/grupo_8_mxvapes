@@ -21,11 +21,11 @@ module.exports = function (sequelize, dataTypes) {
 
         },
         user_pass: {
-            type: dataTypes.INTEGER
-        },
-        /*confirm_pass: {
             type: dataTypes.STRING,
-        },*/
+        },
+        confirm_pass: {
+            type: dataTypes.STRING,
+        },
         address: {
             type: dataTypes.STRING
         },
@@ -47,8 +47,8 @@ module.exports = function (sequelize, dataTypes) {
         User.belongsToMany(modelos.Product, {
             as: "usuarios",
             through: "cart",
-            foreignkey: "idUser",
-            otherkey: "idProduct",
+            foreignKey: "idUser",
+            otherKey: "idProduct",
             timestamps: false
         })
     };

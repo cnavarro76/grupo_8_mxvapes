@@ -1,21 +1,43 @@
-const User = require('../database/models/User');
+let db = require("../database/models");
 
-function userLoggedMiddleware(req, res, next) {
+
+async function userLoggedMiddleware(req, res, next) {
+	let emailInCookie = req.cookies.userEmail;
+	console.log(emailInCookie);
+	
+
+	if (emailInCookie) {
+		let user = await db.User.findOne({
+			where: {
+				email: emailInCookie,
+			},
+		});
+		if (user) {
+			req.session.userLogged = user;
+			res.locals.isLogged = true;
+			res.locals.userLogged = req.session.userLogged;
+		}	
+	}
+	const guestPaths = ["/users/login", "/users/register", "/products"] // paths que no requieren autenticación;
+	if (guestPaths.includes(req.path)) {
+		return next();
+	}
+
+	if (/\/products\/\d+/.test(req.path)) {return next ();}
+	if (/\/navbar\/\d+/.test(req.path)) {return next ();}
 	res.locals.isLogged = false;
 
-	let emailInCookie = req.cookies.userEmail;
-	let userFromCookie = User.findByField('email', emailInCookie);
-
-	if (userFromCookie) {
-		req.session.userLogged = userFromCookie;
-	}
+	
+	
+	
 
 	if (req.session.userLogged) {
 		res.locals.isLogged = true;
 		res.locals.userLogged = req.session.userLogged;
+		return next();
 	}
-
-	next();
+	res.redirect("/users/login");
+	
 }
 
 module.exports = userLoggedMiddleware;

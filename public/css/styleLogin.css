@@ -219,6 +219,11 @@
     margin-bottom:60px;
 }
 
+.text-danger {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
 
 @media(min-width:768px) {
     .formulario {
