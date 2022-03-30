@@ -521,6 +521,10 @@ article p {
 
   }
 
+  .col-md-3 {
+    width: 100%;
+  }
+
   .producto {
     width: 30%;
     margin: 20px auto;
@@ -536,7 +540,7 @@ article p {
 
 
   .container {
-    flex-direction: row;
+    
     margin-top: 0;
   }
 

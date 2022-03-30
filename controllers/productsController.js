@@ -70,6 +70,7 @@ let productsController = {
             product_description: req.body.descripcion,
             price: req.body.precio,
             discount: req.body.descuento
+            
         }, {
             where: {
                 id: req.params.id

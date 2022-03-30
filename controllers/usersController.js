@@ -72,6 +72,7 @@ let usersController = {
 
   guardarUsuario: async function (req, res) {
     const resultValidation = validationResult(req);
+    // console.log(resultValidation);
     if (resultValidation.errors.length > 0) {
       const tipoUsuario = await db.userType.findAll();
       return res.render("register", {
@@ -87,20 +88,20 @@ let usersController = {
       },
     });
 
-   // console.log(userInDb);
+    // console.log("usuario", userInDb);
 
-    // if (userInDb) {
-    //   const tipoUsuario = await db.userType.findAll();
-    //   return res.render("register", {
-    //     errors: {
-    //       email: {
-    //         msg: "Este correo ya está registrado",
-    //       },
-    //     },
-    //     oldData: req.body,
-    //     tipoUsuario,
-    //   });
-    // }
+    if (userInDb) {
+      const tipoUsuario = await db.userType.findAll();
+      return res.render("register", {
+        errors: {
+          email: {
+            msg: "Este correo ya está registrado",
+          },
+        },
+        oldData: req.body,
+        tipoUsuario,
+      });
+    }
 console.log(req.body.user_type)
     db.User.create({
       userName: req.body.userName,
