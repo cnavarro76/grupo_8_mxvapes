@@ -11,6 +11,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 var navbarRouter = require('./routes/navbar');
+var apiRouter = require('./routes/api');
 
 var app = express();
 
@@ -36,6 +37,7 @@ app.use(userLoggedMiddleware);
 app.use('/users', usersRouter);
 app.use('/navbar', navbarRouter);
 app.use('/products', productsRouter);
+app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
