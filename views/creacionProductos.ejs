@@ -24,7 +24,8 @@
     <h1 class="formularios-t">Crear producto</h1>
   
     <div class="input-contenedor-product-name">
-        <input type="text" name="nombre" placeholder="Nombre del Producto" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.name : null %>" />
+        <input type="text" id="name" name="nombre" placeholder="Nombre del Producto" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.name : null %>" />
+        <div id="nameE" hidden>texto</div>
         <% if (locals.errors && errors.name) { %>
             <div class="text-danger">
                 <%= errors.name.msg %> 
@@ -33,7 +34,7 @@
     </div>
         <div>
             <label for="">Categoria</label>
-            <select name="categoria">
+            <select name="categoria" id="categoria">
                 	
               <% for(let i = 0; i < categorias.length; i ++){ %>
                 <option value="<%=categorias[i].id%>">
@@ -42,7 +43,8 @@
             <% } %>
             </select>
             <input type="hidden" placeholder="Categoria" class="form-control <%= locals.errors && errors.category ? 'is-invalid' : null %>"> 
-                <% if (locals.errors && errors.category) { %>
+            <div id="catE" hidden>texto</div>    
+            <% if (locals.errors && errors.category) { %>
                     <div class="text-danger">
                         <%= errors.category.msg %>
                     </div>
@@ -50,7 +52,8 @@
         </div>
         <div class="input-contenedor">
 
-            <input type="text" name="descripcion" placeholder="Descripcion" class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.description : null %>">
+            <input type="text" id="desc" name="descripcion" placeholder="Descripcion" class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.description : null %>">
+            <div id="descE" hidden>texto</div>
             <% if (locals.errors && errors.description) { %>
                 <div class="text-danger">
                     <%= errors.description.msg %>    
@@ -59,25 +62,28 @@
             </div>
             <div class="input-contenedor-price">
    
-                <input type="text" name="precio" placeholder="Precio" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.price : null %>">
-                    <% if (locals.errors && errors.price) { %>
+                <input type="text" id="price" name="precio" placeholder="Precio" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.price : null %>">
+                <div id="priceE" hidden>texto</div>     
+                <% if (locals.errors && errors.price) { %>
                         <div class="text-danger">
                             <%= errors.price.msg %>    
                         </div>
                     <% } %>
                     </div>
                     <div class="input-contenedor-descuento">
-                        <input type="text" name="descuento" placeholder="Descuento" class="form-control <%= locals.errors && errors.discount? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.discount : null %>">
+                        <input type="text" id="disc" name="descuento" placeholder="Descuento" class="form-control <%= locals.errors && errors.discount? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.discount : null %>">
                         <% if (locals.errors && errors.discount) { %>
                             <div class="text-danger">
                                 <%= errors.discount.msg %>    
                             </div>
                         <% } %>
                         </div>
-
+                        
         <div class="input-contenedor">
+            <div id="discE" hidden>texto</div>
             <label for="imagen" class="form-label">Sube una imagen del producto </label>
             <input type="file" name="image" id="image" class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>"> </i>
+            <div id="fileE" hidden>texto</div>
             <% if (locals.errors && errors.image) { %>
                 <div class="text-danger">
                     <%= errors.image.msg %>
@@ -100,4 +106,5 @@
 <%- include('./partials/menu') %>
 
 </body>
+<script src="/js/pCreateFrontVal.js"></script>
 </html>

@@ -29,7 +29,8 @@
             </div>
     
             <div class="input-contenedor-userName">
-                <input type="text" name="userName" placeholder="Nombre(s)" class="form-control <%= locals.errors && errors.userName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.userName : null %>" />
+                <input type="text" id="name" name="userName" placeholder="Nombre(s)" class="form-control <%= locals.errors && errors.userName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.userName : null %>" />
+                <div id="nameE" hidden>texto</div>
                 <% if (locals.errors && errors.userName) { %>
                     <div class="text-danger">
                         <%= errors.userName.msg %> 
@@ -38,7 +39,8 @@
             </div>
             
             <div class="input-contenedor-lastName">
-                <input type="text" name="lastName" placeholder="Apellido(s)" class="form-control <%= locals.errors && errors.lastName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>"> <i class="fas fa-user"></i>
+                <input type="text" id="lastname" name="lastName" placeholder="Apellido(s)" class="form-control <%= locals.errors && errors.lastName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>"> <i class="fas fa-user"></i>
+                <div id="lNameE" hidden>texto</div>
                 <% if (locals.errors && errors.lastName) { %>
                     <div class="text-danger">
                         <%= errors.lastName.msg %> 
@@ -47,7 +49,8 @@
             </div>
            
             <div class="input-contenedor-email">
-                <input type="text" name="email" placeholder="Correo Electronico" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"><i class="fas fa-envelope"></i>
+                <input type="text" id="email" name="email" placeholder="Correo Electronico" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"><i class="fas fa-envelope"></i>
+                <div id="emailE" hidden>texto</div>
                         <% if (locals.errors && errors.email) { %>
                             <div class="text-danger">
                                 <%= errors.email.msg %>
@@ -57,7 +60,7 @@
 
             <div class="input-contenedor-user_type">
                 <label for="user_type">Tipo de usuario</label>
-                <select name="user_type">
+                <select id="user_type" name="user_type">
                     <option value="">Selecciona una opción</option>
                     <% for(let i = 0; i < tipoUsuario.length; i ++){ %>
                     <option value="<%=tipoUsuario[i].id%>">
@@ -72,9 +75,10 @@
                     </div>
                 <% } %>
             </div>
-
+            <div id="user_typeE" hidden>texto</div> 
             <div class="input-contenedor-user_pass">
-                <input type="password" name="user_pass" placeholder="Contraseña" class="form-control <%= locals.errors && errors.user_pass ? 'is-invalid' : null %>">
+                <input type="password" id="password" name="user_pass" placeholder="Contraseña" class="form-control <%= locals.errors && errors.user_pass ? 'is-invalid' : null %>">
+                <div id="passwordE" hidden>texto</div>
                 <% if (locals.errors && errors.user_pass) { %>
                     <div class="text-danger">
                         <%= errors.user_pass.msg %>
@@ -83,7 +87,8 @@
             </div>
             
             <div class="input-contenedor-confirm_pass">
-                <input type="password" name="confirm_pass" placeholder="Confirmar Contraseña" class="form-control <%= locals.errors && errors.confirm_pass ? 'is-invalid' : null %>"> <i class="fas fa-key"></i>
+                <input type="password" id="cPassword" name="confirm_pass" placeholder="Confirmar Contraseña" class="form-control <%= locals.errors && errors.confirm_pass ? 'is-invalid' : null %>"> <i class="fas fa-key"></i>
+                <div id="cPasswordE"hidden >texto</div>
                 <% if (locals.errors && errors.confirm_pass) { %>
                     <div class="text-danger">
                         <%= errors.confirm_pass.msg %>
@@ -92,7 +97,8 @@
             </div>
             
             <div class="input-contenedor-address">
-                <input type="text" name="address" placeholder="Dirección" class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.address : null %>"> <i class="fas fa-map-marked-alt"></i>
+                <input type="text" id="address" name="address" placeholder="Dirección" class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.address : null %>"> <i class="fas fa-map-marked-alt"></i>
+                <div id="addressE" hidden>texto</div> 
                 <% if (locals.errors && errors.address) { %>
                     <div class="text-danger">
                         <%= errors.address.msg %>
@@ -103,6 +109,7 @@
             <div class="input-contenedor">
                  <label for="imagen" class="form-label">Sube tu imagen de usuario </label>
                             <input type="file" name="image" id="file" class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>"> </i>
+                            <div class="text-danger"></div>
                             <% if (locals.errors && errors.image) { %>
                                 <div class="text-danger">
                                     <%= errors.image.msg %>
@@ -132,4 +139,5 @@
 <%- include('./partials/menu') %>
 
 </body>
+<script src="/js/registerUserFrontVal.js"></script>
 </html>

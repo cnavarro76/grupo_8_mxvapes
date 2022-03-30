@@ -22,11 +22,12 @@
             <h1 class="formularios-t">Editar producto</h1>
         <div>
             <label for="">Nombre del producto</label>
-            <input type="text" name="nombre" value="<%=producto.product_name%>" >
+            <input type="text" id="name" name="nombre" value="<%=producto.product_name%>" >
         </div>
+        <div id="nameE" hidden>texto</div>
         <div>
             <label for="">Categoria</label>
-            <select name="categoria">
+            <select name="categoria" id="categoria">
                 <% for(let i = 0; i < categorias.length; i ++){ %>
                     <% if(categorias[i].id == producto.category_id) { %>   
                        <option value="<%=categorias[i].id%>" selected>
@@ -41,18 +42,22 @@
             <% } %>
             </select>
         </div>
+        <div id="catE" hidden>texto</div>
         <div>
             <label for="">Descripción</label>
-            <input type="text" name="descripcion" value="<%=producto.product_description%>">
+            <input type="text" id="desc" name="descripcion" value="<%=producto.product_description%>">
         </div>
+        <div id="descE" hidden>texto</div>
         <div>
             <label for="">Precio</label>
-            <input type="text" name="precio" placeholder="$$$" value="<%=producto.price%>">
+            <input type="text" id="price" name="precio" placeholder="$$$" value="<%=producto.price%>">
         </div>
+        <div id="priceE" hidden>texto</div>
         <div>
             <label for="">Descuento</label>
-            <input type="text" name="descuento" value="<%=producto.discount%>">
+            <input type="text"  id="disc" name="descuento" value="<%=producto.discount%>">
         </div>
+        <div id="discE" hidden>texto</div>
 
        
         <button class="boton" type="submit">Editar</button>
@@ -71,4 +76,5 @@
 
 
 </body>
+<script src="/js/pModFrontVal.js"></script>
 </html>

@@ -27,7 +27,8 @@
 
             <div class="input-contenedor">
  
-              <input type="text" name="email" placeholder="Correo Electronico" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"><i class="fas fa-envelope"></i>
+              <input type="text" id="email" name="email" placeholder="Correo Electronico" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"><i class="fas fa-envelope"></i>
+              <div id="emailError" hidden>texto</div>
                   <% if (locals.errors && errors.email) { %>
                       <div class="text-danger">
                           <%= errors.email.msg %>
@@ -38,7 +39,8 @@
 
                 <div class="input-contenedor-password">
                   
-                  <input type="password" name="password" placeholder="Contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"> <i class="fas fa-key"></i>
+                  <input type="password" id="pass" name="password" placeholder="Contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"> <i class="fas fa-key"></i>
+                  <div id="passError" hidden>texto</div>
                   <% if (locals.errors && errors.password) { %>
                     <div class="text-danger">
                         <%= errors.password.msg %>
@@ -78,4 +80,5 @@
 <%- include('./partials/menu') %>
 
 </body>
+<script src="/js/loginFrontVal.js"></script>
 </html>
