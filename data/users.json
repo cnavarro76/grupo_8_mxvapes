@@ -10,5 +10,65 @@
   "address": "Av. Carlos Lazo",
   "checkbox": "on",
   "image": "1646264963288_img.jpeg"
+ },
+ {
+  "id": 2,
+  "firstName": "Andres",
+  "lastName": "Anguiano",
+  "email": "asan@live.com.mx",
+  "password": "$2a$10$Enb3F97.AlGflzW3xQ6gBuBdV6IosQBcYbi4d1.guEn/PtAI0oUEa",
+  "confirmPassword": "Deathnote1+",
+  "user_type": [
+   "1",
+   ""
+  ],
+  "address": "sdaasdasdasdasdasd",
+  "checkbox": "on",
+  "image": "1648596282490_img.jpeg"
+ },
+ {
+  "id": 3,
+  "firstName": "Andres",
+  "lastName": "Anguiano",
+  "email": "asan@live.com",
+  "password": "$2a$10$xY/gtYF43ABi3jEoUz5JW.jTQUJg9DzFj0NpvGZBIGrpOA.ikeeIG",
+  "confirmPassword": "Deathnote1+",
+  "user_type": [
+   "1",
+   ""
+  ],
+  "address": "sdaasdasdasdasdasd",
+  "checkbox": "on",
+  "image": "1648596384369_img.jpeg"
+ },
+ {
+  "id": 4,
+  "firstName": "Andres",
+  "lastName": "Anguiano",
+  "email": "asan@live.mx",
+  "password": "$2a$10$3C1rh/LwJG1TqsjKT.Smdu0tNNk8vMlqYMrNoiUmwHiX/TfJ4x.G6",
+  "confirmPassword": "Deathnote1+",
+  "user_type": [
+   "2",
+   ""
+  ],
+  "address": "Av Te 950 Granjas Mexico Iztacalco 08400 Ciudad de Mexico CDMX",
+  "checkbox": "on",
+  "image": "1648600537867_img.jpeg"
+ },
+ {
+  "id": 5,
+  "firstName": "Pancho",
+  "lastName": "Carelo",
+  "email": "asan@live.com.xm",
+  "password": "$2a$10$pURyominByyHtkRttr3Z7O3y9Z0s92Gq1k/imPQIqDfXxfQdKQhOq",
+  "confirmPassword": "Deathnote1+",
+  "user_type": [
+   "2",
+   ""
+  ],
+  "address": "123",
+  "checkbox": "on",
+  "image": "1648601173602_img.jpeg"
  }
 ]

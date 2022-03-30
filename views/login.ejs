@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/7a57e2dd08.js" crossorigin="anonymous"></script>
-
+        <script src="../public/js/validation.js"></script>
         <title>Login MXVapes</title>
  <link rel="stylesheet" href="/css/styleLogin.css">
       <%- include('./partials/script-header') %>
@@ -14,7 +14,7 @@
 
     </head>
     <body class="fondo"> 
-
+      
 
 <%- include('./partials/header') %>
 
@@ -26,17 +26,19 @@
             <div class="contenedor">
                     <div class="input-contenedor">
                         
-                        <input type="text" placeholder="Correo electrónico" name="email" class="txt"><i class="fas fa-user"></i>
-                        <% if (locals.errors && errors.email) { %>
+                      <input type="text" id="email" name="email" placeholder="Correo Electronico" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" s><i class="fas fa-envelope"></i>
+                      <div id="emailError" hidden>texto</div>  
+                      <% if (locals.errors && errors.email) { %>
                           <div class="text-danger">
                             <%= errors.email.msg %>
                           </div>
                         <% } %>
                     </div>
-
+                    
                     <div class="input-contenedor">
                         
-                        <input type="password" placeholder="Contraseña" name="password" class="txt"> <i class="fas fa-key"></i>
+                      <input type="password" id="pass" name="password" placeholder="Contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"> <i class="fas fa-key"></i>
+                      <div id="passError" hidden>texto</div> 
                     </div>
                 
                 <label class="form-check-label"><input type="checkbox" class="form-check-input" name="recuerdame">Recordar mis usuario</label>
@@ -58,4 +60,5 @@
             <%- include('./partials/footer') %>
             <%- include('./partials/menu') %>
     </body>
+    <script src="/js/loginFrontVal.js"></script>
 </html>
