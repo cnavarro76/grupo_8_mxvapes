@@ -33,16 +33,24 @@ let usersController = {
 
         return res.redirect("/users/profile");
       }
-      return res.render("login", {
+      
+      return res.render('login', {
+				errors: {
+					password: {
+						msg: 'Contraseña incorrecta'
+					}
+				}
+			});
+		}
+      return res.render('login', {
         errors: {
-          password: {
-            msg: "Contraseña incorrecta",
-          },
-        },
+          email: {
+            msg: 'No se encuentra este email en la base de datos'
+          }
+        }
       });
-    }
   },
-
+     
   register: function (req, res) {
     db.userType
       .findAll()

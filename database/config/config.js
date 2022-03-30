@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "1234",
+    "password": "3Chifl@ados3",
     "database": "dbMxVapes",
     "host": "127.0.0.1",
     "port": "3306",
