@@ -7,8 +7,12 @@ let navbarController = {
         db.Product.findAll({
                 where: {
                     category: req.params.id
-                }
+                },
+                include: ['categoria']
             })
+
+            
+            
             .then(function (productos) {
                 res.render("categorias", {
                     productos

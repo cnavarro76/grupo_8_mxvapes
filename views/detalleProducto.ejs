@@ -37,8 +37,8 @@
 
     
    
-
-
+    <% if (locals.userLogged && locals.userLogged.user_type == 2) {%>
+        
     <button class="boton detalle btn-d" >
         <a href="/products/editar/<%= producto.id %>">
         Editar</a>
@@ -48,6 +48,8 @@
     <button class="boton detalle btn-d" type="submit">Borrar</button>
 </form>
 
+<% } else { %>
+
   <button class="boton detalle btn-d" >
         <a href="#"></a>
         Agregar al carrito</a>
@@ -55,7 +57,7 @@
     <div style="clear:both"></div>
 </div>
 
-
+<% } %>
   
 
   </main>

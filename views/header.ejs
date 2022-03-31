@@ -10,14 +10,22 @@
 
         <nav class="menu-secundario">
            <ul>
+            <% if (locals.userLogged && locals.userLogged.user_type == 2) {%>
                <li>
                    <a href="/products/crear">Crear producto</a>
                    
                </li>
                <li>
+                <a href="/products">Ver productos</a>
+                
+            </li>
+               
+               <% } else { %>
+               <li>
                    <a href="/products">Ver productos</a>
                    
                </li>
+               
 
             <div class="barraBusqueda">
                 <div class="buscador">
@@ -29,6 +37,7 @@
                     </form>
                 </div>
             </div>
+            <% } %>
 
 
             <!--<ul>

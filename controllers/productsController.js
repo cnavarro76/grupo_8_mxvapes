@@ -35,7 +35,7 @@ let productsController = {
         res.redirect('/')
     },
     listado: function (req, res) {
-        db.Product.findAll()
+        db.Product.findAll({include: ['categoria']})
             .then(function (productos) {
                 res.render("listadoProductos", {
                     productos
